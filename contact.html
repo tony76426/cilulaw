@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>聯絡我們｜慈律律師事務所</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&amp;family=Noto+Sans+TC:wght@300;400;500&amp;family=Inter:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<style>
+
+        /* ==========================================================================
+           1. 變數與基礎設定 (Root & Base)
+           ========================================================================== */
+        :root {
+            --gold: #D4AF37;/*金色強調色*/
+            --silver: #C0C0C0;/*footer文字非加粗*/
+            --black: #1A1A1A;/*大多數的黑色文字*/
+            --navy: #3C2C3E;/*footer背景*/
+            --dark-navy: #2E1F2D;/*上面*/
+            --light-gray: #2D2926;
+            --white: #FFFFFF;/*整體背景淺色區*/
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei','Inter','Helvetica Neue',Arial,sans-serif;
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.8; /* 稍微增加行高，提升法律條文的可讀性 */
+            letter-spacing: 0.5px; /* 增加微小字距提升高級感 */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: bold;
+            margin-bottom: 1.2rem;
+            letter-spacing: 2px; /* 標題字距拉開，視覺更開闊 */
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ==========================================================================
+           2. 導航欄 (Header & Nav)
+           ========================================================================== */
+        header {
+            background-color: var(--dark-navy);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            /* Compact header to increase visible content area */
+            padding: 0;
+        }
+
+        /* High-end Header Enhancements */
+        header {
+            background: linear-gradient(180deg, rgba(46, 31, 45, 0.92) 0%, rgba(46, 31, 45, 0.86) 100%);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        
+        
+
+        /* Scroll behavior: hide header when scrolling down (transparent & disappears) */
+        header {
+            transition: opacity .25s ease, transform .25s ease, background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+            will-change: opacity, transform;
+        }
+        header.is-hidden {
+            opacity: 0;
+            transform: translateY(-100%);
+            pointer-events: none;
+            background: transparent !important;
+            box-shadow: none !important;
+            border-bottom-color: transparent !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+.header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 0;
+        }
+
+        .logo-area { display: flex; align-items: center; transform: none !important; }
+        
+        .logo {
+            width: 78px; height: 78px; /* 原 50px，放大約 60% */
+            background-color: transparent; /* 取消方框底色 */
+            border-radius: 0;             /* 取消圓角方框 */
+            overflow: hidden;             /* 裁切 logo 容器外部，確保不外溢 */
+            display: flex; align-items: center;
+            justify-content: center; 
+        }
+
+        .logo img { width: 100%; height: 100%; object-fit: contain; display: block; transform: scale(1.28); transform-origin: center; }
+
+        .logo-text {
+            display: flex; align-items: baseline; font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            letter-spacing: 3px; margin-left: 14px;
+        }
+
+        .logo-gold { color: var(--gold); font-weight: 800; font-size: 31px; line-height: 1; }
+        .logo-white { color: var(--white); font-weight: 400; font-size: 22px; margin-left: 6px; line-height: 1.1; }
+        
+        nav ul { display: flex; list-style: none; gap: 10px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
+        nav ul li { margin-left: 0; }
+        nav ul li a {
+            text-decoration: none; color: var(--white); font-weight: 600;
+            font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei','Helvetica Neue',Arial,sans-serif;
+            transition: color 0.3s; position: relative;
+        
+            font-size: 18px; /* +5% */
+            letter-spacing: 1px;
+            padding: 4px 2px;
+        }
+        nav ul li a:hover { color: var(--gold); }
+        nav ul li a::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -5px; left: 0; background-color: var(--gold); transition: width 0.3s;
+        }
+        nav ul li a:hover::after { width: 100%; }
+
+        /* ==========================================================================
+           3. 內容區塊 (Sections)
+           ========================================================================== */
+        section { padding: 80px 0; }
+        .section-title { text-align: center; margin-bottom: 50px; position: relative; }
+        .section-title::after {
+            content: ''; position: absolute; width: 80px; height: 3px;
+            background-color: var(--gold); bottom: -15px; left: 50%; transform: translateX(-50%);
+        }
+
+        .page-content { display: none; margin-top: 0; padding: 20px 0 60px; }
+        .active-page { display: block; }
+
+        
+        /* ==========================================================================
+           6. 其他組件 (Toast, Line, Form, Map)
+           ========================================================================== */
+        #toast-container { position: fixed; top: 90px; right: 24px; z-index: 2000; display: flex; flex-direction: column; gap: 12px; }
+        .toast {
+            min-width: 280px; padding: 14px 16px; border-radius: 8px; background: var(--white);
+            border-left: 6px solid var(--gold); box-shadow: 0 10px 25px rgba(158, 62, 197, 0.25);
+            display: flex; gap: 10px; animation: slideIn .25s ease-out;
+        }
+        .toast.error { border-left-color: #b00020; }
+        @keyframes slideIn { from{ transform: translateY(-10px); opacity: 0;} to{ transform: translateY(0); opacity: 1;} }
+
+        .line-float {
+            position: fixed; bottom: 25px; right: 25px; width: 65px; height: 65px;
+            z-index: 10000; border-radius: 50%; background-color: rgba(0, 0, 0, 0.15);
+            display: flex; align-items: center; justify-content: center;
+            animation: line-shake 2.5s infinite ease-in-out;
+        }
+        .line-float img { width: 60%; }
+        @keyframes line-shake { 0%, 100% { transform: rotate(0); } 10%, 20% { transform: rotate(-10deg); } 15% { transform: rotate(10deg); } }
+
+        .form-control { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; margin-top: 8px; }
+        .map-container { height: 400px; border-radius: 8px; overflow: hidden; background: #eee; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+        /* ==========================================================================
+           7. 頁腳與響應式 (Footer & Responsive)
+           ========================================================================== */
+        footer { background-color: var(--navy); color: var(--white); padding: 30px 0 15px; }
+        .footer-content { display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
+        .footer-column { flex: 1; min-width: 250px; }
+        .footer-column h3 { color: var(--gold); margin-bottom: 10px; }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li a { color: var(--silver); text-decoration: none; }
+
+        @media (max-width: 768px) {
+    /* Header: keep the same look, but make it usable on mobile */
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+        gap: 6px;
+    }
+
+    .logo-area {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        width: 64px;
+        height: 64px;
+        transform: none; /* avoid oversized logo squeezing the header on mobile */
+    }
+
+    .logo-text { margin-left: 10px; }
+    .logo-gold { font-size: 22px; }
+    .logo-white { font-size: 16px; }
+
+    nav { width: 100%; }
+    nav ul {
+        width: 100%;
+        gap: 10px;
+        flex-wrap: nowrap;             /* one row */
+        overflow-x: auto;              /* horizontal scroll */
+        -webkit-overflow-scrolling: touch;
+        padding: 6px 0 8px;
+        scrollbar-width: none;         /* Firefox */
+    }
+    nav ul::-webkit-scrollbar { display: none; } /* WebKit */
+    nav ul li a { white-space: nowrap; padding: 8px 4px; }
+
+    /* Content spacing under fixed header */
+    #toast-container { top: 120px; right: 16px; }
+    section { padding: 56px 0; }
+    .page-content { padding: 20px 0 56px; }
+
+    /* Maps */
+    .map-container { height: 360px; }
+}
+/* ==========================================================================
+   RWD Patch (Mobile-first usability, keeping desktop layout unchanged)
+   ========================================================================== */
+
+/* Prevent accidental horizontal scrolling on mobile (e.g., wide grids) */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* Make images responsive by default */
+img { max-width: 100%; height: auto; }
+
+/* Better tap targets on touch devices */
+@media (hover: none) {
+    nav ul li a { padding: 10px 6px; }
+    .btn { padding: 12px 22px; }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+    .container { padding: 0 16px; }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .logo-gold { font-size: 20px; }
+    .logo-white { font-size: 15px; }
+    /* Toast narrower */
+    .toast { min-width: 240px; }
+}
+
+/* ==========================================================================
+   Layout classes extracted from inline styles (to enable RWD overrides)
+   ========================================================================== */
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.contact-info { flex: 1; min-width: 300px; }
+
+.contact-info a,
+.footer-column a[href^="tel"] {
+  color: inherit;
+  text-decoration: none;
+}
+.contact-form { flex: 1; min-width: 350px; }
+
+.contact-form.contact-form-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form.contact-form-map { flex: 1.2; min-width: 350px; }
+
+@media (max-width: 768px) {
+    .contact-container { gap: 18px; }
+    .contact-info, .contact-form, .contact-form.contact-form-map { min-width: 0; flex: 1 1 100%; }
+    .contact-form.contact-form-card { padding: 18px; }
+}
+
+
+/* ===== Nav Premium Font Upgrade ===== */
+nav a {
+    font-family: 'Noto Serif TC', serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================================================
+   Mobile Hamburger Navigation (RWD) - keep desktop unchanged
+   ========================================================================== */
+
+.hamburger{
+  display:none;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
+}
+.hamburger span{
+  display:block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  opacity: 0.95;
+}
+.hamburger:focus-visible{
+  outline: 2px solid rgba(212,175,55,0.75);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* Backdrop for the off-canvas menu */
+.menu-backdrop{
+  display:none;
+  position: fixed;
+  inset: 0;
+  background: rgba(46,31,45,0.18);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  z-index: 1500;
+}
+
+/* Fix: ensure off-canvas menu stays above backdrop and remains clickable (mobile) */
+body.menu-open header{ z-index: 1701; }
+body.menu-open .menu-backdrop{ z-index: 1700; }
+body.menu-open nav.primary-nav ul.nav-list{ z-index: 1702; }
+
+
+@media (max-width: 768px){
+  /* Place hamburger at top-right like the reference image */
+  .header-container{ position: relative; }
+  .hamburger{
+    display:flex;
+    position:absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1700;
+  }
+
+  /* Hide the original inline nav on mobile; use off-canvas instead */
+  nav.primary-nav ul.nav-list{
+    display:none !important;
+  }
+
+  /* Off-canvas menu (opens from the right, not behind content) */
+  body.menu-open nav.primary-nav ul.nav-list{
+    display:flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: clamp(190px, 62vw, 240px);
+    padding: max(env(safe-area-inset-top), 10px) 14px 14px;
+    justify-content: flex-start !important;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 10px;
+    background: var(--dark-navy);
+    border-left: 1px solid rgba(212,175,55,0.18);
+    box-shadow: -10px 0 26px rgba(0,0,0,0.18);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1600;
+  }
+
+  body.menu-open .menu-backdrop{
+    display:block;
+  }
+
+  /* Ensure header stays visible while menu is open */
+  body.menu-open header.is-hidden{
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  /* Make menu items comfortable to tap */
+  body.menu-open nav.primary-nav ul.nav-list li a{
+    font-size: 18px;
+    padding: 10px 6px;
+    width: 100%;
+  }
+  body.menu-open nav.primary-nav ul.nav-list li a::after{
+    bottom: 2px;
+  }
+
+  body.menu-open nav.primary-nav ul.nav-list li a{
+    -webkit-tap-highlight-color: transparent;
+  }
+
+}
+
+
+/* Defensive: hide quick nav title if present */
+@media (max-width: 768px){
+  .quick-nav-title, .menu-title, .menu-heading{ display:none !important; }
+}
+/* ==========================================================================
+   Floating Circle Hamburger (Scroll) - Mobile only, style stays consistent
+   ========================================================================== */
+#floatingMenuBtn{
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  background: rgba(46, 31, 45, 0.94);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+  z-index: 1800;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+#floatingMenuBtn span{
+  display:block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  opacity: 0.95;
+}
+#floatingMenuBtn:focus-visible{
+  outline: 2px solid rgba(212,175,55,0.75);
+  outline-offset: 4px;
+}
+#floatingMenuBtn.is-visible{ display:flex; }
+
+@media (min-width: 769px){
+  #floatingMenuBtn{ display:none !important; }
+}
+/* ==========================================================================
+   SEO (Brand-safe): visually hidden text (accessible, no layout change)
+   ========================================================================== */
+.seo-visually-hidden{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  border:0 !important;
+  white-space: nowrap !important;
+}
+</style>
+<meta content="慈律律師事務所位於新北市土城區青雲路145號2樓，提供電話、地址、地圖、LINE官方帳號與預約諮詢入口，歡迎民事、刑事、家事、不動產、繼承與勞資案件當事人聯繫。" name="description"/><meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/><meta content="#2E1F2D" name="theme-color"/><meta content="telephone=no" name="format-detection"/><link href="https://www.cilulaw.tw/contact.html" rel="canonical"/><link href="https://www.cilulaw.tw/contact.html" hreflang="x-default" rel="alternate"/><link href="https://www.cilulaw.tw/contact.html" hreflang="zh-TW" rel="alternate"/><meta content="website" property="og:type"/><meta content="zh_TW" property="og:locale"/><meta content="慈律律師事務所" property="og:site_name"/><meta content="聯絡我們｜慈律律師事務所" property="og:title"/><meta content="慈律律師事務所位於新北市土城區青雲路145號2樓，提供電話、地址、地圖、LINE官方帳號與預約諮詢入口，歡迎民事、刑事、家事、不動產、繼承與勞資案件當事人聯繫。" property="og:description"/><meta content="https://www.cilulaw.tw/contact.html" property="og:url"/><meta content="https://www.cilulaw.tw/images/logo.png" property="og:image"/><meta content="summary_large_image" name="twitter:card"/><meta content="聯絡我們｜慈律律師事務所" name="twitter:title"/><meta content="慈律律師事務所位於新北市土城區青雲路145號2樓，提供電話、地址、地圖、LINE官方帳號與預約諮詢入口，歡迎民事、刑事、家事、不動產、繼承與勞資案件當事人聯繫。" name="twitter:description"/><meta content="https://www.cilulaw.tw/images/logo.png" name="twitter:image"/>
+<style>
+/* Standalone page spacing: keeps fixed header from covering page titles */
+body.standalone-page .page-content.active-page{
+  display:block;
+  padding-top: 130px;
+}
+@media (max-width: 768px){
+  body.standalone-page .page-content.active-page{ padding-top: 170px; }
+}
+</style><script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cilulaw.tw/#organization","name":"慈律律師事務所","url":"https://www.cilulaw.tw/","logo":"https://www.cilulaw.tw/images/logo.png","telephone":"02-22668879","faxNumber":"02-22625252","address":{"@type":"PostalAddress","addressCountry":"TW","addressRegion":"新北市","addressLocality":"土城區","streetAddress":"青雲路145號2樓","postalCode":"236"},"sameAs":["https://www.google.com/search?q=慈律律師事務所"]},{"@type":"WebSite","@id":"https://www.cilulaw.tw/#website","url":"https://www.cilulaw.tw/","name":"慈律律師事務所","publisher":{"@id":"https://www.cilulaw.tw/#organization"},"inLanguage":"zh-TW"},{"@type":"ContactPage","@id":"https://www.cilulaw.tw/contact.html#webpage","url":"https://www.cilulaw.tw/contact.html","name":"聯絡我們｜慈律律師事務所","isPartOf":{"@id":"https://www.cilulaw.tw/#website"},"about":{"@id":"https://www.cilulaw.tw/#organization"},"inLanguage":"zh-TW","description":"慈律律師事務所位於新北市土城區青雲路145號2樓，提供電話、地址、地圖、LINE官方帳號與預約諮詢入口，歡迎民事、刑事、家事、不動產、繼承與勞資案件當事人聯繫。"},{"@type":["LegalService","LocalBusiness"],"@id":"https://www.cilulaw.tw/#legalservice","name":"慈律律師事務所","url":"https://www.cilulaw.tw/","image":"https://www.cilulaw.tw/images/office-environment-1.jpg","telephone":"02-22668879","faxNumber":"02-22625252","address":{"@type":"PostalAddress","addressCountry":"TW","addressRegion":"新北市","addressLocality":"土城區","streetAddress":"青雲路145號2樓","postalCode":"236"},"geo":{"@type":"GeoCoordinates","latitude":"25.0019","longitude":"121.4590"},"areaServed":[{"@type":"AdministrativeArea","name":"新北市"},{"@type":"AdministrativeArea","name":"台北市"},{"@type":"Country","name":"臺灣"}],"priceRange":"$$","openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday"],"opens":"09:00","closes":"18:00"}],"contactPoint":{"@type":"ContactPoint","telephone":"02-22668879","contactType":"customer service","areaServed":"TW","availableLanguage":["zh-TW"]},"parentOrganization":{"@id":"https://www.cilulaw.tw/#organization"}},{"@type":"BreadcrumbList","@id":"https://www.cilulaw.tw/contact.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.cilulaw.tw/"},{"@type":"ListItem","position":2,"name":"聯絡我們","item":"https://www.cilulaw.tw/contact.html"}]}]}</script></head>
+<body class="standalone-page"><div id="seo-hidden-text" class="seo-visually-hidden">慈律律師事務所，新北土城律師，提供民事、刑事、家事、勞資、不動產、遺產繼承、交通事故、家暴保護令、強制執行、非訟事件等專業法律服務，歡迎預約諮詢。</div>
+<div aria-live="polite" id="toast-container"></div>
+<header>
+<div class="container header-container">
+<div class="logo-area">
+<div class="logo"><img alt="慈律律師事務所標誌" src="images/logo.png"/></div>
+<div class="logo-text">
+<span class="logo-gold">慈律</span><span class="logo-white">律師事務所</span>
+</div>
+</div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" class="hamburger" type="button"><span></span><span></span><span></span></button>
+<nav class="primary-nav">
+<ul class="nav-list" id="primary-nav">
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+<li><a href="articles.html">法律觀點</a></li>
+<li><a href="appointment.html">預約諮詢</a></li>
+<li><a href="contact.html">聯絡我們</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<div class="menu-backdrop"></div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" id="floatingMenuBtn" type="button"><span></span><span></span><span></span></button>
+<!-- Contact Page -->
+<section class="page-content active-page" id="contact">
+<div class="container">
+<h1 class="section-title">聯絡我們</h1>
+<div class="contact-container">
+<div class="contact-info">
+<div class="info-item" style="display: flex; gap: 15px; margin-bottom: 25px;">
+<div class="info-icon"><img alt="慈律律師事務所地址位置圖示" height="50" src="icons/icon-location.png" width="50"/></div>
+<div>
+<h4 style="margin-bottom: 5px;">地址</h4>
+<p>新北市土城區青雲路145號2樓</p>
+</div>
+</div>
+<div class="info-item" style="display: flex; gap: 15px; margin-bottom: 25px;">
+<div class="info-icon"><img alt="慈律律師事務所電話聯絡圖示" height="50" src="icons/icon-phone.png" width="50"/></div>
+<div>
+<h4 style="margin-bottom: 5px;">電話</h4>
+<p><a href="tel:0222668879">02-22668879</a></p>
+</div>
+</div>
+<div class="info-item" style="display: flex; gap: 15px; margin-bottom: 25px;">
+<div class="info-icon"><img alt="慈律律師事務所上班時間圖示" height="50" src="icons/icon-officehours.png" width="50"/></div>
+<div>
+<h4 style="margin-bottom: 5px;">上班時間</h4>
+<p>週一至週五：09:00 - 18:00</p>
+<p>週六：09:00 - 12:00（需預約）</p>
+</div>
+</div>
+<div class="info-item" style="display: flex; gap: 15px; margin-bottom: 25px;">
+<div class="info-icon"><img alt="慈律律師事務所 LINE 官方帳號圖示" height="50" src="icons/icon-line.png" width="50"/></div>
+<div>
+<h4 style="margin-bottom: 5px;">LINE官方帳號</h4>
+<p style="margin-bottom: 15px;">掃描QR Code加入好友</p>
+<div class="qrcode-container" style="width: 150px; height: 150px; border: 1px solid #eee; padding: 5px; border-radius: 8px;">
+<img alt="慈律律師事務所 LINE 官方帳號 QR Code" src="images/line-qrcode.jpg" style="width: 100%; height: 100%; object-fit: cover;"/>
+</div>
+</div>
+</div>
+</div>
+<div class="contact-form contact-form-map">
+<div class="map-container" style="height: 480px; border-radius: 12px; overflow: hidden; box-shadow: 0 5px 20px rgba(0,0,0,0.1); border: 1px solid #eee;">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps?q=%E6%96%B0%E5%8C%97%E5%B8%82%E5%9C%9F%E5%9F%8E%E5%8D%80%E9%9D%92%E9%9B%B2%E8%B7%AF145%E8%99%9F2%E6%A8%93&amp;output=embed" style="border:0;" width="100%">
+</iframe>
+</div>
+</div>
+</div>
+</div>
+</section><a class="line-float" href="https://line.me/R/ti/p/@689mbehi" target="_blank" rel="noopener noreferrer">
+<img alt="慈律律師事務所 LINE 客服按鈕" src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg"/>
+</a>
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-column">
+<h3>慈律律師事務所</h3>
+<p>專業法律服務，守護您的權益</p>
+<p>Professional Legal Services, Protecting Your Rights</p>
+</div>
+<div class="footer-column">
+<h3>快速連結</h3>
+<ul>
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>聯絡資訊</h3>
+<p>新北市土城區青雲路145號2樓</p>
+<p>電話：<a href="tel:0222668879">02-22668879</a></p>
+<p>傳真：02-22625252</p>
+</div>
+<div class="footer-column">
+<h3>法律聲明</h3>
+<ul>
+<li><a href="privacy.html">隱私權政策</a></li>
+<li><a href="privacy.html#disclaimer">免責聲明</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 慈律律師事務所 版權所有</p>
+</div>
+</div></footer>
+<script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const bodyEl = document.body;
+            const headerEl = document.querySelector('header');
+            const hamburgerBtn = document.querySelector('.hamburger');
+            const menuBackdrop = document.querySelector('.menu-backdrop');
+            const floatingMenuBtn = document.getElementById('floatingMenuBtn');
+            const menuLinks = document.querySelectorAll('nav.primary-nav ul.nav-list a');
+            let lastScrollY = window.scrollY;
+
+            const stripQuickNavTitle = () => {
+                document.querySelectorAll('.quick-nav-title, .menu-title, .menu-heading').forEach(el => el.remove());
+                document.querySelectorAll('nav.primary-nav *').forEach(el => {
+                    if (el && el.childNodes && el.childNodes.length === 1 && el.textContent) {
+                        const t = el.textContent.trim();
+                        if (t === '快速導覽') el.remove();
+                    }
+                });
+            };
+
+            const syncFloatingVisibility = () => {
+                if (!floatingMenuBtn) return;
+                const isMobile = window.innerWidth <= 768;
+                const shouldShow = isMobile && window.scrollY > 80 && !bodyEl.classList.contains('menu-open');
+                floatingMenuBtn.classList.toggle('is-visible', shouldShow);
+            };
+
+            const closeMenu = () => {
+                if (!hamburgerBtn || !menuBackdrop) return;
+                bodyEl.classList.remove('menu-open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded', 'false');
+                syncFloatingVisibility();
+            };
+
+            const openMenu = () => {
+                if (!hamburgerBtn || !menuBackdrop) return;
+                stripQuickNavTitle();
+                bodyEl.classList.add('menu-open');
+                hamburgerBtn.setAttribute('aria-expanded', 'true');
+                if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded', 'true');
+                syncFloatingVisibility();
+            };
+
+            const toggleMenu = (event) => {
+                if (event) event.preventDefault();
+                if (bodyEl.classList.contains('menu-open')) closeMenu();
+                else openMenu();
+            };
+
+            if (hamburgerBtn && menuBackdrop) {
+                hamburgerBtn.addEventListener('click', toggleMenu);
+                if (floatingMenuBtn) floatingMenuBtn.addEventListener('click', toggleMenu);
+                menuBackdrop.addEventListener('click', closeMenu);
+                menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') closeMenu();
+                });
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth > 768) closeMenu();
+                    syncFloatingVisibility();
+                });
+            }
+
+            if (headerEl) {
+                const updateHeaderOnScroll = () => {
+                    if (bodyEl.classList.contains('menu-open')) return;
+                    const currentScrollY = window.scrollY;
+                    if (currentScrollY > lastScrollY && currentScrollY > 80) {
+                        headerEl.classList.add('is-hidden');
+                    } else {
+                        headerEl.classList.remove('is-hidden');
+                    }
+                    lastScrollY = Math.max(currentScrollY, 0);
+                };
+                updateHeaderOnScroll();
+                window.addEventListener('scroll', updateHeaderOnScroll, { passive: true });
+            }
+
+            syncFloatingVisibility();
+            window.addEventListener('scroll', syncFloatingVisibility, { passive: true });
+        });
+</script>
+</body>
+</html>

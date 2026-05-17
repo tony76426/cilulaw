@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>勞資爭議處理與權益保障｜慈律律師事務所</title>
+<meta content="詳細解析勞資爭議處理流程與法律救濟途徑，幫助勞工有效保障自身權益" name="description"/>
+<style>
+        :root {
+            --primary: #004b6b;
+            --primary-light: #4a7b9d;
+            --accent: #f8b500;
+            --light: #f5f7fa;
+            --dark: #2c3e50;
+            --text: #333333;
+            --text-light: #666666;
+            --border: rgba(0, 75, 107, 0.08);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 頂部導航 */
+        header {
+            background-color: #0A1931;
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-size: 14px;
+            font-weight: 500;
+            color: #B0B0B0;
+            text-decoration: none;
+            transition: color 0.3s ease, font-weight 0.3s ease;
+        }
+
+        .logo:hover {
+            color: #FFFFFF;
+            font-weight: bold;
+        }
+
+        .navbar-center {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 18px;
+            font-weight: 700;
+            color: #D3D3D3;
+            pointer-events: none;
+        }
+
+        .breadcrumb {
+            font-size: 14px;
+            color: #D3D3D3;
+            white-space: nowrap;
+        }
+
+        /* 文章頁面樣式 */
+        .article-page {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .article-hero {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .article-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 30px;
+            color: white;
+        }
+
+        .article-category {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 15px;
+            margin-right: 10px;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .article-content {
+            padding: 40px;
+        }
+
+        .article-section {
+            margin-bottom: 40px;
+        }
+
+        .article-section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-section h3 {
+            color: var(--dark);
+            margin: 25px 0 15px;
+        }
+
+        .article-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .article-section ul, .article-section ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .article-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background-color: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .quote-box {
+            background-color: rgba(0, 75, 107, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .quote-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .quote-author {
+            text-align: right;
+            margin-top: 10px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        /* 表格樣式 */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 1rem;
+        }
+
+        .comparison-table th {
+            background-color: var(--primary);
+            color: white;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .comparison-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .comparison-table tr:nth-child(even) {
+            background-color: #f7fafc;
+        }
+
+        .comparison-table tr:hover {
+            background-color: #edf2f7;
+        }
+
+        /* 流程圖樣式 */
+        .process-flow {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .process-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .step-number {
+            background-color: var(--primary);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .step-content {
+            flex: 1;
+        }
+
+        .step-title {
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .step-desc {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* 權益計算器樣式 */
+        .calculator {
+            background-color: var(--light);
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        .calculator-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .calculator-input {
+            margin-bottom: 15px;
+        }
+
+        .calculator-input label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+        }
+
+        .calculator-input input, .calculator-input select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        .calculator-button {
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 4px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            margin-top: 10px;
+        }
+
+        .calculator-button:hover {
+            background-color: var(--primary-light);
+        }
+
+        .calculator-result {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: rgba(0, 75, 107, 0.1);
+            border-radius: 4px;
+            display: none;
+        }
+
+        /* 案例框樣式 */
+        .case-example {
+            background-color: #e6fffa;
+            border-left: 4px solid #38b2ac;
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .case-title {
+            font-weight: 600;
+            color: #234e52;
+            margin-bottom: 10px;
+        }
+
+        .case-content {
+            color: #234e52;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .tag {
+            background-color: var(--light);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background-color: var(--primary-light);
+            color: white;
+            cursor: pointer;
+        }
+
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background-color: var(--light);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text);
+            transition: var(--transition);
+            max-width: 45%;
+        }
+
+        .nav-button:hover {
+            background-color: var(--primary-light);
+            color: white;
+        }
+
+        .nav-button.prev {
+            text-align: left;
+        }
+
+        .nav-button.next {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .nav-button .arrow {
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        /* 底部 */
+        footer {
+            background-color: #0A1931;
+            color: white;
+            padding: 50px 0 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        /* 浮動按鈕 */
+        .floating-button {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(6, 172, 199, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .floating-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .navbar-center {
+                position: static;
+                transform: none;
+                margin-top: 8px;
+                order: 2;
+                text-align: center;
+                width: 100%;
+            }
+            
+            .breadcrumb {
+                order: 3;
+                width: 100%;
+                text-align: right;
+                margin-top: 6px;
+            }
+            
+            .navbar { 
+                flex-wrap: wrap; 
+            }
+            
+            .article-hero {
+                height: 300px;
+            }
+            
+            .article-title {
+                font-size: 1.8rem;
+            }
+            
+            .article-content {
+                padding: 25px;
+            }
+            
+            .article-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-button {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .article-hero {
+                height: 250px;
+            }
+            
+            .article-title {
+                font-size: 1.5rem;
+            }
+        }
+    
+.footer-column h3 {
+  color: #D4AF37;
+}
+
+/* ==========================================================================
+   慈律網站一致性修正：套用 index 導航列與 Footer 視覺
+   ========================================================================== */
+:root {
+    --gold: #D4AF37;
+    --silver: #C0C0C0;
+    --black: #1A1A1A;
+    --navy: #3C2C3E;
+    --dark-navy: #2E1F2D;
+    --white: #FFFFFF;
+}
+
+body {
+    padding-top: 98px;
+    background-color: #f5f7fa;
+    letter-spacing: 0.5px;
+}
+
+/* index 同款固定式導航列 */
+header {
+    background: linear-gradient(180deg, rgba(46, 31, 45, 0.92) 0%, rgba(46, 31, 45, 0.86) 100%) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: opacity .25s ease, transform .25s ease, background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+header.is-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-bottom-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    transform: none !important;
+}
+
+.logo {
+    width: 78px;
+    height: 78px;
+    background-color: transparent;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transform: scale(1.28);
+    transform-origin: center;
+}
+
+.logo-text {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 3px;
+    margin-left: 14px;
+}
+
+.logo-gold {
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 31px;
+    line-height: 1;
+}
+
+.logo-white {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 6px;
+    line-height: 1.1;
+}
+
+nav.primary-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav.primary-nav ul li {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+nav.primary-nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500 !important;
+    font-family: 'Noto Serif TC', serif !important;
+    transition: color 0.3s;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 4px 2px;
+}
+
+nav.primary-nav ul li a:hover {
+    color: var(--gold);
+}
+
+nav.primary-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--gold);
+    transition: width 0.3s;
+}
+
+nav.primary-nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* 文章主卡片與 index 色系微調 */
+.article-page {
+    border: 1px solid rgba(212,175,55,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.article-category,
+.comparison-table th,
+.step-number {
+    background-color: var(--dark-navy);
+}
+
+.article-section h2,
+.step-title,
+.faq-section h2,
+.faq-question {
+    color: var(--dark-navy);
+}
+
+.article-section h2 {
+    border-bottom-color: rgba(212,175,55,0.24);
+}
+
+.highlight-box {
+    border-left-color: var(--gold);
+    background: #fbf7ea;
+}
+
+.quote-box {
+    border-left-color: var(--gold);
+    background-color: rgba(212,175,55,0.08);
+}
+
+.nav-button:hover,
+.tag:hover {
+    background-color: var(--dark-navy);
+    color: #fff;
+}
+
+/* index 同款 Footer */
+footer {
+    background-color: var(--navy) !important;
+    color: var(--white);
+    padding: 30px 0 15px;
+}
+
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 0;
+}
+
+.footer-column h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.footer-column ul {
+    list-style: none;
+}
+
+.footer-column ul li {
+    margin-bottom: 8px;
+}
+
+.footer-column ul li a,
+.footer-column a {
+    color: var(--silver);
+    text-decoration: none;
+}
+
+.footer-column ul li a:hover,
+.footer-column a:hover {
+    color: var(--white);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+}
+
+/* 手機選單：與 index 結構一致 */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.hamburger span,
+#floatingMenuBtn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    opacity: 0.95;
+}
+
+.hamburger:focus-visible,
+#floatingMenuBtn:focus-visible {
+    outline: 2px solid rgba(212,175,55,0.75);
+    outline-offset: 3px;
+    border-radius: 10px;
+}
+
+.menu-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(46,31,45,0.18);
+    z-index: 1500;
+}
+
+body.menu-open header { z-index: 1701; }
+body.menu-open .menu-backdrop { z-index: 1700; display: block; }
+body.menu-open nav.primary-nav ul.nav-list { z-index: 1702; }
+
+#floatingMenuBtn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(46, 31, 45, 0.94);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+    z-index: 1800;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#floatingMenuBtn.is-visible { display: flex; }
+
+@media (max-width: 768px) {
+    body { padding-top: 132px; }
+
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+        gap: 6px;
+        position: relative;
+    }
+
+    .logo-area {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        width: 64px;
+        height: 64px;
+        transform: none;
+    }
+
+    .logo-text { margin-left: 10px; }
+    .logo-gold { font-size: 22px; }
+    .logo-white { font-size: 16px; }
+
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 1700;
+    }
+
+    nav.primary-nav {
+        width: 100%;
+    }
+
+    nav.primary-nav ul.nav-list {
+        display: none !important;
+    }
+
+    body.menu-open nav.primary-nav ul.nav-list {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: clamp(190px, 62vw, 240px);
+        padding: max(env(safe-area-inset-top), 10px) 14px 14px;
+        justify-content: flex-start !important;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 10px;
+        background: var(--dark-navy);
+        border-left: 1px solid rgba(212,175,55,0.18);
+        box-shadow: -10px 0 26px rgba(0,0,0,0.18);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 1702;
+    }
+
+    body.menu-open header.is-hidden {
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+    }
+
+    body.menu-open nav.primary-nav ul.nav-list li a {
+        font-size: 18px;
+        padding: 10px 6px;
+        width: 100%;
+        display: block;
+    }
+
+    .article-page { margin-top: 0; }
+}
+
+@media (min-width: 769px) {
+    #floatingMenuBtn { display: none !important; }
+}
+
+    
+
+/* ==========================================================================
+   Final full-width shell fix: header/footer match index full-bleed layout
+   ========================================================================== */
+body > header,
+body > footer {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+body > footer {
+    display: block;
+    clear: both;
+    background-color: var(--navy) !important;
+}
+body > footer > .container {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* 勞資文章專屬元件：維持原功能，僅同步慈律色系 */
+.calculator {
+    border-color: rgba(212,175,55,0.18);
+    background: #fbf7ea;
+}
+.calculator-title { color: var(--dark-navy); }
+.calculator-button { background-color: var(--dark-navy); }
+.calculator-button:hover { background-color: #3C2C3E; }
+.calculator-result { background-color: rgba(212,175,55,0.12); }
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+</head>
+<body>
+<!-- 頂部導航 -->
+<header>
+<div class="container header-container">
+<div class="logo-area">
+<div class="logo"><img alt="慈律律師事務所" src="images/logo.png"/></div>
+<div class="logo-text">
+<span class="logo-gold">慈律</span><span class="logo-white">律師事務所</span>
+</div>
+</div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" class="hamburger" type="button"><span></span><span></span><span></span></button>
+<nav class="primary-nav">
+<ul class="nav-list" id="primary-nav">
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+<li><a href="articles.html">法律觀點</a></li>
+<li><a href="appointment.html">預約諮詢</a></li>
+<li><a href="contact.html">聯絡我們</a></li>
+</ul>
+</nav>
+</div>
+</header><div class="menu-backdrop" hidden=""></div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" id="floatingMenuBtn" type="button"><span></span><span></span><span></span></button>
+<!-- 文章內容 -->
+<div class="container">
+<div class="article-page">
+<div class="article-hero">
+<img alt="勞資爭議處理與勞工權益保障專業解析" src="https://www.judicial.gov.tw/Public/Images/201912/32319121016531a93e.PNG?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="article-hero-overlay">
+<span class="article-category">勞資爭議</span>
+<span class="article-category">勞動權益</span>
+<span class="article-category">勞動基準法</span>
+<h1 class="article-title">勞資爭議處理與權益保障</h1>
+<div class="article-meta">
+<span>2022年02月10日</span>
+<span>作者: 陳律師</span>
+<span>閱讀時間: 6分鐘</span>
+</div>
+</div>
+</div>
+<div class="article-content">
+<div class="article-section">
+<h2>前言</h2>
+<p>面對雇主不當解僱、加班費爭議、職場霸凌或工資給付等問題，勞工往往處於相對弱勢的地位。本文將詳細解析勞資爭議處理流程與法律救濟途徑，提供勞工有效保障自身權益的實用指引，幫助您在面對勞資糾紛時能夠正確應對，維護合法勞動權益。</p>
+<div class="highlight-box">
+<p>勞資爭議處理有嚴格的時效限制，特別是工資請求權時效為5年，資遣費請求權時效為10年，建議及早採取行動保障權益。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>一、常見勞資爭議類型</h2>
+<h3>工資與加班費爭議</h3>
+<p>根據勞動基準法規定，雇主應依法給付工資及加班費：</p>
+<ul>
+<li>平日加班：前2小時加給1/3，第3小時起加給2/3</li>
+<li>休息日加班：前2小時加給1又1/3，第3-8小時加給1又2/3，第9-12小時加給2又2/3</li>
+<li>國定假日加班：加倍發給工資</li>
+<li>例假加班：除天災、事變等特殊情況外，原則上不得要求勞工於例假工作</li>
+</ul>
+<div class="case-example">
+<div class="case-title">實務案例：加班費計算</div>
+<div class="case-content">最高法院108年度台上字第100號判決明確指出，加班費計算應以「平日每小時工資額」為基礎，且雇主不得以本薪加津貼方式規避加班費計算。</div>
+</div>
+<h3>不當解僱與資遣費爭議</h3>
+<p>雇主終止勞動契約應符合法定事由並給付資遣費：</p>
+<ul>
+<li>資遣費計算：舊制為工作滿1年給付1個月平均工資，新制為工作滿1年給付0.5個月平均工資</li>
+<li>預告期間：依年資長短給予10-30日預告期間或預告期間工資</li>
+<li>非法解僱救濟：可請求確認僱傭關係存在、復職及補發工資</li>
+</ul>
+<div class="quote-box">
+<p>注意：雇主若以「業務性質變更」為由資遣勞工，必須確實有業務性質變更且有減少勞工之必要，且無適當工作可供安置，否則可能構成非法解僱。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>二、勞資爭議處理途徑</h2>
+<table class="comparison-table">
+<thead>
+<tr>
+<th>處理途徑</th>
+<th>適用情況</th>
+<th>處理時效</th>
+<th>優點</th>
+<th>缺點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>勞資協調</td>
+<td>雙方有意願協商</td>
+<td>無時效限制</td>
+<td>程序簡單、成本低</td>
+<td>無強制效力</td>
+</tr>
+<tr>
+<td>勞工局調解</td>
+<td>各類勞資爭議</td>
+<td>申請後30-60日</td>
+<td>免費、專業調解人</td>
+<td>調解成立才有效力</td>
+</tr>
+<tr>
+<td>勞動法庭訴訟</td>
+<td>重大權益受損</td>
+<td>視案件複雜度</td>
+<td>判決有強制力</td>
+<td>時間長、成本高</td>
+</tr>
+<tr>
+<td>勞檢申訴</td>
+<td>違反勞基法事項</td>
+<td>申訴後15工作日</td>
+<td>行政調查、可開罰</td>
+<td>僅能處理違法事項</td>
+</tr>
+</tbody>
+</table>
+<!-- 資遣費計算器 -->
+<div class="calculator">
+<div class="calculator-title">資遣費試算</div>
+<div class="calculator-input">
+<label for="work-years">工作年資（年）</label>
+<input id="work-years" placeholder="例如：5.5" type="number"/>
+</div>
+<div class="calculator-input">
+<label for="avg-salary">平均工資（元）</label>
+<input id="avg-salary" placeholder="例如：45000" type="number"/>
+</div>
+<div class="calculator-input">
+<label for="pension-system">勞退制度</label>
+<select id="pension-system">
+<option value="new">勞退新制（94年7月1日後）</option>
+<option value="old">勞退舊制（94年6月30日前）</option>
+</select>
+</div>
+<button class="calculator-button" onclick="calculateSeverance()">計算資遣費</button>
+<div class="calculator-result" id="severance-result">
+<strong>試算結果：</strong>
+<div id="severance-amount"></div>
+</div>
+</div>
+<div class="quote-box">
+<p>處理建議：建議先嘗試勞工局調解，若調解不成再考慮訴訟。同時可向勞工局申訴雇主違法事項，透過行政手段施加壓力。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>三、證據蒐集與保存</h2>
+<h3>必要證據文件</h3>
+<p>勞資爭議中，證據是勝訴的關鍵：</p>
+<div class="process-flow">
+<div class="process-step">
+<div class="step-number">1</div>
+<div class="step-content">
+<div class="step-title">勞動契約與工作規則</div>
+<div class="step-desc">勞動契約、工作規則、聘書等文件</div>
+</div>
+</div>
+<div class="process-step">
+<div class="step-number">2</div>
+<div class="step-content">
+<div class="step-title">工資與出勤紀錄</div>
+<div class="step-desc">薪資單、出勤紀錄、加班申請單</div>
+</div>
+</div>
+<div class="process-step">
+<div class="step-number">3</div>
+<div class="step-content">
+<div class="step-title">溝通記錄</div>
+<div class="step-desc">Line對話、Email、會議記錄</div>
+</div>
+</div>
+<div class="process-step">
+<div class="step-number">4</div>
+<div class="step-content">
+<div class="step-title">其他佐證</div>
+<div class="step-desc">勞健保投保記錄、勞退提繳記錄</div>
+</div>
+</div>
+</div>
+<h3>四、證據保存注意事項</h3>
+<ul>
+<li>定期備份電子郵件與通訊軟體對話記錄</li>
+<li>妥善保存紙本文件，必要時影印備份</li>
+<li>重要對話盡量以書面或可留存記錄的方式進行</li>
+<li>涉及職場霸凌或不當對待時，可錄音存證（需注意合法性）</li>
+</ul>
+<div class="case-example">
+<div class="case-title">重要判例：舉證責任分配</div>
+<div class="case-content">最高法院106年度台上字第246號判決指出，關於工資、工時、休假等勞動條件之事實，雇主負有較重之舉證責任，應保存相關紀錄備查。</div>
+</div>
+</div>
+<div class="article-section">
+<h2>五、法律小叮嚀</h2>
+<p>勞資爭議處理需要策略與耐心，了解自身權利、蒐集完整證據、選擇適當途徑是成功解決爭議的關鍵。面對勞資糾紛時，建議保持理性溝通，同時做好法律準備，必要時尋求專業律師協助。</p>
+<p>勞工權益的保障不僅是個人權益問題，更是維護勞動尊嚴與社會正義的重要環節。透過合法途徑解決勞資爭議，有助於建立更公平合理的勞動環境。</p>
+<div class="highlight-box">
+<p>立即採取行動：若您正面臨勞資爭議，應立即蒐集相關證據，諮詢專業勞工法律師，並在法定時效內採取適當法律行動，以保障自身權益。</p>
+<div class="quote-author">— 慈律律師事務所</div>
+</div>
+</div>
+<div class="article-navigation">
+<a class="nav-button prev" href="202204最新民法修正對契約法的影響與實務應用.html">
+<span class="arrow">←</span>
+<span>上一篇：最新民法修正對契約法的影響與實務應用</span>
+</a>
+<a class="nav-button next" href="202201離婚程序與監護權一次看懂.html">
+<span>下一篇：離婚程序與監護權一次看懂</span>
+<span class="arrow">→</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- 底部 -->
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-column">
+<h3>慈律律師事務所</h3>
+<p>專業法律服務，守護您的權益</p>
+<p>Professional Legal Services, Protecting Your Rights</p>
+</div>
+<div class="footer-column">
+<h3>快速連結</h3>
+<ul>
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>聯絡資訊</h3>
+<p>新北市土城區青雲路145號2樓</p>
+<p>電話：02-22668879</p>
+<p>傳真：02-22625252</p>
+</div>
+<div class="footer-column">
+<h3>法律聲明</h3>
+<ul>
+<li><a href="privacy.html">隱私權政策</a></li>
+<li><a href="privacy.html#disclaimer">免責聲明</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 慈律律師事務所 版權所有</p>
+</div>
+</div>
+</footer>
+<!-- 浮動 LINE 按鈕：✅ 加上可點連結（新分頁） -->
+<a aria-label="加入 LINE 好友" class="floating-button" href="https://line.me/R/ti/p/@689mbehi" rel="noopener" target="_blank">
+<img alt="LINE" src="https://cdn-icons-png.flaticon.com/512/124/124027.png">
+</img></a>
+<script>
+(function(){
+    const bodyEl = document.body;
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const menuBackdrop = document.querySelector('.menu-backdrop');
+    const floatingMenuBtn = document.getElementById('floatingMenuBtn');
+    const headerEl = document.querySelector('header');
+
+    function syncFloatingVisibility(){
+        if (!floatingMenuBtn) return;
+        const shouldShow = window.innerWidth <= 768 && window.scrollY > 80 && !bodyEl.classList.contains('menu-open');
+        floatingMenuBtn.classList.toggle('is-visible', shouldShow);
+    }
+
+    function closeMenu(){
+        bodyEl.classList.remove('menu-open');
+        if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', 'false');
+        if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuBackdrop) menuBackdrop.hidden = true;
+        syncFloatingVisibility();
+    }
+
+    function openMenu(){
+        bodyEl.classList.add('menu-open');
+        if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', 'true');
+        if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded', 'true');
+        if (menuBackdrop) menuBackdrop.hidden = false;
+        syncFloatingVisibility();
+    }
+
+    function toggleMenu(){
+        if (bodyEl.classList.contains('menu-open')) closeMenu();
+        else openMenu();
+    }
+
+    if (hamburgerBtn) hamburgerBtn.addEventListener('click', function(e){ e.preventDefault(); toggleMenu(); });
+    if (floatingMenuBtn) floatingMenuBtn.addEventListener('click', function(e){ e.preventDefault(); openMenu(); });
+    if (menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
+    document.querySelectorAll('nav.primary-nav a').forEach(function(a){ a.addEventListener('click', closeMenu); });
+
+    let lastScrollY = window.scrollY;
+    window.addEventListener('scroll', function(){
+        const currentY = window.scrollY;
+        if (headerEl && !bodyEl.classList.contains('menu-open')) {
+            if (currentY > lastScrollY && currentY > 120) headerEl.classList.add('is-hidden');
+            else headerEl.classList.remove('is-hidden');
+        }
+        lastScrollY = currentY;
+        syncFloatingVisibility();
+    }, { passive: true });
+
+    window.addEventListener('resize', function(){
+        if (window.innerWidth > 768) closeMenu();
+        syncFloatingVisibility();
+    });
+    syncFloatingVisibility();
+})();
+</script><script>
+        // 資遣費計算功能
+        function calculateSeverance() {
+            const workYears = parseFloat(document.getElementById('work-years').value);
+            const avgSalary = parseFloat(document.getElementById('avg-salary').value);
+            const pensionSystem = document.getElementById('pension-system').value;
+            
+            if (isNaN(workYears) || workYears <= 0 || isNaN(avgSalary) || avgSalary <= 0) {
+                alert('請輸入有效的工作年資與平均工資');
+                return;
+            }
+            
+            let severance = 0;
+            let explanation = '';
+            
+            if (pensionSystem === 'new') {
+                // 勞退新制：每滿1年發給0.5個月平均工資
+                severance = avgSalary * 0.5 * workYears;
+                explanation = `依據勞退新制，您的工作年資 ${workYears} 年，平均工資 ${avgSalary.toLocaleString()} 元，可領取資遣費 ${severance.toLocaleString()} 元。`;
+            } else {
+                // 勞退舊制：每滿1年發給1個月平均工資
+                severance = avgSalary * workYears;
+                explanation = `依據勞退舊制，您的工作年資 ${workYears} 年，平均工資 ${avgSalary.toLocaleString()} 元，可領取資遣費 ${severance.toLocaleString()} 元。`;
+            }
+            
+            // 顯示結果
+            const resultDiv = document.getElementById('severance-result');
+            const amountDiv = document.getElementById('severance-amount');
+            
+            amountDiv.innerHTML = `
+                <p>${explanation}</p>
+                <p>此為初步試算，實際金額可能因特殊情況而有所調整，建議諮詢專業人士確認。</p>
+            `;
+            
+            resultDiv.style.display = 'block';
+        }
+
+        // 文章導航：僅在 href 無效時攔截，否則讓瀏覽器正常跳轉
+        document.querySelectorAll('.nav-button').forEach(function(button) {
+            button.addEventListener('click', function(e) {
+                var href = this.getAttribute('href');
+                // 只有當連結為空或 "#" 時才攔截
+                if (!href || href === '#') {
+                    e.preventDefault();
+                    alert('將導航至相關文章');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

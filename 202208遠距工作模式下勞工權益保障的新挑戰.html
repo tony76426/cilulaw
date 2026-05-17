@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>遠距工作模式下勞工權益寶樣的新挑戰 | 慈律律師事務所</title>
+<style>
+        :root {
+            --primary: #004b6b;
+            --primary-light: #4a7b9d;
+            --accent: #f8b500;
+            --light: #f5f7fa;
+            --dark: #2c3e50;
+            --text: #333333;
+            --text-light: #666666;
+            --border: rgba(0, 75, 107, 0.08);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 頂部導航 */
+header {
+    background-color: #0A1931; /* 深海軍藍 */
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #D3D3D3; /* 淺灰色 */
+    text-decoration: none;
+}
+
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #D3D3D3; /* 淺灰色 */
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: gray; /* 滑過變灰 */
+    font-weight: 700; /* 加粗 */
+}
+
+        /* 返回按鈕 */
+        .back-button {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 30px 0;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* 文章頁面樣式 */
+        .article-page {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .article-hero {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .article-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 30px;
+            color: white;
+        }
+
+        .article-category {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .article-content {
+            padding: 40px;
+        }
+
+        .article-section {
+            margin-bottom: 40px;
+        }
+
+        .article-section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-section h3 {
+            color: var(--dark);
+            margin: 25px 0 15px;
+        }
+
+        .article-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .article-section ul, .article-section ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .article-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background-color: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .quote-box {
+            background-color: rgba(0, 75, 107, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .quote-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .quote-author {
+            text-align: right;
+            margin-top: 10px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .tag {
+            background-color: var(--light);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background-color: var(--primary-light);
+            color: white;
+            cursor: pointer;
+        }
+
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background-color: var(--light);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text);
+            transition: var(--transition);
+            max-width: 45%;
+        }
+
+        .nav-button:hover {
+            background-color: var(--primary-light);
+            color: white;
+        }
+
+        .nav-button.prev {
+            text-align: left;
+        }
+
+        .nav-button.next {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .nav-button .arrow {
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+/* 底部 */
+footer {
+    background-color: #0A1931; /* 深海軍藍 */
+    color: white;
+    padding: 50px 0 20px;
+}
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        /* 浮動按鈕 */
+        .floating-button {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(6, 139, 199, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .floating-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+            
+            .article-hero {
+                height: 300px;
+            }
+            
+            .article-title {
+                font-size: 1.8rem;
+            }
+            
+            .article-content {
+                padding: 25px;
+            }
+            
+            .article-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-button {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .article-hero {
+                height: 250px;
+            }
+            
+            .article-title {
+                font-size: 1.5rem;
+            }
+        }
+    
+.navbar { position: relative; }
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 700;
+    color: #D3D3D3;
+    pointer-events: none;
+}
+.breadcrumb {
+    font-size: 14px;
+    color: #D3D3D3;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .navbar-center {
+        position: static;
+        transform: none;
+        margin-top: 8px;
+        order: 2;
+        text-align: center;
+        width: 100%;
+    }
+    .breadcrumb {
+        order: 3;
+        width: 100%;
+        text-align: right;
+        margin-top: 6px;
+    }
+    .navbar { flex-wrap: wrap; }
+}
+
+.logo {
+    font-size: 14px !important;
+    color: #B0B0B0 !important;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+.logo:hover {
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+.footer-column h3 {
+  color: #D4AF37;
+}
+
+/* ========================================================================== 
+   慈律網站一致性修正：套用 index 導航列與 Footer 視覺
+   ========================================================================== */
+:root {
+    --gold: #D4AF37;
+    --silver: #C0C0C0;
+    --black: #1A1A1A;
+    --navy: #3C2C3E;
+    --dark-navy: #2E1F2D;
+    --white: #FFFFFF;
+}
+
+html, body { max-width: 100%; overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+
+body {
+    padding-top: 98px;
+    background-color: #f5f7fa;
+    letter-spacing: 0.5px;
+}
+
+/* index 同款固定式導航列 */
+header {
+    background: linear-gradient(180deg, rgba(46, 31, 45, 0.92) 0%, rgba(46, 31, 45, 0.86) 100%) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: opacity .25s ease, transform .25s ease, background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+header.is-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-bottom-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    transform: none !important;
+}
+
+.logo {
+    width: 78px !important;
+    height: 78px !important;
+    background-color: transparent;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transform: scale(1.28);
+    transform-origin: center;
+}
+
+.logo-text {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 3px;
+    margin-left: 14px;
+}
+
+.logo-gold {
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 31px;
+    line-height: 1;
+}
+
+.logo-white {
+    color: var(--white);
+    font-weight: 400;
+    font-size: 22px;
+    margin-left: 6px;
+    line-height: 1.1;
+}
+
+nav.primary-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav.primary-nav ul li {
+    margin-left: 0;
+    margin-bottom: 0;
+}
+
+nav.primary-nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500 !important;
+    font-family: 'Noto Serif TC', serif !important;
+    transition: color 0.3s;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 4px 2px;
+}
+
+nav.primary-nav ul li a:hover { color: var(--gold); }
+nav.primary-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--gold);
+    transition: width 0.3s;
+}
+nav.primary-nav ul li a:hover::after { width: 100%; }
+
+/* 文章主卡片與 index 色系微調 */
+.article-page {
+    border: 1px solid rgba(212,175,55,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+.article-category,
+.comparison-table th,
+.info-table th,
+.step-number,
+.case-number {
+    background-color: var(--dark-navy) !important;
+}
+.article-section h2,
+.step-title,
+.faq-section h2,
+.faq-question,
+.case-title,
+.platform-name,
+.case-card-title,
+.law-name,
+.calculator-title {
+    color: var(--dark-navy) !important;
+}
+.article-section h2 { border-bottom-color: rgba(212,175,55,0.24); }
+.highlight-box,
+.case-study,
+.law-article {
+    border-left-color: var(--gold) !important;
+    background: #fbf7ea !important;
+}
+.quote-box,
+.reminder-box {
+    border-left-color: var(--gold) !important;
+    background-color: rgba(212,175,55,0.08) !important;
+}
+.nav-button:hover,
+.tag:hover {
+    background-color: var(--dark-navy) !important;
+    color: #fff !important;
+}
+
+/* index 同款 Footer */
+footer {
+    background-color: var(--navy) !important;
+    color: var(--white);
+    padding: 30px 0 15px;
+    width: 100%;
+    margin: 0;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+}
+.footer-column {
+    flex: 1;
+    min-width: 250px;
+    margin-bottom: 0;
+}
+.footer-column h3 {
+    color: var(--gold) !important;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.footer-column ul { list-style: none; }
+.footer-column ul li { margin-bottom: 8px; }
+.footer-column ul li a,
+.footer-column a {
+    color: var(--silver);
+    text-decoration: none;
+}
+.footer-column ul li a:hover,
+.footer-column a:hover { color: var(--white); }
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+}
+.copyright { display: none; }
+
+/* 手機選單：與 index 結構一致 */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    -webkit-tap-highlight-color: transparent;
+}
+.hamburger span,
+#floatingMenuBtn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    opacity: 0.95;
+}
+.hamburger:focus-visible,
+#floatingMenuBtn:focus-visible {
+    outline: 2px solid rgba(212,175,55,0.75);
+    outline-offset: 3px;
+    border-radius: 10px;
+}
+.menu-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(46,31,45,0.18);
+    z-index: 1500;
+}
+body.menu-open header { z-index: 1701; }
+body.menu-open .menu-backdrop { z-index: 1700; display: block; }
+body.menu-open nav.primary-nav ul.nav-list { z-index: 1702; }
+#floatingMenuBtn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(46, 31, 45, 0.94);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+    z-index: 1800;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+#floatingMenuBtn.is-visible { display: flex; }
+
+@media (max-width: 768px) {
+    body { padding-top: 132px; }
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+        gap: 6px;
+        position: relative;
+    }
+    .logo-area { width: 100%; justify-content: flex-start; }
+    .logo { width: 64px !important; height: 64px !important; transform: none; }
+    .logo-text { margin-left: 10px; }
+    .logo-gold { font-size: 22px; }
+    .logo-white { font-size: 16px; }
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 1700;
+    }
+    nav.primary-nav { width: 100%; }
+    nav.primary-nav ul.nav-list { display: none !important; }
+    body.menu-open nav.primary-nav ul.nav-list {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: clamp(190px, 62vw, 240px);
+        padding: max(env(safe-area-inset-top), 10px) 14px 14px;
+        justify-content: flex-start !important;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 10px;
+        background: var(--dark-navy);
+        border-left: 1px solid rgba(212,175,55,0.18);
+        box-shadow: -10px 0 26px rgba(0,0,0,0.18);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 1702;
+    }
+    body.menu-open header.is-hidden {
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+    }
+    body.menu-open nav.primary-nav ul.nav-list li a {
+        font-size: 18px;
+        padding: 10px 6px;
+        width: 100%;
+        display: block;
+    }
+    .article-page { margin-top: 0; }
+}
+@media (min-width: 769px) { #floatingMenuBtn { display: none !important; } }
+
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&amp;family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/></head>
+<body>
+<!-- 頂部導航 -->
+<header>
+<div class="container header-container">
+<div class="logo-area">
+<div class="logo"><img alt="慈律律師事務所" src="images/logo.png"/></div>
+<div class="logo-text"><span class="logo-gold">慈律</span><span class="logo-white">律師事務所</span></div>
+</div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" class="hamburger" type="button"><span></span><span></span><span></span></button>
+<nav class="primary-nav">
+<ul class="nav-list" id="primary-nav">
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+<li><a href="articles.html">法律觀點</a></li>
+<li><a href="appointment.html">預約諮詢</a></li>
+<li><a href="contact.html">聯絡我們</a></li>
+</ul>
+</nav>
+</div>
+</header><div class="menu-backdrop" hidden=""></div><button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" id="floatingMenuBtn" type="button"><span></span><span></span><span></span></button>
+<!-- 文章內容 -->
+<div class="container">
+<div class="article-page">
+<div class="article-hero">
+<img alt="遠距工作" src="https://s3cdn.yourator.co/articles/banners/000/000/195/default/974eee699e537049672e97c48048603a0813589a.png"/>
+<div class="article-hero-overlay">
+<span class="article-category">勞動基準法</span>
+<span class="article-category">遠距工作</span>
+<span class="article-category">勞工權益</span>
+<span class="article-category">職災認定</span>
+<span class="article-category">工時管理</span>
+<span class="article-category">資訊安全</span>
+<h1 class="article-title">遠距工作模式下勞工權益保障的新挑戰</h1>
+<div class="article-meta">
+<span>2022年08月11日</span>
+<span>作者: 王律師</span>
+<span>閱讀時間: 15分鐘</span>
+</div>
+</div>
+</div>
+<div class="article-content">
+<div class="article-section">
+<h2>前言</h2>
+<p>疫情之後，遠距工作成為許多企業的新常態。不論是全遠距、混合制，或跨國團隊協作，這種工作型態在帶來彈性與效率的同時，也引發了新的法律議題——勞工權益該如何保障？</p>
+<p>本文將探討遠距工作下常見的法律爭點、雇主與勞工雙方的責任劃分，以及現行法規與實務的應對方式。</p>
+</div>
+<div class="article-section">
+<h2>遠距工作法律地位的認定</h2>
+<p>在我國現行法律中，遠距工作並非完全脫離《勞動基準法》的適用範圍。只要勞工仍受雇主指揮監督、提供勞務並取得報酬，即屬「僱傭關係」。</p>
+<div class="highlight-box">
+<p>「地點」並非判斷勞動關係的要件，即使在家工作，只要存在指揮監督關係，仍受《勞基法》保障。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>遠距工作常見的法律爭點</h2>
+<div class="issue-list">
+<div class="issue-item">
+<div class="issue-header">
+<div class="issue-number">1</div>
+<h3 class="issue-title">工時管理困難</h3>
+</div>
+<div class="issue-content">
+<p>遠距工作易導致加班不易界定。若雇主未明訂工時制度或監控方式，勞工可能超時工作卻無法請求加班費。</p>
+</div>
+<div class="suggestion-box">
+<p><strong>建議做法：</strong></p>
+<ul>
+<li>以「打卡系統」或「線上簽到」作為出勤依據</li>
+<li>明定上下班時間與回報機制</li>
+<li>鼓勵員工定時休息，避免變相延長工時</li>
+</ul>
+</div>
+</div>
+<div class="issue-item">
+<div class="issue-header">
+<div class="issue-number">2</div>
+<h3 class="issue-title">勞動安全與職災責任</h3>
+</div>
+<div class="issue-content">
+<p>遠距辦公的居家環境若發生意外，例如使用公司電腦時觸電或跌倒受傷，是否屬職災？實務上，若能證明該事故與工作有直接關聯，仍屬職災範疇。</p>
+</div>
+<div class="suggestion-box">
+<p><strong>實務提醒：</strong>建議公司：</p>
+<ul>
+<li>提供安全作業指引</li>
+<li>定期線上教育訓練</li>
+<li>由勞工自我檢核居家安全環境</li>
+</ul>
+</div>
+</div>
+<div class="issue-item">
+<div class="issue-header">
+<div class="issue-number">3</div>
+<h3 class="issue-title">資訊安全與保密義務</h3>
+</div>
+<div class="issue-content">
+<p>遠距工作增加資料外洩風險。若勞工於家中或公共場所處理公司機密資料，未妥善保護而導致洩漏，雇主與勞工皆可能承擔責任。</p>
+</div>
+<div class="suggestion-box">
+<p><strong>建議：</strong></p>
+<ul>
+<li>簽訂保密協定（NDA）與資訊安全政策</li>
+<li>要求使用加密連線（VPN）與公司授權裝置</li>
+<li>定期稽核資安行為</li>
+</ul>
+</div>
+</div>
+<div class="issue-item">
+<div class="issue-header">
+<div class="issue-number">4</div>
+<h3 class="issue-title">設備與費用補償問題</h3>
+</div>
+<div class="issue-content">
+<p>誰負責電腦、網路費、耗材成本？若勞工自備設備或使用個人網路，應有明確的補貼或租用規範。</p>
+</div>
+<div class="suggestion-box">
+<p><strong>勞動部指引建議：</strong>可依雙方協議，約定：</p>
+<ul>
+<li>雇主提供或補貼設備</li>
+<li>遠距工作費用報銷制度</li>
+<li>資訊安全維護責任歸屬</li>
+</ul>
+</div>
+</div>
+<div class="issue-item">
+<div class="issue-header">
+<div class="issue-number">5</div>
+<h3 class="issue-title">績效考核與差別待遇</h3>
+</div>
+<div class="issue-content">
+<p>部分員工認為遠距工作導致升遷或獎金不公。若考核標準未公開或偏向實體出勤者，恐涉間接歧視或違反平等對待原則。</p>
+</div>
+<div class="suggestion-box">
+<p><strong>建議：</strong>企業應建立明確、可量化的績效指標，並確保遠距與現場員工在制度上受同等對待。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="article-section">
+<h2>現行法規的適用與實務操作</h2>
+<h3>1. 《勞動基準法》</h3>
+<p>仍適用於遠距勞工，包括：</p>
+<ul>
+<li>工時、休息日、加班費</li>
+<li>年假、產假、資遣程序等</li>
+</ul>
+<h3>2. 《職業安全衛生法》</h3>
+<p>雇主應維護工作安全，即使工作地點在家，也需提供必要的安全教育。</p>
+<h3>3. 《個人資料保護法》</h3>
+<p>遠距工作中涉及個資傳輸、儲存與處理，雇主應建立資安防護與告知機制。</p>
+</div>
+<div class="article-section">
+<h2>國際趨勢參考</h2>
+<table class="info-table">
+<thead>
+<tr>
+<th>國家／地區</th>
+<th>主要規範</th>
+<th>特點</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>歐盟</strong></td>
+<td>《遠距工作框架協議》</td>
+<td>強調「工作權等同原則」，保障遠距勞工不受差別待遇。</td>
+</tr>
+<tr>
+<td><strong>日本</strong></td>
+<td>勞動省《在宅勤務指針》</td>
+<td>明確規範工時紀錄、設備費補貼與資安責任。</td>
+</tr>
+<tr>
+<td><strong>美國</strong></td>
+<td>各州勞工法為主</td>
+<td>多以雇主內部政策規範，但要求合理補償與安全責任。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="article-section">
+<h2>律師建議：企業與勞工的雙向保障策略</h2>
+<div class="suggestion-cards">
+<div class="suggestion-card">
+<div class="card-header">
+<div class="card-icon">企</div>
+<h3 class="card-title">對企業</h3>
+</div>
+<div class="card-content">
+<ul>
+<li>制定〈遠距工作規範〉，明定工時、設備、保密等事項</li>
+<li>實施數位出勤制度，保留工時紀錄以符合法規</li>
+<li>加強資安教育與監管措施</li>
+<li>適時提供設備補助，降低爭議風險</li>
+</ul>
+</div>
+</div>
+<div class="suggestion-card">
+<div class="card-header">
+<div class="card-icon">勞</div>
+<h3 class="card-title">對勞工</h3>
+</div>
+<div class="card-content">
+<ul>
+<li>主動留存工時與溝通紀錄，避免加班爭議</li>
+<li>確認公司資安政策，勿於公共Wi-Fi處理機密資料</li>
+<li>若受傷或意外，應立即報案並留存證據</li>
+<li>若有不當待遇或違法要求，可向勞工局申訴</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="article-section">
+<h2>法律小叮嚀</h2>
+<p>遠距工作雖提升彈性，但也挑戰傳統勞動保障制度。未來隨著數位轉型與AI自動化，<strong>「勞動關係的界線」</strong>將愈趨模糊。唯有完善的制度與透明的溝通，才能讓遠距工作成為雙贏而非風險。</p>
+<div class="quote-box">
+<p>不論您是企業主或受僱者，遠距工作都應「權利與義務並重」。若有工時爭議、職災爭點或勞動契約修改需求，建議諮詢專業律師，確保雙方合法且安心的合作關係。</p>
+<div class="quote-author">— 慈律律師事務所</div>
+</div>
+</div>
+<div class="article-navigation">
+<a class="nav-button prev" href="202301社群平台內容侵權責任：使用圖片、音樂、影片的法律界線.html">
+<span class="arrow">←</span>
+<span>上一篇：社群平台內容侵權責任：使用圖片、音樂、影片的法律界線</span>
+</a>
+<a class="nav-button next" href="202207買賣糾紛與定金陷阱：消費者如何自保？.html">
+<span>下一篇：買賣糾紛與定金陷阱：消費者如何自保？</span>
+<span class="arrow">→</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- 底部 -->
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-column">
+<h3>慈律律師事務所</h3>
+<p>專業法律服務，守護您的權益</p>
+<p>Professional Legal Services, Protecting Your Rights</p>
+</div>
+<div class="footer-column">
+<h3>快速連結</h3>
+<ul>
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+<li><a href="articles.html">法律觀點</a></li>
+<li><a href="appointment.html">預約諮詢</a></li>
+<li><a href="contact.html">聯絡我們</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>聯絡資訊</h3>
+<p>新北市土城區青雲路145號2樓</p>
+<p>電話：02-22668879</p>
+<p>傳真：02-22625252</p>
+</div>
+<div class="footer-column">
+<h3>法律聲明</h3>
+<ul>
+<li><a href="privacy.html" target="_blank">隱私權政策</a></li>
+<li><a href="privacy.html#disclaimer" target="_blank">免責聲明</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom"><p>© 2023 慈律律師事務所 版權所有</p></div>
+</div>
+</footer>
+<!-- 浮動 LINE 按鈕：✅ 加上可點連結（新分頁） -->
+<a aria-label="加入 LINE 好友" class="floating-button" href="https://line.me/R/ti/p/@689mbehi" rel="noopener" target="_blank">
+<img alt="LINE" src="https://cdn-icons-png.flaticon.com/512/124/124027.png">
+</img></a>
+<script>
+// 文章導航：僅在 href 無效時攔截，否則讓瀏覽器正常跳轉
+document.querySelectorAll('.nav-button').forEach(function(button) {
+    button.addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        // 只有當連結為空或 "#" 時才攔截
+        if (!href || href === '#') {
+            e.preventDefault();
+            alert('將導航至相關文章');
+        }
+    });
+});
+
+
+(function(){
+  var body = document.body;
+  var header = document.querySelector('header');
+  var menuButtons = [document.querySelector('.hamburger'), document.getElementById('floatingMenuBtn')].filter(Boolean);
+  var backdrop = document.querySelector('.menu-backdrop');
+  var lastScrollY = window.scrollY;
+  function setMenu(open){
+    body.classList.toggle('menu-open', open);
+    menuButtons.forEach(function(btn){ btn.setAttribute('aria-expanded', open ? 'true' : 'false'); });
+    if (backdrop) {
+      if (open) backdrop.removeAttribute('hidden');
+      else backdrop.setAttribute('hidden','');
+    }
+  }
+  menuButtons.forEach(function(btn){ btn.addEventListener('click', function(){ setMenu(!body.classList.contains('menu-open')); }); });
+  if (backdrop) backdrop.addEventListener('click', function(){ setMenu(false); });
+  document.querySelectorAll('nav.primary-nav a').forEach(function(a){ a.addEventListener('click', function(){ setMenu(false); }); });
+  window.addEventListener('scroll', function(){
+    var currentY = window.scrollY;
+    if (!header || body.classList.contains('menu-open')) return;
+    if (currentY > lastScrollY && currentY > 80) header.classList.add('is-hidden');
+    else header.classList.remove('is-hidden');
+    var floating = document.getElementById('floatingMenuBtn');
+    if (floating) floating.classList.toggle('is-visible', currentY > 120);
+    lastScrollY = currentY;
+  }, {passive:true});
+})();
+</script>
+</body>
+</html>

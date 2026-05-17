@@ -1,0 +1,1128 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI生成內容的著作權歸屬問題探討｜慈律律師事務所</title>
+<style>
+        :root {
+            --primary: #004b6b;
+            --primary-light: #4a7b9d;
+            --accent: #f8b500;
+            --light: #f5f7fa;
+            --dark: #2c3e50;
+            --text: #333333;
+            --text-light: #666666;
+            --border: rgba(0, 75, 107, 0.08);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 頂部導航 */
+header {
+    background-color: #0A1931; /* 深海軍藍 */
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #D3D3D3; /* 淺灰色 */
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #D3D3D3; /* 淺灰色 */
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: gray; /* 滑過變灰 */
+    font-weight: 700; /* 加粗 */
+}
+
+        /* 返回按鈕 */
+        .back-button {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 30px 0;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* 文章頁面樣式 */
+        .article-page {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .article-hero {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .article-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 30px;
+            color: white;
+        }
+
+        .article-category {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .article-content {
+            padding: 40px;
+        }
+
+        .article-section {
+            margin-bottom: 40px;
+        }
+
+        .article-section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-section h3 {
+            color: var(--dark);
+            margin: 25px 0 15px;
+        }
+
+        .article-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .article-section ul, .article-section ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .article-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background-color: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .quote-box {
+            background-color: rgba(0, 75, 107, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .quote-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .quote-author {
+            text-align: right;
+            margin-top: 10px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .tag {
+            background-color: var(--light);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background-color: var(--primary-light);
+            color: white;
+            cursor: pointer;
+        }
+
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background-color: var(--light);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text);
+            transition: var(--transition);
+            max-width: 45%;
+        }
+
+        .nav-button:hover {
+            background-color: var(--primary-light);
+            color: white;
+        }
+
+        .nav-button.prev {
+            text-align: left;
+        }
+
+        .nav-button.next {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .nav-button .arrow {
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+/* 底部 */
+footer {
+    background-color: #0A1931; /* 深海軍藍 */
+    color: white;
+    padding: 50px 0 20px;
+}
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        /* 浮動按鈕 */
+        .floating-button {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(0, 75, 107, 0.08);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .floating-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+            
+            .article-hero {
+                height: 300px;
+            }
+            
+            .article-title {
+                font-size: 1.8rem;
+            }
+            
+            .article-content {
+                padding: 25px;
+            }
+            
+            .article-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-button {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .article-hero {
+                height: 250px;
+            }
+            
+            .article-title {
+                font-size: 1.5rem;
+            }
+        }
+    
+.navbar { position: relative; }
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 700;
+    color: #D3D3D3;
+    pointer-events: none;
+}
+.breadcrumb {
+    font-size: 14px;
+    color: #D3D3D3;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .navbar-center {
+        position: static;
+        transform: none;
+        margin-top: 8px;
+        order: 2;
+        text-align: center;
+        width: 100%;
+    }
+    .breadcrumb {
+        order: 3;
+        width: 100%;
+        text-align: right;
+        margin-top: 6px;
+    }
+    .navbar { flex-wrap: wrap; }
+}
+
+.logo {
+    font-size: 14px !important;
+    color: #B0B0B0 !important;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+.logo:hover {
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+.footer-column h3 {
+  color: #D4AF37;
+}
+
+
+
+/* ==========================================================================
+   慈律網站一致性修正：套用 index 導航列與 Footer 視覺
+   ========================================================================== */
+:root {
+    --gold: #D4AF37;
+    --silver: #C0C0C0;
+    --black: #1A1A1A;
+    --navy: #3C2C3E;
+    --dark-navy: #2E1F2D;
+    --white: #FFFFFF;
+}
+
+html, body { max-width: 100%; overflow-x: hidden; }
+img { max-width: 100%; height: auto; }
+
+body {
+    padding-top: 98px;
+    background-color: #f5f7fa;
+    letter-spacing: 0.5px;
+}
+
+/* index 同款固定式導航列 */
+header {
+    background: linear-gradient(180deg, rgba(46, 31, 45, 0.92) 0%, rgba(46, 31, 45, 0.86) 100%) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: opacity .25s ease, transform .25s ease, background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+header.is-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-bottom-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.logo-area { display: flex; align-items: center; transform: none !important; }
+
+.logo {
+    width: 78px !important;
+    height: 78px !important;
+    background-color: transparent;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: initial !important;
+    color: inherit !important;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    transform: scale(1.28);
+    transform-origin: center;
+}
+
+.logo-text {
+    display: flex;
+    align-items: baseline;
+    font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 3px;
+    margin-left: 14px;
+}
+.logo-gold { color: var(--gold); font-weight: 800; font-size: 31px; line-height: 1; }
+.logo-white { color: var(--white); font-weight: 400; font-size: 22px; margin-left: 6px; line-height: 1.1; }
+
+nav.primary-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+nav.primary-nav ul li { margin-left: 0; margin-bottom: 0; }
+nav.primary-nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500 !important;
+    font-family: 'Noto Serif TC', serif !important;
+    transition: color 0.3s;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 4px 2px;
+}
+nav.primary-nav ul li a:hover { color: var(--gold); }
+nav.primary-nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: var(--gold);
+    transition: width 0.3s;
+}
+nav.primary-nav ul li a:hover::after { width: 100%; }
+
+/* 文章內容色系同步 index */
+.article-page {
+    border: 1px solid rgba(212,175,55,0.12);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+.article-category,
+.info-table th,
+.comparison-table th,
+.step-number,
+.case-number,
+.calculator-button {
+    background-color: var(--dark-navy) !important;
+}
+.article-section h2,
+.step-title,
+.faq-section h2,
+.faq-question,
+.case-title,
+.platform-name,
+.asset-name,
+.calculator-title,
+.asset-icon,
+.issue-icon {
+    color: var(--dark-navy) !important;
+}
+.article-section h2 { border-bottom-color: rgba(212,175,55,0.24); }
+.highlight-box,
+.case-study,
+.law-article {
+    border-left-color: var(--gold) !important;
+    background: #fbf7ea !important;
+}
+.quote-box,
+.reminder-box {
+    border-left-color: var(--gold) !important;
+    background-color: rgba(212,175,55,0.08) !important;
+}
+.asset-card { border-top-color: var(--gold) !important; }
+.nav-button:hover,
+.tag:hover,
+.calculator-button:hover {
+    background-color: var(--dark-navy) !important;
+    color: #fff !important;
+}
+.info-table tr:nth-child(even) { background-color: rgba(212,175,55,0.045) !important; }
+.info-table tr:hover { background-color: rgba(212,175,55,0.10) !important; }
+.platform-card,
+.asset-card,
+.calculator {
+    border: 1px solid rgba(212,175,55,0.12);
+    background-color: #fffdf7 !important;
+}
+
+/* index 同款 Footer */
+footer {
+    background-color: var(--navy) !important;
+    color: var(--white);
+    padding: 30px 0 15px;
+}
+.footer-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+}
+.footer-column { flex: 1; min-width: 250px; margin-bottom: 0; }
+.footer-column h3 { color: var(--gold); margin-bottom: 10px; font-size: 18px; }
+.footer-column ul { list-style: none; }
+.footer-column ul li { margin-bottom: 8px; }
+.footer-column ul li a,
+.footer-column a { color: var(--silver); text-decoration: none; }
+.footer-column ul li a:hover,
+.footer-column a:hover { color: var(--white); }
+.footer-bottom {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.7);
+    font-size: 14px;
+}
+.copyright { display: none; }
+
+/* 手機選單 */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    flex-direction: column;
+    -webkit-tap-highlight-color: transparent;
+}
+.hamburger span,
+#floatingMenuBtn span {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    opacity: 0.95;
+}
+.hamburger:focus-visible,
+#floatingMenuBtn:focus-visible {
+    outline: 2px solid rgba(212,175,55,0.75);
+    outline-offset: 3px;
+    border-radius: 10px;
+}
+.menu-backdrop {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(46,31,45,0.18);
+    z-index: 1500;
+}
+body.menu-open header { z-index: 1701; }
+body.menu-open .menu-backdrop { z-index: 1700; display: block; }
+body.menu-open nav.primary-nav ul.nav-list { z-index: 1702; }
+#floatingMenuBtn {
+    position: fixed;
+    top: 14px;
+    right: 14px;
+    width: 52px;
+    height: 52px;
+    border-radius: 999px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    background: rgba(46, 31, 45, 0.94);
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+    z-index: 1800;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+#floatingMenuBtn.is-visible { display: flex; }
+
+@media (max-width: 768px) {
+    body { padding-top: 132px; }
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+        gap: 6px;
+        position: relative;
+    }
+    .logo-area { width: 100%; justify-content: flex-start; }
+    .logo { width: 64px !important; height: 64px !important; transform: none; }
+    .logo-text { margin-left: 10px; }
+    .logo-gold { font-size: 22px; }
+    .logo-white { font-size: 16px; }
+    .hamburger {
+        display: flex;
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        z-index: 1700;
+    }
+    nav.primary-nav { width: 100%; }
+    nav.primary-nav ul.nav-list { display: none !important; }
+    body.menu-open nav.primary-nav ul.nav-list {
+        display: flex !important;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        width: clamp(190px, 62vw, 240px);
+        padding: max(env(safe-area-inset-top), 10px) 14px 14px;
+        justify-content: flex-start !important;
+        align-items: stretch;
+        flex-wrap: nowrap;
+        gap: 10px;
+        background: var(--dark-navy);
+        border-left: 1px solid rgba(212,175,55,0.18);
+        box-shadow: -10px 0 26px rgba(0,0,0,0.18);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        z-index: 1702;
+    }
+    body.menu-open header.is-hidden {
+        opacity: 1 !important;
+        transform: none !important;
+        pointer-events: auto !important;
+    }
+    body.menu-open nav.primary-nav ul.nav-list li a {
+        font-size: 18px;
+        padding: 10px 6px;
+        width: 100%;
+        display: block;
+    }
+    .article-page { margin-top: 0; }
+}
+@media (min-width: 769px) { #floatingMenuBtn { display: none !important; } }
+
+/* Header/Footer full-bleed layout */
+body > header,
+body > footer {
+    width: 100%;
+    max-width: none;
+    margin-left: 0;
+    margin-right: 0;
+}
+body > footer { display: block; clear: both; background-color: var(--navy) !important; }
+body > footer > .container { max-width: 1200px; margin-left: auto; margin-right: auto; }
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&amp;family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/></head>
+<body>
+<!-- 頂部導航 -->
+<header>
+<div class="container header-container">
+<div class="logo-area">
+<div class="logo"><img alt="慈律律師事務所" src="images/logo.png"/></div>
+<div class="logo-text"><span class="logo-gold">慈律</span><span class="logo-white">律師事務所</span></div>
+</div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" class="hamburger" type="button"><span></span><span></span><span></span></button>
+<nav class="primary-nav">
+<ul class="nav-list" id="primary-nav">
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+<li><a href="articles.html">法律觀點</a></li>
+<li><a href="appointment.html">預約諮詢</a></li>
+<li><a href="contact.html">聯絡我們</a></li>
+</ul>
+</nav>
+</div>
+</header><div class="menu-backdrop" hidden=""></div><button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" id="floatingMenuBtn" type="button"><span></span><span></span><span></span></button>
+<!-- 文章內容 -->
+<div class="container">
+<div class="article-page">
+<div class="article-hero">
+<img alt="AI人工智慧" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/>
+<div class="article-hero-overlay">
+<span class="article-category">專利法</span>
+<span class="article-category">商標法</span>
+<span class="article-category">著作權法</span>
+<span class="article-category">智慧財產權</span>
+<span class="article-category">生成式AI</span>
+<h1 class="article-title">AI生成內容的著作權歸屬問題探討</h1>
+<div class="article-meta">
+<span>2025年1月25日</span>
+<span>作者: 林律師</span>
+<span>閱讀時間: 12分鐘</span>
+</div>
+</div>
+</div>
+<div class="article-content">
+<div class="article-section">
+<h2>前言</h2>
+<p>隨著人工智慧（AI）技術迅速發展，AI能夠自動生成文字、圖像、音樂、程式碼等內容已成為日常現象。然而，當AI生成的作品被使用、商業化或散布時，著作權究竟屬於誰？是開發AI的公司、輸入提示詞的使用者、還是AI本身？本文將從我國《著作權法》及國際實務角度，分析這一新興議題。</p>
+</div>
+<div class="article-section">
+<h2>AI生成內容的法律空白現狀</h2>
+<p>現行《中華民國著作權法》於立法時並未預見AI的創作行為，其核心精神仍以「人類作者」為前提。第3條第1款明定：「著作係指具創作性之表達，並為人類智慧之創作。」因此，目前法律上對「AI生成內容」的歸屬仍處於灰色地帶。</p>
+<div class="highlight-box">
+<p>依現行法律，AI並非「自然人」，因此無法成為著作權人，也不能擁有權利或負擔義務。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>AI生成內容的三種主要情境</h2>
+<div class="case-study">
+<div class="case-header">
+<h3 class="case-title"> 1)完全由AI自主生成</h3>
+</div>
+<div class="case-content">
+<p>  例如輸入一句簡單指令：「生成一幅山水畫」。AI系統自動完成全部內容、無人為創意參與。</p>
+<p><strong>  → 目前實務上普遍認定：不具著作權，因缺乏「人類創作性」。</strong></p>
+</div>
+</div>
+<div class="case-study">
+<div class="case-header">
+<h3 class="case-title"> 2)由人主導、AI協助生成</h3>
+</div>
+<div class="case-content">
+<p>  例如使用者提供具體構思、風格、情節設定，AI依此生成內容。</p>
+<p><strong>  → 可能被認定為共同創作或使用者的著作。</strong></p>
+<p>  關鍵在於人類的「創作貢獻」是否具足夠創意與控制力。</p>
+</div>
+</div>
+<div class="case-study">
+<div class="case-header">
+<h3 class="case-title"> 3)AI生成後再經人類編修、選擇</h3>
+</div>
+<div class="case-content">
+<p>  若使用者對AI生成結果進行修改、裁剪、組合、排版等，</p>
+<p><strong>  → 其「編輯成果」部分可構成編輯著作或改作著作，但AI原始生成內容部分仍屬無著作權狀態。</strong></p>
+</div>
+</div>
+</div>
+<div class="article-section">
+<h2>國際實務趨勢</h2>
+<table class="info-table">
+<thead>
+<tr>
+<th>國家</th>
+<th>判例／政策</th>
+<th>要點摘要</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>美國</strong></td>
+<td>  2023年《Thaler v. Perlmutter》案</td>
+<td>   美國法院明確指出「AI作品不具人類創作性，不享著作權保護」。</td>
+</tr>
+<tr>
+<td><strong>歐盟</strong></td>
+<td>  AI Act與著作權指令草案</td>
+<td>   傾向要求「人類創作貢獻」作為保護前提，並強調透明度與資料來源標示。</td>
+</tr>
+<tr>
+<td><strong>英國</strong></td>
+<td>  《Copyright, Designs and Patents Act》第9條第3項</td>
+<td>   特例規定「由電腦自動生成之作品，其著作權人為使電腦運作之人」。</td>
+</tr>
+<tr>
+<td><strong>日本</strong></td>
+<td>  文化廳2023指引</td>
+<td>   若AI生成內容缺乏人類創作性，則不屬著作物；但可受不正競爭法保護。</td>
+</tr>
+<tr>
+<td><strong>台灣</strong></td>
+<td>  人工智慧基本法草案20250901</td>
+<td>   「七大基本原則」與「四大推動重點」。</td>
+</tr>
+</tbody>
+</table>
+<div class="quote-box">
+<p>各國雖方向不同，但共同核心為：人類創作性是著作權保護的必要條件。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>使用者與AI平台的權利界線</h2>
+<p>多數AI平台（如ChatGPT、Midjourney、Runway、Adobe Firefly）在使用條款中，已預先約定生成內容的授權與使用範圍。</p>
+<div class="platform-comparison">
+<div class="platform-card">
+<div class="platform-name"><strong>OpenAI (ChatGPT)</strong></div>
+<div class="platform-description">
+                                使用者可自由使用生成內容，但應遵守合理使用與禁止違法用途條款。
+                            </div>
+</div>
+<div class="platform-card">
+<div class="platform-name"><strong>Midjourney</strong></div>
+<div class="platform-description">
+                                付費用戶擁有生成圖像的商業使用權，非付費用戶則不保有完整權利。
+                            </div>
+</div>
+<div class="platform-card">
+<div class="platform-name"><strong>Adobe Firefly</strong></div>
+<div class="platform-description">
+                                承諾素材來源合法，使用者可擁有商業使用權。
+                            </div>
+</div>
+<div class="platform-card">
+<div class="platform-name"><strong>Stability AI (Stable Diffusion)</strong></div>
+<div class="platform-description">
+                                模型開源，但生成內容之合法性與使用者負責。
+                            </div>
+</div>
+</div>
+<div class="reminder-box">
+<p><strong>建議：</strong>使用前詳閱平台服務條款，確定是否有商業使用限制、著作標示義務或資料來源要求。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>AI生成內容的法律風險</h2>
+<div class="risk-list">
+<div class="risk-item">
+<div class="risk-icon">⚠️</div>
+<div class="risk-content">
+<h4>侵權風險</h4>
+<p>若AI訓練資料含有未授權作品，生成結果可能「實質相似」而構成侵權。</p>
+</div>
+</div>
+<div class="risk-item">
+<div class="risk-icon">⚠️</div>
+<div class="risk-content">
+<h4>歸屬爭議</h4>
+<p>多人共用AI系統時，創作貢獻比例不明，導致權利歸屬不清。</p>
+</div>
+</div>
+<div class="risk-item">
+<div class="risk-icon">⚠️</div>
+<div class="risk-content">
+<h4>倫理與透明度</h4>
+<p>若使用AI生成內容未揭露，恐影響作品真實性與信用。</p>
+</div>
+</div>
+<div class="risk-item">
+<div class="risk-icon">⚠️</div>
+<div class="risk-content">
+<h4>商業使用風險</h4>
+<p>廣告、出版、設計等行業使用AI作品時，應審慎確認授權來源。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="article-section">
+<h2>律師觀點與實務建議</h2>
+<h3>人為創意介入是關鍵</h3>
+<p>若欲主張著作權，應能證明自己在AI生成過程中具明確創作指導與選擇判斷。</p>
+<h3>保留生成紀錄</h3>
+<p>建議留存prompt（提示詞）、編修步驟與版本紀錄，以證明創作貢獻。</p>
+<h3>契約約定優先</h3>
+<p>若在公司或委託關係中使用AI創作，應明確約定生成內容的權利歸屬。</p>
+<h3>慎選商用素材</h3>
+<p>商業用途須確認素材來源合法，以免觸法。</p>
+<h3>政策仍在演進中</h3>
+<p>建議隨時關注智慧財產局、文化部或國際WIPO的新規範。</p>
+</div>
+<div class="article-section">
+<h2>結論與展望</h2>
+<p>AI已改變創作的定義，但法律制度仍以「人類創作性」為核心。未來可能出現：</p>
+<ul>
+<li>AI生成內容的專屬登錄制度</li>
+<li>AI平台責任規範化</li>
+<li>新型態智慧財產權（如「資料權」、「演算法權」）</li>
+</ul>
+<div class="quote-box">
+<p>AI是強大的創意工具，但權利歸屬與風險界線仍需明確。若您涉及AI創作、授權或商業化應用，建議尋求專業法律協助，確保作品合法、安全且具保護力。</p>
+<div class="quote-author">— 慈律律師事務所</div>
+</div>
+</div>
+<div class="article-navigation">
+<a class="nav-button prev" href="202507洗錢防制法解析：你需要知道的責任與風險.html">
+<span class="arrow">←</span>
+<span>上一篇：洗錢防制法解析：你需要知道的責任與風險</span>
+</a>
+<a class="nav-button next" href="202403離婚需要準備哪些文件？一次看懂流程與注意事項.html">
+<span>下一篇：離婚需要準備哪些文件?一次看懂流程與注意事項</span>
+<span class="arrow">→</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- 底部 -->
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-column">
+<h3>慈律律師事務所</h3>
+<p>專業法律服務，守護您的權益</p>
+<p>Professional Legal Services, Protecting Your Rights</p>
+</div>
+<div class="footer-column">
+<h3>快速連結</h3>
+<ul>
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>聯絡資訊</h3>
+<p>新北市土城區青雲路145號2樓</p>
+<p>電話：02-22668879</p>
+<p>傳真：02-22625252</p>
+</div>
+<div class="footer-column">
+<h3>法律聲明</h3>
+<ul>
+<li><a href="privacy.html">隱私權政策</a></li>
+<li><a href="privacy.html#disclaimer">免責聲明</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom"><p>© 2026 慈律律師事務所 版權所有</p></div>
+</div>
+</footer><a aria-label="加入 LINE 好友" class="floating-button" href="https://line.me/R/ti/p/@689mbehi" rel="noopener" target="_blank">
+<img alt="LINE" src="https://cdn-icons-png.flaticon.com/512/124/124027.png">
+</img></a>
+<!-- 浮動 LINE 按鈕：✅ 加上可點連結（新分頁） -->
+
+
+<script>
+(function(){
+    const bodyEl = document.body;
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const menuBackdrop = document.querySelector('.menu-backdrop');
+    const floatingMenuBtn = document.getElementById('floatingMenuBtn');
+    const headerEl = document.querySelector('header');
+
+    function syncFloatingVisibility(){
+        if (!floatingMenuBtn) return;
+        const shouldShow = window.innerWidth <= 768 && window.scrollY > 80 && !bodyEl.classList.contains('menu-open');
+        floatingMenuBtn.classList.toggle('is-visible', shouldShow);
+    }
+    function closeMenu(){
+        bodyEl.classList.remove('menu-open');
+        if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', 'false');
+        if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuBackdrop) menuBackdrop.hidden = true;
+        syncFloatingVisibility();
+    }
+    function openMenu(){
+        bodyEl.classList.add('menu-open');
+        if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', 'true');
+        if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded', 'true');
+        if (menuBackdrop) menuBackdrop.hidden = false;
+        syncFloatingVisibility();
+    }
+    function toggleMenu(){ bodyEl.classList.contains('menu-open') ? closeMenu() : openMenu(); }
+
+    if (hamburgerBtn) hamburgerBtn.addEventListener('click', function(e){ e.preventDefault(); toggleMenu(); });
+    if (floatingMenuBtn) floatingMenuBtn.addEventListener('click', function(e){ e.preventDefault(); toggleMenu(); });
+    if (menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+    window.addEventListener('resize', function(){ if (window.innerWidth > 768) closeMenu(); syncFloatingVisibility(); });
+    window.addEventListener('scroll', function(){
+        if (headerEl && !bodyEl.classList.contains('menu-open')) {
+            if (window.scrollY > 10) headerEl.classList.add('is-hidden');
+            else headerEl.classList.remove('is-hidden');
+        }
+        syncFloatingVisibility();
+    }, { passive: true });
+    document.querySelectorAll('nav.primary-nav a').forEach(function(link){ link.addEventListener('click', closeMenu); });
+    syncFloatingVisibility();
+})();
+</script><script>
+// 文章導航：僅在 href 無效時攔截，否則讓瀏覽器正常跳轉
+document.querySelectorAll('.nav-button').forEach(function(button) {
+    button.addEventListener('click', function(e) {
+        var href = this.getAttribute('href');
+        if (!href || href === '#') {
+            e.preventDefault();
+            alert('將導航至相關文章');
+        }
+    });
+});
+</script></body>
+</html>

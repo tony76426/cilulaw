@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>車禍發生後的自保步驟：報案、蒐證到理賠｜慈律律師事務所</title>
+<style>
+        :root {
+            --primary: #004b6b;
+            --primary-light: #4a7b9d;
+            --accent: #f8b500;
+            --light: #f5f7fa;
+            --dark: #2c3e50;
+            --text: #333333;
+            --text-light: #666666;
+            --border: rgba(0, 75, 107, 0.08);
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --shadow-hover: 0 8px 15px rgba(0, 0, 0, 0.15);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background-color: var(--light);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 頂部導航 */
+header {
+    background-color: #0A1931; /* 深海軍藍 */
+    box-shadow: var(--shadow);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    color: #D3D3D3; /* 淺灰色 */
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #D3D3D3; /* 淺灰色 */
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: gray; /* 滑過變灰 */
+    font-weight: 700; /* 加粗 */
+}
+
+        /* 返回按鈕 */
+        .back-button {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 16px;
+            margin: 30px 0;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+
+        .back-button:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+
+        /* 文章頁面樣式 */
+        .article-page {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            margin-bottom: 50px;
+        }
+
+        .article-hero {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .article-hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .article-hero-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+            padding: 30px;
+            color: white;
+        }
+
+        .article-category {
+            display: inline-block;
+            background-color: var(--primary-light);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 20px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .article-content {
+            padding: 40px;
+        }
+
+        .article-section {
+            margin-bottom: 40px;
+        }
+
+        .article-section h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .article-section h3 {
+            color: var(--dark);
+            margin: 25px 0 15px;
+        }
+
+        .article-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+
+        .article-section ul, .article-section ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        .article-section li {
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background-color: var(--light);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .quote-box {
+            background-color: rgba(0, 75, 107, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .quote-box p {
+            margin-bottom: 0;
+            font-style: italic;
+        }
+
+        .quote-author {
+            text-align: right;
+            margin-top: 10px;
+            font-weight: 500;
+            color: var(--text-light);
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .tag {
+            background-color: var(--light);
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: var(--transition);
+        }
+
+        .tag:hover {
+            background-color: var(--primary-light);
+            color: white;
+            cursor: pointer;
+        }
+
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            padding: 12px 20px;
+            background-color: var(--light);
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text);
+            transition: var(--transition);
+            max-width: 45%;
+        }
+
+        .nav-button:hover {
+            background-color: var(--primary-light);
+            color: white;
+        }
+
+        .nav-button.prev {
+            text-align: left;
+        }
+
+        .nav-button.next {
+            text-align: right;
+            margin-left: auto;
+        }
+
+        .nav-button .arrow {
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+/* 底部 */
+footer {
+    background-color: #0A1931; /* 深海軍藍 */
+    color: white;
+    padding: 50px 0 20px;
+}
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .footer-column {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 30px;
+        }
+
+        .footer-column h3 {
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-column a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+        }
+
+        /* 浮動按鈕 */
+        .floating-button {
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            background-color: rgba(6, 137, 199, 0.09);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 99;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .floating-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .floating-button img {
+            width: 30px;
+            height: 30px;
+        }
+
+        /* 響應式設計 */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                padding: 15px 0;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+            }
+            
+            .nav-links li {
+                margin: 0 10px;
+            }
+            
+            .article-hero {
+                height: 300px;
+            }
+            
+            .article-title {
+                font-size: 1.8rem;
+            }
+            
+            .article-content {
+                padding: 25px;
+            }
+            
+            .article-navigation {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .nav-button {
+                max-width: 100%;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .article-hero {
+                height: 250px;
+            }
+            
+            .article-title {
+                font-size: 1.5rem;
+            }
+        }
+    
+.navbar { position: relative; }
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+    font-weight: 700;
+    color: #D3D3D3;
+    pointer-events: none;
+}
+.breadcrumb {
+    font-size: 14px;
+    color: #D3D3D3;
+    white-space: nowrap;
+}
+@media (max-width: 768px) {
+    .navbar-center {
+        position: static;
+        transform: none;
+        margin-top: 8px;
+        order: 2;
+        text-align: center;
+        width: 100%;
+    }
+    .breadcrumb {
+        order: 3;
+        width: 100%;
+        text-align: right;
+        margin-top: 6px;
+    }
+    .navbar { flex-wrap: wrap; }
+}
+
+.logo {
+    font-size: 14px !important;
+    color: #B0B0B0 !important;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+.logo:hover {
+    color: #FFFFFF !important;
+    font-weight: bold;
+}
+
+.footer-column h3 {
+  color: #D4AF37;
+}
+
+
+
+/* ==========================================================================
+   慈律網站一致性修正：套用 index 導航列、Footer、RWD 與紫金色系
+   ========================================================================== */
+:root {
+    --gold: #D4AF37;
+    --silver: #C0C0C0;
+    --black: #1A1A1A;
+    --navy: #3C2C3E;
+    --dark-navy: #2E1F2D;
+    --white: #FFFFFF;
+}
+
+html, body { max-width: 100%; overflow-x: hidden; }
+body {
+    padding-top: 98px;
+    background-color: #f5f7fa;
+    letter-spacing: 0.5px;
+}
+img { max-width: 100%; }
+
+/* index 同款固定式導航列 */
+header {
+    background: linear-gradient(180deg, rgba(46, 31, 45, 0.92) 0%, rgba(46, 31, 45, 0.86) 100%) !important;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    position: fixed !important;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: opacity .25s ease, transform .25s ease, background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+header.is-hidden {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+    background: transparent !important;
+    box-shadow: none !important;
+    border-bottom-color: transparent !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+.logo-area { display: flex; align-items: center; transform: none !important; }
+.logo {
+    width: 78px !important;
+    height: 78px !important;
+    background-color: transparent;
+    border-radius: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: initial !important;
+    color: inherit !important;
+}
+.logo:hover { color: inherit !important; font-weight: inherit !important; }
+.logo img { width: 100%; height: 100%; object-fit: contain; display: block; transform: scale(1.28); transform-origin: center; }
+.logo-text { display: flex; align-items: baseline; font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 3px; margin-left: 14px; }
+.logo-gold { color: var(--gold); font-weight: 800; font-size: 31px; line-height: 1; }
+.logo-white { color: var(--white); font-weight: 400; font-size: 22px; margin-left: 6px; line-height: 1.1; }
+nav.primary-nav ul { display: flex; list-style: none; gap: 10px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
+nav.primary-nav ul li { margin-left: 0; margin-bottom: 0; }
+nav.primary-nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-weight: 500 !important;
+    font-family: 'Noto Serif TC', serif !important;
+    transition: color 0.3s;
+    position: relative;
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding: 4px 2px;
+}
+nav.primary-nav ul li a:hover { color: var(--gold); }
+nav.primary-nav ul li a::after { content: ''; position: absolute; width: 0; height: 2px; bottom: -5px; left: 0; background-color: var(--gold); transition: width 0.3s; }
+nav.primary-nav ul li a:hover::after { width: 100%; }
+
+/* 文章主卡片與 index 色系微調 */
+.article-page { border: 1px solid rgba(212,175,55,0.12); box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+.article-category,
+.info-table th,
+.step-number,
+.case-number { background-color: var(--dark-navy) !important; }
+.article-section h2,
+.step-title,
+.case-title,
+.platform-name,
+.asset-name,
+.calculator-title,
+.faq-section h2,
+.faq-question { color: var(--dark-navy) !important; }
+.article-section h2 { border-bottom-color: rgba(212,175,55,0.24); }
+.highlight-box,
+.case-study,
+.law-article { border-left-color: var(--gold) !important; background: #fbf7ea !important; }
+.quote-box,
+.reminder-box { border-left-color: var(--gold) !important; background-color: rgba(212,175,55,0.08) !important; }
+.issue-icon,
+.asset-icon { color: var(--gold) !important; }
+.asset-card { border-top-color: var(--gold) !important; }
+.info-table tr:nth-child(even),
+.comparison-table tr:nth-child(even) { background-color: rgba(212,175,55,0.05) !important; }
+.info-table tr:hover,
+.comparison-table tr:hover { background-color: rgba(212,175,55,0.10) !important; }
+.nav-button:hover,
+.tag:hover,
+.calculator-button,
+.back-button:hover { background-color: var(--dark-navy) !important; color: #fff !important; }
+.back-button { color: var(--dark-navy) !important; border-color: var(--dark-navy) !important; }
+
+/* 補齊部分文章頁原本未定義或視覺較弱的元件 */
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    border-radius: 8px;
+    overflow: hidden;
+}
+.info-table th, .info-table td { padding: 15px; text-align: left; border-bottom: 1px solid rgba(46,31,45,0.08); }
+.reminder-box {
+    padding: 20px;
+    margin: 25px 0;
+    border-radius: 0 4px 4px 0;
+    border-left: 4px solid var(--gold);
+}
+.doc-list, .flow-chart {
+    background: #fffdf7;
+    border: 1px solid rgba(212,175,55,0.16);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 25px 0;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.04);
+}
+.doc-list h4, .flow-step h4 { color: var(--dark-navy); margin-bottom: 10px; }
+.flow-chart { display: flex; flex-direction: column; gap: 14px; }
+.flow-step { border-left: 3px solid rgba(212,175,55,0.75); padding-left: 14px; }
+
+/* index 同款 Footer */
+footer { background-color: var(--navy) !important; color: var(--white); padding: 30px 0 15px; }
+.footer-content { display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; justify-content: flex-start; }
+.footer-column { flex: 1; min-width: 250px; margin-bottom: 0; }
+.footer-column h3 { color: var(--gold); margin-bottom: 10px; font-size: 18px; }
+.footer-column ul { list-style: none; }
+.footer-column ul li { margin-bottom: 8px; }
+.footer-column ul li a, .footer-column a { color: var(--silver); text-decoration: none; }
+.footer-column ul li a:hover, .footer-column a:hover { color: var(--white); }
+.footer-bottom { text-align: center; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); font-size: 14px; }
+.copyright { display: none; }
+
+/* 手機選單 */
+.hamburger { display: none; background: transparent; border: none; padding: 8px; cursor: pointer; align-items: center; justify-content: center; gap: 5px; flex-direction: column; -webkit-tap-highlight-color: transparent; }
+.hamburger span, #floatingMenuBtn span { display: block; width: 22px; height: 2px; background: var(--white); border-radius: 2px; opacity: 0.95; }
+.hamburger:focus-visible, #floatingMenuBtn:focus-visible { outline: 2px solid rgba(212,175,55,0.75); outline-offset: 3px; border-radius: 10px; }
+.menu-backdrop { display: none; position: fixed; inset: 0; background: rgba(46,31,45,0.18); z-index: 1500; }
+body.menu-open header { z-index: 1701; }
+body.menu-open .menu-backdrop { z-index: 1700; display: block; }
+body.menu-open nav.primary-nav ul.nav-list { z-index: 1702; }
+#floatingMenuBtn { position: fixed; top: 14px; right: 14px; width: 52px; height: 52px; border-radius: 999px; display: none; align-items: center; justify-content: center; flex-direction: column; gap: 5px; background: rgba(46, 31, 45, 0.94); border: 1px solid rgba(212, 175, 55, 0.28); box-shadow: 0 10px 28px rgba(0,0,0,0.22); z-index: 1800; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+#floatingMenuBtn.is-visible { display: flex; }
+
+/* Header/Footer 滿版 */
+body > header, body > footer { width: 100%; max-width: none; margin-left: 0; margin-right: 0; }
+body > footer { display: block; clear: both; background-color: var(--navy) !important; }
+body > footer > .container { max-width: 1200px; margin-left: auto; margin-right: auto; }
+
+@media (max-width: 768px) {
+    body { padding-top: 132px; }
+    .header-container { flex-direction: column; align-items: flex-start; padding: 8px 0; gap: 6px; position: relative; }
+    .logo-area { width: 100%; justify-content: flex-start; }
+    .logo { width: 64px !important; height: 64px !important; transform: none; }
+    .logo-text { margin-left: 10px; }
+    .logo-gold { font-size: 22px; }
+    .logo-white { font-size: 16px; }
+    .hamburger { display: flex; position: absolute; top: 8px; right: 8px; z-index: 1700; }
+    nav.primary-nav { width: 100%; }
+    nav.primary-nav ul.nav-list { display: none !important; }
+    body.menu-open nav.primary-nav ul.nav-list { display: flex !important; flex-direction: column; position: fixed; top: 0; right: 0; height: 100vh; width: clamp(190px, 62vw, 240px); padding: max(env(safe-area-inset-top), 10px) 14px 14px; justify-content: flex-start !important; align-items: stretch; flex-wrap: nowrap; gap: 10px; background: var(--dark-navy); border-left: 1px solid rgba(212,175,55,0.18); box-shadow: -10px 0 26px rgba(0,0,0,0.18); overflow-y: auto; -webkit-overflow-scrolling: touch; z-index: 1702; }
+    body.menu-open header.is-hidden { opacity: 1 !important; transform: none !important; pointer-events: auto !important; }
+    body.menu-open nav.primary-nav ul.nav-list li a { font-size: 18px; padding: 10px 6px; width: 100%; display: block; }
+    .article-page { margin-top: 0; }
+}
+@media (min-width: 769px) { #floatingMenuBtn { display: none !important; } }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&amp;family=Noto+Sans+TC:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/></head>
+<body>
+<!-- 頂部導航 -->
+
+<header>
+<div class="container header-container">
+<div class="logo-area">
+<a aria-label="慈律律師事務所首頁" class="logo" href="index.html"><img alt="慈律律師事務所" src="images/logo.png"/></a>
+<div class="logo-text"><span class="logo-gold">慈律</span><span class="logo-white">律師事務所</span></div>
+</div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" class="hamburger" type="button"><span></span><span></span><span></span></button>
+<nav class="primary-nav">
+<ul class="nav-list" id="primary-nav">
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+<li><a href="articles.html">法律觀點</a></li>
+<li><a href="appointment.html">預約諮詢</a></li>
+<li><a href="contact.html">聯絡我們</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<div class="menu-backdrop" hidden=""></div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" id="floatingMenuBtn" type="button"><span></span><span></span><span></span></button>
+
+<!-- 文章內容 -->
+<div class="container">
+<div class="article-page">
+<div class="article-hero">
+<img alt="交通事故現場" src="https://st4.depositphotos.com/39002138/39828/i/450/depositphotos_398283704-stock-photo-car-crash-accident-road.jpg"/>
+<div class="article-hero-overlay">
+<span class="article-category">車禍賠償</span>
+<span class="article-category">車禍處理</span>
+<span class="article-category">交通事故</span>
+<span class="article-category">保險理賠</span>
+<span class="article-category">蒐證技巧</span>
+<span class="article-category">法律權益</span>
+<span class="article-category">肇事責任</span>
+<h1 class="article-title">車禍發生後的自保步驟：報案、蒐證到理賠</h1>
+<div class="article-meta">
+<span>2023年12月05日</span>
+<span>作者: 王律師</span>
+<span>閱讀時間: 12分鐘</span>
+</div>
+</div>
+</div>
+<div class="article-content">
+<div class="article-section">
+<h2>前言</h2>
+<p>車禍意外往往來得突然，當下若處理不當，可能影響後續責任判定與保險理賠。發生事故時，除了保持冷靜，更重要的是<strong>「即時蒐證、自我保護」</strong>。本文將帶您了解從事故現場、報案、蒐證到保險理賠的完整流程與注意事項。</p>
+<div class="highlight-box">
+<p>車禍處理關鍵：保持冷靜、確保安全、立即報警、完整蒐證、及時通報保險公司。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>事故發生第一步：立即確保人身安全</h2>
+<div class="flow-chart">
+<div class="flow-step">
+<div class="step-content">
+<h4> 1)立即停車、開啟警示燈</h4>
+<p> 保持現場狀態，不任意移動車輛。若有二次事故風險，應先移至安全處。</p>
+</div>
+</div>
+<div class="flow-step">
+<div class="step-content">
+<h4> 2)確認有無人員受傷</h4>
+<p> 若有人受傷，優先撥打119求救。同時撥打110報警，警方到場後會製作事故紀錄。</p>
+</div>
+</div>
+<div class="flow-step">
+<div class="step-content">
+<h4> 3)避免爭吵與推擠行為</h4>
+<p> 保持冷靜、勿口出爭執，以免被誤認為肇事逃逸或妨害秩序。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="article-section">
+<h2>報案與警方現場處理</h2>
+<h3>1. 報案方式</h3>
+<p>撥打110報警，說明地點、車號、是否有人受傷。警方會派遣交警或派出所人員到現場處理。</p>
+<h3>2. 警方處理內容</h3>
+<ul>
+<li>拍照測繪現場、紀錄雙方陳述</li>
+<li>製作「交通事故現場筆錄」</li>
+<li>如有傷亡，將進一步製作「交通事故初步分析研判表」</li>
+</ul>
+<div class="reminder-box">
+<p><strong>建議：</strong>務必索取「報案三聯單」或「交通事故初步分析表」影本，作為後續理賠與法律依據。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>蒐證重點：現場證據越完整越有利</h2>
+<p>事故現場的證據往往影響賠償責任認定。請務必蒐集下列資料：</p>
+<div class="doc-list">
+<h4>蒐證清單</h4>
+<ul>
+<li><strong>現場照片與影片</strong> - 車輛相對位置、道路標線、煞車痕跡、號誌燈狀況、車輛損壞部位與角度</li>
+<li><strong>行車紀錄器畫面</strong> - 立即備份檔案，避免被覆蓋或刪除</li>
+<li><strong>證人資料</strong> - 若現場有路人、店家目擊，可記下姓名、電話</li>
+<li><strong>對方資料</strong> - 拍攝或記錄對方駕照、行照、保險證明（強制險、任意險）、車牌號碼</li>
+</ul>
+</div>
+<div class="quote-box">
+<p>若夜間拍攝，請開啟閃光燈或錄影模式，確保照片清晰可辨識。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>通報保險公司與理賠流程</h2>
+<h3>1. 通報保險公司</h3>
+<p>請於事故發生後24小時內通知您的保險公司（包含強制險與任意險）。</p>
+<div class="doc-list">
+<h4>需提供資訊</h4>
+<ul>
+<li>事故時間、地點、經過</li>
+<li>雙方車號與駕駛姓名</li>
+<li>警方報案編號</li>
+<li>照片或影片證據</li>
+</ul>
+</div>
+<p><strong>保險公司通常會派「查勘員」前往現場或車廠確認損害狀況。</strong></p>
+<h3>2. 理賠流程</h3>
+<p>（以一般物損或人損案件為例）</p>
+<div class="flow-chart">
+<div class="flow-step">
+<div class="step-content">
+<h4> 1)保險公司受理報案</h4>
+</div>
+</div>
+<div class="flow-step">
+<div class="step-content">
+<h4> 2)派員查勘、確認責任歸屬</h4>
+</div>
+</div>
+<div class="flow-step">
+<div class="step-content">
+<h4> 3)提交修車估價或醫療費用單據</h4>
+</div>
+</div>
+<div class="flow-step">
+<div class="step-content">
+<h4> 4)填寫理賠申請書</h4>
+</div>
+</div>
+<div class="flow-step">
+<div class="step-content">
+<h4> 5)審核後撥款</h4>
+</div>
+</div>
+</div>
+<div class="reminder-box">
+<p><strong>小提醒：</strong>若為人身傷害，理賠需附上診斷書、收據、醫療明細。若為車損，請保留修車估價單與照片。</p>
+</div>
+</div>
+<div class="article-section">
+<h2>若發生爭議，應如何處理？</h2>
+<h3>可申請交通事故調解</h3>
+<p>由當地警察局、調解委員會或地方法院進行協調。若協調不成，仍可提起民事訴訟。</p>
+<h3>尋求律師協助</h3>
+<ul>
+<li>協助釐清責任歸屬</li>
+<li>計算損害賠償金額（醫療費、工作損失、精神慰撫金等）</li>
+<li>代理與保險公司談判或訴訟</li>
+</ul>
+</div>
+<div class="article-section">
+<h2>車禍後常見迷思與提醒</h2>
+<table class="info-table">
+<thead>
+<tr>
+<th>常見情況</th>
+<th>法律提醒</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>「對方說不用報警，私下處理就好」</td>
+<td>堅決報警！未報案恐無法證明責任歸屬，保險也可能不理賠。</td>
+</tr>
+<tr>
+<td>「只是小擦撞，不用留證據」</td>
+<td>即使輕微，也應拍照記錄。傷勢有時會延遲顯現。</td>
+</tr>
+<tr>
+<td>「對方沒保險我就沒救了？」</td>
+<td>仍可向對方求償，或由強制險代位求償機制協助。</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="article-section">
+<h2>法律小叮嚀</h2>
+<p>交通事故往往牽涉民事、刑事與保險三方面責任。若您不確定該如何主張權益，建議儘早諮詢專業律師，協助您檢視蒐證完整性、確認理賠金額與責任比例，避免日後爭議。</p>
+<div class="quote-box">
+<p>事故發生時，冷靜處理、確實蒐證，是保障權益的第一步。法律，是保護懂得運用它的人。</p>
+<div class="quote-author">— 慈律律師事務所</div>
+</div>
+</div>
+<div class="article-navigation">
+<a class="nav-button prev" href="202401繼承權與遺產分配：法定繼承順位與特留分解析.html">
+<span class="arrow">←</span>
+<span>上一篇：繼承權與遺產分配：法定繼承順位與特留分解析</span>
+</a>
+<a class="nav-button next" href="202311不動產買賣契約審閱重點與常見陷阱.html">
+<span>下一篇：不動產買賣契約審閱重點與常見陷阱</span>
+<span class="arrow">→</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- 底部 -->
+<!-- Footer -->
+
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-column">
+<h3>慈律律師事務所</h3>
+<p>專業法律服務，守護您的權益</p>
+<p>Professional Legal Services, Protecting Your Rights</p>
+</div>
+<div class="footer-column">
+<h3>快速連結</h3>
+<ul>
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>聯絡資訊</h3>
+<p>新北市土城區青雲路145號2樓</p>
+<p>電話：02-22668879</p>
+<p>傳真：02-22625252</p>
+</div>
+<div class="footer-column">
+<h3>法律聲明</h3>
+<ul>
+<li><a href="privacy.html">隱私權政策</a></li>
+<li><a href="privacy.html#disclaimer">免責聲明</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom"><p>© 2026 慈律律師事務所 版權所有</p></div>
+</div>
+</footer>
+<a aria-label="加入 LINE 好友" class="floating-button" href="https://line.me/R/ti/p/@689mbehi" rel="noopener" target="_blank"><img alt="LINE" src="https://cdn-icons-png.flaticon.com/512/124/124027.png"/></a>
+
+
+<!-- 浮動 LINE 按鈕：✅ 加上可點連結（新分頁） -->
+
+
+
+<script>
+(function(){
+    const bodyEl = document.body;
+    const hamburgerBtn = document.querySelector('.hamburger');
+    const menuBackdrop = document.querySelector('.menu-backdrop');
+    const floatingMenuBtn = document.getElementById('floatingMenuBtn');
+    const headerEl = document.querySelector('header');
+
+    function syncFloatingVisibility(){
+        if (!floatingMenuBtn) return;
+        const shouldShow = window.innerWidth <= 768 && window.scrollY > 80 && !bodyEl.classList.contains('menu-open');
+        floatingMenuBtn.classList.toggle('is-visible', shouldShow);
+    }
+
+    function closeMenu(){
+        bodyEl.classList.remove('menu-open');
+        if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', 'false');
+        if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded', 'false');
+        if (menuBackdrop) menuBackdrop.hidden = true;
+        syncFloatingVisibility();
+    }
+
+    function openMenu(){
+        bodyEl.classList.add('menu-open');
+        if (hamburgerBtn) hamburgerBtn.setAttribute('aria-expanded', 'true');
+        if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded', 'true');
+        if (menuBackdrop) menuBackdrop.hidden = false;
+        syncFloatingVisibility();
+    }
+
+    function toggleMenu(){
+        if (bodyEl.classList.contains('menu-open')) closeMenu();
+        else openMenu();
+    }
+
+    if (hamburgerBtn) hamburgerBtn.addEventListener('click', function(e){ e.preventDefault(); toggleMenu(); });
+    if (floatingMenuBtn) floatingMenuBtn.addEventListener('click', function(e){ e.preventDefault(); toggleMenu(); });
+    if (menuBackdrop) menuBackdrop.addEventListener('click', closeMenu);
+
+    document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeMenu(); });
+    window.addEventListener('resize', function(){ if (window.innerWidth > 768) closeMenu(); syncFloatingVisibility(); });
+    window.addEventListener('scroll', function(){
+        if (headerEl && !bodyEl.classList.contains('menu-open')) {
+            if (window.scrollY > 10) headerEl.classList.add('is-hidden');
+            else headerEl.classList.remove('is-hidden');
+        }
+        syncFloatingVisibility();
+    }, { passive: true });
+    document.querySelectorAll('nav.primary-nav a').forEach(function(link){ link.addEventListener('click', closeMenu); });
+    document.querySelectorAll('.nav-button').forEach(function(button) {
+        button.addEventListener('click', function(e) {
+            var href = this.getAttribute('href');
+            if (!href || href === '#') { e.preventDefault(); alert('將導航至相關文章'); }
+        });
+    });
+    syncFloatingVisibility();
+})();
+</script>
+</body>
+</html>
