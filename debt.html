@@ -1,0 +1,1249 @@
+<!DOCTYPE html>
+
+<html lang="zh-TW">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>債務糾紛律師｜借款返還、欠款催討、本票與強制執行｜慈律律師事務所</title>
+<!-- Favicon & App Icons -->
+<link rel="icon" href="/favicon.ico" type="image/x-icon">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/icons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="48x48" href="/images/icons/favicon-48x48.png">
+<link rel="icon" type="image/png" sizes="64x64" href="/images/icons/favicon-64x64.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/images/icons/favicon-192x192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/icons/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500&family=Inter:wght@300;400;500&display=swap">
+</noscript>
+<style>
+
+        /* ==========================================================================
+           1. 變數與基礎設定 (Root & Base)
+           ========================================================================== */
+        :root {
+            --gold: #D4AF37;/*金色強調色*/
+            --silver: #C0C0C0;/*footer文字非加粗*/
+            --black: #1A1A1A;/*大多數的黑色文字*/
+            --navy: #3C2C3E;/*footer背景*/
+            --dark-navy: #2E1F2D;/*上面*/
+            --light-gray: #2D2926;
+            --white: #FFFFFF;/*整體背景淺色區*/
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei','Inter','Helvetica Neue',Arial,sans-serif;
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.8; /* 稍微增加行高，提升法律條文的可讀性 */
+            letter-spacing: 0.5px; /* 增加微小字距提升高級感 */
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: bold;
+            margin-bottom: 1.2rem;
+            letter-spacing: 2px; /* 標題字距拉開，視覺更開闊 */
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ==========================================================================
+           2. 導航欄 (Header & Nav)
+           ========================================================================== */
+        header {
+            background-color: var(--dark-navy);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            /* Compact header to increase visible content area */
+            padding: 0;
+        }
+
+        /* High-end Header Enhancements */
+        header {
+            background: linear-gradient(180deg, rgba(46, 31, 45, 0.92) 0%, rgba(46, 31, 45, 0.86) 100%);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+        
+        
+        
+
+        /* Scroll behavior: hide header when scrolling down (transparent & disappears) */
+        header {
+            transition: opacity .25s ease, transform .25s ease, background-color .25s ease, box-shadow .25s ease, border-color .25s ease;
+            will-change: opacity, transform;
+        }
+        header.is-hidden {
+            opacity: 0;
+            transform: translateY(-100%);
+            pointer-events: none;
+            background: transparent !important;
+            box-shadow: none !important;
+            border-bottom-color: transparent !important;
+            backdrop-filter: none !important;
+            -webkit-backdrop-filter: none !important;
+        }
+.header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 0;
+        }
+
+        .logo-area { display: flex; align-items: center; transform: none !important; }
+        
+        .logo {
+            width: 78px; height: 78px; /* 原 50px，放大約 60% */
+            background-color: transparent; /* 取消方框底色 */
+            border-radius: 0;             /* 取消圓角方框 */
+            overflow: hidden;             /* 裁切 logo 容器外部，確保不外溢 */
+            display: flex; align-items: center;
+            justify-content: center; 
+        }
+
+        .logo img { width: 100%; height: 100%; object-fit: contain; display: block; transform: scale(1.28); transform-origin: center; }
+
+        .logo-text {
+            display: flex; align-items: baseline; font-family: 'Noto Sans TC', 'Helvetica Neue', Arial, sans-serif;
+            letter-spacing: 3px; margin-left: 14px;
+        }
+
+        .logo-gold { color: var(--gold); font-weight: 800; font-size: 31px; line-height: 1; }
+        .logo-white { color: var(--white); font-weight: 400; font-size: 22px; margin-left: 6px; line-height: 1.1; }
+        
+        nav ul { display: flex; list-style: none; gap: 10px; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
+        nav ul li { margin-left: 0; }
+        nav ul li a {
+            text-decoration: none; color: var(--white); font-weight: 600;
+            font-family: 'Noto Sans TC','PingFang TC','Microsoft JhengHei','Helvetica Neue',Arial,sans-serif;
+            transition: color 0.3s; position: relative;
+        
+            font-size: 18px; /* +5% */
+            letter-spacing: 1px;
+            padding: 4px 2px;
+        }
+        nav ul li a:hover { color: var(--gold); }
+        nav ul li a::after {
+            content: ''; position: absolute; width: 0; height: 2px;
+            bottom: -5px; left: 0; background-color: var(--gold); transition: width 0.3s;
+        }
+        nav ul li a:hover::after { width: 100%; }
+
+        /* ==========================================================================
+           3. 內容區塊 (Sections)
+           ========================================================================== */
+        section { padding: 80px 0; }
+        .section-title { text-align: center; margin-bottom: 50px; position: relative; }
+        .section-title::after {
+            content: ''; position: absolute; width: 80px; height: 3px;
+            background-color: var(--gold); bottom: -15px; left: 50%; transform: translateX(-50%);
+        }
+
+        .page-content { display: none; margin-top: 0; padding: 20px 0 60px; }
+        .active-page { display: block; }
+
+        
+
+/* Hero */
+        .hero {
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+            text-align: center; color: var(--white); margin-top: -5px; position: relative; overflow: hidden;
+        
+            margin-bottom: 20px;
+        }
+        .hero-slide {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0; transition: opacity 1s ease-in-out; background-size: cover; background-position: center;
+        }
+        .hero-slide.active { opacity: 1; }
+        .hero-content { position: relative; z-index: 2; }
+        .hero-content h1 { font-size: 3.5rem;  margin-bottom: 20px; 
+            /* 平時顯示極淺灰色，接近白色 */ color: var(--white);  /* 增加文字陰影，確保碰到淺色底圖時也能看見 */text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5); 
+        }
+
+        .hero-content p {  font-size: 1.5rem;  margin-bottom: 30px; 
+            /* 副標題使用您定義的銀灰色，但在深底色上會顯得亮白 */  color: var(--light-gray); text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn {
+            display: inline-block; padding: 12px 30px; background-color: var(--gold);
+            color: var(--white); text-decoration: none; border-radius: 4px;
+            font-weight: 500; transition: all 0.3s; border: none; cursor: pointer;
+        }
+        .btn:hover { background-color: #c19b2e; transform: translateY(-2px); }
+        
+        .about-content { display: flex; gap: 40px; align-items: center;}
+	   .about-text {flex: 1;}
+	   .about-image img { max-width: 600px;   /* 桌機最佳視覺尺寸 */width: 100%;height: 500px;border-radius: 12px;}
+
+
+        
+/* ==========================================================================
+           5. 網格與卡片 (Grid & Cards)
+           ========================================================================== */
+        .home-grid-3, .values-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;
+        }
+        .service-card, .value-card, .home-card {
+            background-color: var(--white); border-radius: 8px; padding: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03); transition: transform 0.3s;
+        }
+        
+
+        /* ==========================================================================
+           Home (律師團隊) - Mobile alignment fix
+           - Desktop: keep a neat 2-column layout
+           - Mobile: avatar on the left, brief on the right (stacked list)
+           ========================================================================== */
+        .home-team-list{
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 22px 26px;
+        }
+        .home-team-item{
+            display: flex;
+            gap: 15px;
+            align-items: center;
+            min-width: 0;
+        }
+        .home-team-avatar{
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--gold);
+            flex: 0 0 auto;
+            background: #fff;
+        }
+        .home-team-avatar img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .home-team-meta{
+            min-width: 0;
+        }
+        .home-team-meta h4{
+            margin: 0 0 4px 0;
+            letter-spacing: 2px;
+        }
+        .home-team-meta p{
+            margin: 0;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 768px){
+            .home-team-list{
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+        }
+.service-card:hover, .value-card:hover { transform: translateY(-5px); }
+        
+        /* ==========================================================================
+           6. 其他組件 (Toast, Line, Form, Map)
+           ========================================================================== */
+        #toast-container { position: fixed; top: 90px; right: 24px; z-index: 2000; display: flex; flex-direction: column; gap: 12px; }
+        .toast {
+            min-width: 280px; padding: 14px 16px; border-radius: 8px; background: var(--white);
+            border-left: 6px solid var(--gold); box-shadow: 0 10px 25px rgba(158, 62, 197, 0.25);
+            display: flex; gap: 10px; animation: slideIn .25s ease-out;
+        }
+        .toast.error { border-left-color: #b00020; }
+        @keyframes slideIn { from{ transform: translateY(-10px); opacity: 0;} to{ transform: translateY(0); opacity: 1;} }
+
+        .line-float {
+            position: fixed; bottom: 25px; right: 25px; width: 65px; height: 65px;
+            z-index: 10000; border-radius: 50%; background-color: rgba(0, 0, 0, 0.15);
+            display: flex; align-items: center; justify-content: center;
+            animation: line-shake 2.5s infinite ease-in-out;
+        }
+        .line-float img { width: 60%; }
+        @keyframes line-shake { 0%, 100% { transform: rotate(0); } 10%, 20% { transform: rotate(-10deg); } 15% { transform: rotate(10deg); } }
+
+        .form-control { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 4px; margin-top: 8px; }
+        .map-container { height: 400px; border-radius: 8px; overflow: hidden; background: #eee; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+        /* ==========================================================================
+           7. 頁腳與響應式 (Footer & Responsive)
+           ========================================================================== */
+        footer { background-color: var(--navy); color: var(--white); padding: 30px 0 15px; }
+        .footer-content { display: flex; flex-wrap: wrap; gap: 30px; margin-bottom: 30px; }
+        .footer-column { flex: 1; min-width: 250px; }
+        .footer-column h3 { color: var(--gold); margin-bottom: 10px; }
+        .footer-column ul { list-style: none; }
+        .footer-column ul li a { color: var(--silver); text-decoration: none; }
+
+        @media (max-width: 768px) {
+    /* Header: keep the same look, but make it usable on mobile */
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px 0;
+        gap: 6px;
+    }
+
+    .logo-area {
+        width: 100%;
+        justify-content: flex-start;
+    }
+
+    .logo {
+        width: 64px;
+        height: 64px;
+        transform: none; /* avoid oversized logo squeezing the header on mobile */
+    }
+
+    .logo-text { margin-left: 10px; }
+    .logo-gold { font-size: 22px; }
+    .logo-white { font-size: 16px; }
+
+    nav { width: 100%; }
+    nav ul {
+        width: 100%;
+        gap: 10px;
+        flex-wrap: nowrap;             /* one row */
+        overflow-x: auto;              /* horizontal scroll */
+        -webkit-overflow-scrolling: touch;
+        padding: 6px 0 8px;
+        scrollbar-width: none;         /* Firefox */
+    }
+    nav ul::-webkit-scrollbar { display: none; } /* WebKit */
+    nav ul li a { white-space: nowrap; padding: 8px 4px; }
+
+    /* Content spacing under fixed header */
+    #toast-container { top: 120px; right: 16px; }
+    section { padding: 56px 0; }
+    .page-content { padding: 20px 0 56px; }
+
+    /* Hero */
+    .hero { height: 72vh; margin-top: 0; }
+    .hero-content h1 { font-size: 2.1rem; }
+    .hero-content p { font-size: 1.1rem; }
+
+    /* Common flex stacks */
+    .about-content { flex-direction: column; }
+
+    /* Maps */
+    .map-container { height: 360px; }
+}
+
+
+        /* ==========================================================================
+           8. icon至中
+           ========================================================================== */
+
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: left; /* 讓標題與內文也居中 */
+            transition: transform 0.3s ease;
+        }
+
+        .service-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px; /* 這裡的高度建議與你 img 的 height 一致 */
+            margin-bottom: 20px;
+    }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* ==========================================================================
+           9. google評論
+           ========================================================================== */
+
+/* --- Google 評論：三排併行 --- */
+.google-review-section {
+    grid-column: 1 / -1; /* 讓 Google 評論區塊在 values-grid 中橫向滿版 */
+    width: 100%;
+    padding: 60px 0;
+    background-color: #fcfcfc; /* 稍微深一點的底色區分區塊 */
+}
+
+.google-review-grid {
+    display: grid;
+    /* 強制三排平分 1200px 空間 */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 25px;
+    margin: 40px 0;
+}
+
+.google-review-card {
+    width: 100%; /* 隨 Grid 縮放 */
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.google-review-card:hover {
+    transform: translateY(-8px);
+    border-color: var(--gold);
+}
+
+/* --- 手機版響應式設定 --- */
+@media (max-width: 992px) {
+    .google-review-grid {
+        /* 中型螢幕變兩排 */
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .team-topbar {
+        top: 110px;    /* 手機版 header 通常較高 */
+    }
+    
+    .google-review-grid {
+        /* 手機版變直排 */
+        grid-template-columns: 1fr;
+    }
+
+
+}
+
+/* ==========================================================================
+   RWD Patch (Mobile-first usability, keeping desktop layout unchanged)
+   ========================================================================== */
+
+/* Prevent accidental horizontal scrolling on mobile (e.g., wide grids) */
+html, body { max-width: 100%; overflow-x: hidden; }
+
+/* Make images responsive by default */
+img { max-width: 100%; height: auto; }
+
+/* Home "律師團隊" block inside .home-grid-3 contains multiple profiles in one row;
+   allow wrapping nicely on smaller screens */
+.home-grid-3 > div {
+    flex-wrap: wrap;
+}
+
+/* Better tap targets on touch devices */
+@media (hover: none) {
+    nav ul li a { padding: 10px 6px; }
+    .btn { padding: 12px 22px; }
+}
+
+/* Medium screens (tablets) */
+@media (max-width: 992px) {
+    .container { padding: 0 16px; }
+    .about-image img { height: auto; }
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+    .logo-gold { font-size: 20px; }
+    .logo-white { font-size: 15px; }
+    .hero-content h1 { font-size: 1.9rem; }
+    .hero-content p { font-size: 1.05rem; }
+
+    /* Cards spacing */
+    .service-card, .value-card, .home-card { padding: 18px; }
+
+    /* Toast narrower */
+    .toast { min-width: 240px; }
+}
+
+/* ==========================================================================
+   Layout classes extracted from inline styles (to enable RWD overrides)
+   ========================================================================== */
+.about-content.home-about {
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+.about-text.home-about-text { flex: 1; min-width: 300px; }
+.about-image.home-about-image {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.contact-info { flex: 1; min-width: 300px; }
+.contact-form { flex: 1; min-width: 350px; }
+
+.contact-form.contact-form-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form.contact-form-map { flex: 1.2; min-width: 350px; }
+
+@media (max-width: 768px) {
+    .contact-container { gap: 18px; }
+    .contact-info, .contact-form, .contact-form.contact-form-map { min-width: 0; flex: 1 1 100%; }
+    .contact-form.contact-form-card { padding: 18px; }
+}
+
+
+/* ===== Nav Premium Font Upgrade ===== */
+nav a {
+    font-family: 'Noto Serif TC', serif !important;
+    font-weight: 500 !important;
+    letter-spacing: 1px;
+}
+
+
+/* ==========================================================================
+   Mobile Hamburger Navigation (RWD) - keep desktop unchanged
+   ========================================================================== */
+
+.hamburger{
+  display:none;
+  background: transparent;
+  border: none;
+  padding: 8px;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-direction: column;
+  -webkit-tap-highlight-color: transparent;
+}
+.hamburger span{
+  display:block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  opacity: 0.95;
+}
+.hamburger:focus-visible{
+  outline: 2px solid rgba(212,175,55,0.75);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* Backdrop for the off-canvas menu */
+.menu-backdrop{
+  display:none;
+  position: fixed;
+  inset: 0;
+  background: rgba(46,31,45,0.18);
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  z-index: 1500;
+}
+
+/* Fix: ensure off-canvas menu stays above backdrop and remains clickable (mobile) */
+body.menu-open header{ z-index: 1701; }
+body.menu-open .menu-backdrop{ z-index: 1700; }
+body.menu-open nav.primary-nav ul.nav-list{ z-index: 1702; }
+
+
+@media (max-width: 768px){
+  /* Place hamburger at top-right like the reference image */
+  .header-container{ position: relative; }
+  .hamburger{
+    display:flex;
+    position:absolute;
+    top: 8px;
+    right: 8px;
+    z-index: 1700;
+  }
+
+  /* Hide the original inline nav on mobile; use off-canvas instead */
+  nav.primary-nav ul.nav-list{
+    display:none !important;
+  }
+
+  /* Off-canvas menu (opens from the right, not behind content) */
+  body.menu-open nav.primary-nav ul.nav-list{
+    display:flex !important;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: clamp(190px, 62vw, 240px);
+    padding: max(env(safe-area-inset-top), 10px) 14px 14px;
+    justify-content: flex-start !important;
+    align-items: stretch;
+    flex-wrap: nowrap;
+    gap: 10px;
+    background: var(--dark-navy);
+    border-left: 1px solid rgba(212,175,55,0.18);
+    box-shadow: -10px 0 26px rgba(0,0,0,0.18);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    z-index: 1600;
+  }
+
+  body.menu-open .menu-backdrop{
+    display:block;
+  }
+
+  /* Ensure header stays visible while menu is open */
+  body.menu-open header.is-hidden{
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: auto !important;
+  }
+
+  /* Make menu items comfortable to tap */
+  body.menu-open nav.primary-nav ul.nav-list li a{
+    font-size: 18px;
+    padding: 10px 6px;
+    width: 100%;
+  }
+  body.menu-open nav.primary-nav ul.nav-list li a::after{
+    bottom: 2px;
+  }
+
+  body.menu-open nav.primary-nav ul.nav-list li a{
+    -webkit-tap-highlight-color: transparent;
+  }
+
+}
+
+
+/* Defensive: hide quick nav title if present */
+@media (max-width: 768px){
+  .quick-nav-title, .menu-title, .menu-heading{ display:none !important; }
+}
+/* ==========================================================================
+   Floating Circle Hamburger (Scroll) - Mobile only, style stays consistent
+   ========================================================================== */
+#floatingMenuBtn{
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  width: 52px;
+  height: 52px;
+  border-radius: 999px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 5px;
+  background: rgba(46, 31, 45, 0.94);
+  border: 1px solid rgba(212, 175, 55, 0.28);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+  z-index: 1800;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+#floatingMenuBtn span{
+  display:block;
+  width: 22px;
+  height: 2px;
+  background: var(--white);
+  border-radius: 2px;
+  opacity: 0.95;
+}
+#floatingMenuBtn:focus-visible{
+  outline: 2px solid rgba(212,175,55,0.75);
+  outline-offset: 4px;
+}
+#floatingMenuBtn.is-visible{ display:flex; }
+
+@media (min-width: 769px){
+  #floatingMenuBtn{ display:none !important; }
+}
+
+
+   ========================================================================== */
+
+/* ==========================================================================
+   About: Google reviews embellishment (premium, subtle)
+   ========================================================================== */
+#about .google-review-title{
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+#about .google-review-title::after{
+  content:'';
+  position:absolute;
+  left: 0;
+  bottom: 0;
+  width: 72px;
+  height: 3px;
+  background: var(--gold);
+  opacity: 0.9;
+}
+#about .google-rating-overview{
+  margin-top: 14px;
+  padding: 16px 18px;
+  border: 1px solid rgba(212,175,55,0.18);
+  border-radius: 14px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.04);
+  background: linear-gradient(180deg, #fff, #fbf7ea);
+  display: inline-block;
+}
+#about .google-rating-overview .rating-stars{
+  color: var(--gold);
+  letter-spacing: 2px;
+}
+#about .google-review-card{
+  border: 1px solid rgba(212,175,55,0.10);
+}
+#about .google-review-card:hover{
+  box-shadow: 0 14px 32px rgba(0,0,0,0.08);
+}
+#about .google-review-card .review-author{
+  color: rgba(26,26,26,0.72);
+}
+
+
+/* ==========================================================================
+   About: Google review cards - extra decoration (premium, subtle)
+   ========================================================================== */
+#about .google-review-section{
+  position: relative;
+  overflow: hidden;
+}
+#about .google-review-card{
+  position: relative;
+  border-radius: 16px;
+  background: linear-gradient(180deg, #ffffff 0%, #fffdf7 100%);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.06);
+  border: 1px solid rgba(212,175,55,0.16);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+#about .google-review-card::before{
+  /* small golden quote mark */
+  content:"“";
+  position:absolute;
+  top: 14px;
+  left: 16px;
+  font-size: 44px;
+  line-height: 1;
+  color: rgba(212,175,55,0.60);
+  font-family: 'Noto Serif TC', serif;
+  pointer-events:none;
+}
+#about .google-review-card::after{
+  /* corner accent line */
+  content:"";
+  position:absolute;
+  top: 14px;
+  right: 14px;
+  width: 52px;
+  height: 52px;
+  border-top: 2px solid rgba(212,175,55,0.35);
+  border-right: 2px solid rgba(212,175,55,0.22);
+  border-top-right-radius: 14px;
+  pointer-events:none;
+}
+
+#about .google-review-card:hover{
+  transform: translateY(-10px);
+  border-color: rgba(212,175,55,0.30);
+  box-shadow: 0 18px 44px rgba(0,0,0,0.10);
+}
+
+#about .google-review-card .review-text{
+  margin-top: 20px;
+  color: rgba(26,26,26,0.82);
+  letter-spacing: 0.6px;
+}
+#about .google-review-card .review-author{
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed rgba(212,175,55,0.28);
+  color: rgba(26,26,26,0.70);
+  letter-spacing: 1px;
+}
+
+
+/* ==========================================================================
+   SEO (Brand-safe): visually hidden text (accessible, no layout change)
+   ========================================================================== */
+.seo-visually-hidden{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+  border:0 !important;
+  white-space: nowrap !important;
+}
+
+
+/* ========================================================================== 
+   Service Landing Page Template - Civil / Family SEO pages
+   ========================================================================== */
+.service-page{display:block;margin-top:0;padding:0 0 70px;background:#fff;}
+.service-hero{
+  position:relative;
+  min-height:560px;
+  padding:150px 0 92px;
+  display:flex;
+  align-items:center;
+  color:#2E1F2D;
+  overflow:hidden;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,.98) 0%, rgba(253,249,238,.96) 48%, rgba(244,236,215,.92) 100%);
+}
+.service-hero::before{
+  content:"";
+  position:absolute;
+  right:-5%;
+  top:96px;
+  width:52%;
+  height:76%;
+  border-radius:42px 0 0 42px;
+  background:
+    linear-gradient(90deg, rgba(46,31,45,.38), rgba(46,31,45,.08)),
+    url('images/hero-banner-1.jpg') center/cover no-repeat;
+  box-shadow: -28px 32px 80px rgba(46,31,45,.16);
+  opacity:.9;
+}
+.service-hero::after{
+  content:"";
+  position:absolute;
+  inset:auto 0 0 0;
+  height:92px;
+  background:linear-gradient(180deg, transparent, rgba(255,255,255,.98));
+  pointer-events:none;
+}
+.service-hero .container{
+  position:relative;
+  z-index:2;
+  display:grid;
+  grid-template-columns:minmax(0, 1fr) 380px;
+  gap:48px;
+  align-items:center;
+}
+.service-hero-panel{
+  max-width:780px;
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+}
+.service-kicker{
+  display:inline-flex;
+  align-items:center;
+  gap:12px;
+  color:#8B6E1F;
+  font-family:'Noto Serif TC',serif;
+  font-weight:700;
+  letter-spacing:3.5px;
+  margin-bottom:16px;
+  font-size:.98rem;
+  text-transform:uppercase;
+}
+.service-kicker::before{
+  content:"";
+  width:42px;
+  height:1px;
+  background:rgba(139,110,31,.62);
+}
+.service-hero h1{
+  max-width:760px;
+  font-family:'Noto Serif TC','Noto Sans TC',serif;
+  font-size:clamp(2rem, 3.45vw, 3.15rem);
+  line-height:1.22;
+  margin-bottom:20px;
+  letter-spacing:1px;
+  font-weight:700;
+  color:#2E1F2D;
+  text-shadow:none;
+}
+.service-hero h1 .title-sub{
+  display:block;
+  margin-top:14px;
+  font-size:clamp(1.04rem, 1.45vw, 1.28rem);
+  line-height:1.75;
+  font-weight:600;
+  letter-spacing:1.1px;
+  color:rgba(46,31,45,.72);
+}
+.service-hero p{max-width:720px;font-size:1.08rem;color:rgba(46,31,45,.76);line-height:2.05;}
+.service-hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px;}
+.service-hero .btn{
+  border-radius:8px;
+  padding:13px 28px;
+  box-shadow:0 14px 28px rgba(212,175,55,.22);
+}
+.btn-outline{background:rgba(255,255,255,.64);border:1px solid rgba(139,110,31,.36);color:#2E1F2D;box-shadow:none;}
+.btn-outline:hover{background:#fff7dd;}
+.service-hero-visual{
+  position:relative;
+  min-height:310px;
+  display:flex;
+  align-items:flex-end;
+  justify-content:flex-end;
+}
+.service-hero-visual::before{
+  content:"";
+  position:absolute;
+  inset:22px 28px auto auto;
+  width:210px;
+  height:210px;
+  border:1px solid rgba(212,175,55,.5);
+  border-radius:999px;
+  background:rgba(255,255,255,.18);
+}
+.visual-card{
+  position:relative;
+  width:min(340px,100%);
+  padding:28px;
+  border-radius:24px;
+  background:rgba(255,255,255,.88);
+  border:1px solid rgba(212,175,55,.26);
+  box-shadow:0 24px 70px rgba(46,31,45,.18);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+}
+.visual-card .visual-label{font-family:'Noto Serif TC',serif;color:#8B6E1F;font-weight:700;letter-spacing:2px;margin-bottom:14px;}
+.visual-card ul{list-style:none;margin:0;padding:0;display:grid;gap:12px;}
+.visual-card li{display:flex;gap:10px;align-items:flex-start;color:rgba(46,31,45,.76);line-height:1.7;}
+.visual-card li::before{content:"";width:7px;height:7px;border-radius:999px;background:var(--gold);flex:0 0 auto;margin-top:11px;box-shadow:0 0 0 5px rgba(212,175,55,.13);}
+.hero-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+.hero-tags span{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;background:rgba(212,175,55,.11);border:1px solid rgba(212,175,55,.24);color:rgba(46,31,45,.72);font-size:.92rem;line-height:1.4;}
+.service-layout{display:grid;grid-template-columns:minmax(0,1fr) 330px;gap:34px;align-items:start;margin-top:-40px;position:relative;z-index:3;}
+.service-main-card,.service-side-card,.service-section-card{background:#fff;border:1px solid rgba(212,175,55,.16);border-radius:18px;box-shadow:0 14px 40px rgba(0,0,0,.06);}
+.service-main-card{padding:34px;}
+.service-side-card{padding:24px;position:sticky;top:100px;}
+.service-section-card{padding:30px;margin-top:26px;}
+.service-section-card h2,.service-main-card h2{color:var(--black);font-size:1.55rem;letter-spacing:1.5px;position:relative;padding-bottom:12px;}
+.service-section-card h2::after,.service-main-card h2::after{content:"";position:absolute;left:0;bottom:0;width:72px;height:3px;background:var(--gold);}
+.service-lead{font-size:1.05rem;color:rgba(26,26,26,.78);line-height:2;}
+.service-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px;}
+.service-mini-card{border:1px solid rgba(212,175,55,.14);background:linear-gradient(180deg,#fff,#fffdf7);border-radius:14px;padding:18px;}
+.service-mini-card h3{font-size:1.08rem;margin:0 0 8px;color:#2E1F2D;letter-spacing:1px;}
+.service-mini-card p{margin:0;color:rgba(26,26,26,.72);line-height:1.85;}
+.service-list{padding-left:1.2rem;color:rgba(26,26,26,.78);line-height:2;}
+.service-list li{margin-bottom:6px;}
+.flow-list{counter-reset:flow;display:grid;gap:14px;margin-top:18px;}
+.flow-item{counter-increment:flow;display:grid;grid-template-columns:46px 1fr;gap:14px;align-items:start;padding:18px;border-radius:14px;background:#fbf7ea;border:1px solid rgba(212,175,55,.18);}
+.flow-item::before{content:counter(flow);width:42px;height:42px;border-radius:999px;background:var(--dark-navy);color:var(--gold);display:grid;place-items:center;font-weight:800;font-family:'Noto Serif TC',serif;}
+.flow-item h3{font-size:1.05rem;margin:0 0 4px;letter-spacing:1px;}
+.flow-item p{margin:0;color:rgba(26,26,26,.72);line-height:1.8;}
+.faq-list{display:grid;gap:16px;margin-top:18px;}
+.faq-item{border:1px solid rgba(212,175,55,.16);border-radius:14px;padding:18px;background:#fff;box-shadow:0 8px 24px rgba(0,0,0,.035);}
+.faq-item h3{font-size:1.05rem;margin:0 0 8px;color:#2E1F2D;letter-spacing:1px;}
+.faq-item p{margin:0;color:rgba(26,26,26,.74);line-height:1.9;}
+.related-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:18px;}
+.related-links a{display:block;padding:16px 18px;border:1px solid rgba(212,175,55,.16);border-radius:14px;text-decoration:none;color:#2E1F2D;background:#fffdf7;transition:all .25s ease;}
+.related-links a:hover{transform:translateY(-3px);border-color:rgba(212,175,55,.45);box-shadow:0 10px 28px rgba(0,0,0,.06);}
+.side-title{color:var(--gold);font-size:1.2rem;margin-bottom:10px;}
+.side-list{list-style:none;margin:14px 0 20px;padding:0;}
+.side-list li{padding:10px 0;border-bottom:1px dashed rgba(212,175,55,.25);color:rgba(26,26,26,.76);}
+.side-list li:last-child{border-bottom:0;}
+.service-cta{margin-top:28px;padding:34px;border-radius:20px;background:linear-gradient(135deg,#2E1F2D,#3C2C3E);color:#fff;display:flex;justify-content:space-between;gap:24px;align-items:center;}
+.service-cta h2{color:#fff;margin-bottom:8px;padding:0;}
+.service-cta h2::after{display:none;}
+.service-cta p{margin:0;color:rgba(255,255,255,.82);line-height:1.9;}
+.breadcrumb{font-size:.92rem;margin-bottom:20px;color:rgba(46,31,45,.58);}
+.breadcrumb a{color:rgba(46,31,45,.66);text-decoration:none;}
+.breadcrumb a:hover{color:var(--gold);}
+@media(max-width:992px){.service-hero .container{grid-template-columns:1fr}.service-hero::before{width:72%;right:-26%;opacity:.28}.service-hero-visual{display:none}.service-layout{grid-template-columns:1fr}.service-side-card{position:static}.service-hero h1{font-size:2.4rem}.service-grid,.related-links{grid-template-columns:1fr}.service-cta{flex-direction:column;align-items:flex-start}}
+@media(max-width:768px){.service-hero{min-height:auto;padding:132px 0 78px}.service-hero::before{top:92px;height:56%;width:92%;right:-48%;border-radius:28px 0 0 28px}.service-hero h1{font-size:2rem}.service-hero h1 .title-sub{font-size:1rem}.service-hero p{font-size:1rem}.hero-tags span{font-size:.86rem}.service-main-card,.service-section-card{padding:22px}.service-side-card{padding:20px}.flow-item{grid-template-columns:40px 1fr}.service-cta{padding:24px}}
+</style>
+<meta content="慈律律師事務所位於新北市土城區，提供債務糾紛、借款返還、欠款催討、本票支票、支付命令、強制執行與債務協商等法律諮詢，協助當事人整理借貸證據、金流紀錄並規劃求償或防禦策略。" name="description"/>
+<meta content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" name="robots"/>
+<meta content="#2E1F2D" name="theme-color"/>
+<link href="https://www.cilulaw.tw/debt.html" rel="canonical"/>
+<link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+<link href="https://www.cilulaw.tw/debt.html" hreflang="zh-TW" rel="alternate"/>
+<link href="https://www.cilulaw.tw/debt.html" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="zh_TW" property="og:locale"/>
+<meta content="慈律律師事務所" property="og:site_name"/>
+<meta content="債務糾紛律師｜借款返還、欠款催討、本票與強制執行｜慈律律師事務所" property="og:title"/>
+<meta content="慈律律師事務所位於新北市土城區，提供債務糾紛、借款返還、欠款催討、本票支票、支付命令、強制執行與債務協商等法律諮詢，協助當事人整理借貸證據、金流紀錄並規劃求償或防禦策略。" property="og:description"/>
+<meta content="https://www.cilulaw.tw/debt.html" property="og:url"/>
+<meta content="https://www.cilulaw.tw/images/logo.png" property="og:image"/>
+<meta property="og:image:alt" content="慈律律師事務所債務糾紛律師服務頁，提供借款返還、欠款催討、支付命令與強制執行諮詢"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="債務糾紛律師｜借款返還、欠款催討、本票與強制執行｜慈律律師事務所" name="twitter:title"/>
+<meta content="慈律律師事務所位於新北市土城區，提供債務糾紛、借款返還、欠款催討、本票支票、支付命令、強制執行與債務協商等法律諮詢，協助當事人整理借貸證據、金流紀錄並規劃求償或防禦策略。" name="twitter:description"/>
+<meta content="https://www.cilulaw.tw/images/logo.png" name="twitter:image"/>
+<script id="seo-schema" type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.cilulaw.tw/#organization","name":"慈律律師事務所","url":"https://www.cilulaw.tw/","logo":"https://www.cilulaw.tw/images/logo.png","telephone":"+886-2-2266-8879","faxNumber":"+886-2-2262-5252","address":{"@type":"PostalAddress","addressCountry":"TW","addressRegion":"新北市","addressLocality":"土城區","postalCode":"236","streetAddress":"青雲路145號2樓"}},{"@type":"WebSite","@id":"https://www.cilulaw.tw/#website","url":"https://www.cilulaw.tw/","name":"慈律律師事務所","publisher":{"@id":"https://www.cilulaw.tw/#organization"},"inLanguage":"zh-TW","potentialAction":{"@type":"SearchAction","target":"https://www.cilulaw.tw/articles.html?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"WebPage","@id":"https://www.cilulaw.tw/debt.html#webpage","url":"https://www.cilulaw.tw/debt.html","name":"債務糾紛律師｜借款返還、欠款催討、本票與強制執行｜慈律律師事務所","isPartOf":{"@id":"https://www.cilulaw.tw/#website"},"about":{"@id":"https://www.cilulaw.tw/#organization"},"inLanguage":"zh-TW","description":"慈律律師事務所位於新北市土城區，提供債務糾紛、借款返還、欠款催討、本票支票、支付命令、強制執行與債務協商等法律諮詢，協助當事人整理借貸證據、金流紀錄並規劃求償或防禦策略。"},{"@type":["LegalService","LocalBusiness"],"@id":"https://www.cilulaw.tw/debt.html#legalservice","name":"慈律律師事務所｜債務糾紛律師","url":"https://www.cilulaw.tw/debt.html","image":"https://www.cilulaw.tw/images/logo.png","telephone":"+886-2-2266-8879","address":{"@type":"PostalAddress","addressCountry":"TW","addressRegion":"新北市","addressLocality":"土城區","postalCode":"236","streetAddress":"青雲路145號2樓"},"areaServed":[{"@type":"AdministrativeArea","name":"新北市"},{"@type":"City","name":"土城區"},{"@type":"City","name":"板橋區"},{"@type":"City","name":"台北市"}],"priceRange":"$$","serviceType":["債務糾紛","借款返還","欠款催討","本票支票","支付命令","強制執行","債務協商"],"parentOrganization":{"@id":"https://www.cilulaw.tw/#organization"}},{"@type":"BreadcrumbList","@id":"https://www.cilulaw.tw/debt.html#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"首頁","item":"https://www.cilulaw.tw/"},{"@type":"ListItem","position":2,"name":"債務糾紛律師","item":"https://www.cilulaw.tw/debt.html"}]},{"@type":"FAQPage","@id":"https://www.cilulaw.tw/debt.html#faq","mainEntity":[{"@type":"Question","name":"借錢給別人沒有借據，可以要回來嗎？","acceptedAnswer":{"@type":"Answer","text":"仍有機會，但需要用匯款紀錄、對話紀錄、對方承認欠款訊息、還款紀錄或證人等資料證明借貸關係與金額。"}},{"@type":"Question","name":"支付命令收到後可以不理嗎？","acceptedAnswer":{"@type":"Answer","text":"不建議。若債務人對金額或債權有爭議，通常要在法定期間內提出異議，否則可能產生執行風險。"}},{"@type":"Question","name":"本票裁定是不是一定會輸？","acceptedAnswer":{"@type":"Answer","text":"本票裁定程序主要審查票據形式，若債務人有原因關係不存在、已清償、被迫簽票等抗辯，仍需另行評估救濟或訴訟策略。"}},{"@type":"Question","name":"債務糾紛諮詢前要準備什麼資料？","acceptedAnswer":{"@type":"Answer","text":"建議準備借據、契約、本票、匯款紀錄、對話紀錄、對方資料、催討紀錄，以及法院或執行處寄來的文件。"}},{"@type":"Question","name":"對方沒財產，打贏官司有用嗎？","acceptedAnswer":{"@type":"Answer","text":"勝訴判決或支付命令確定後可作為強制執行基礎；若對方目前無財產，仍可評估取得債權憑證並持續查調財產。"}}]}]}</script>
+</head>
+<body><div id="seo-hidden-text" class="seo-visually-hidden">慈律律師事務所債務糾紛律師服務，借款返還、欠款催討、本票支票、支付命令、強制執行、債務協商與新北土城法律諮詢。</div>
+<div aria-live="polite" id="toast-container"></div>
+<header>
+<div class="container header-container">
+<div class="logo-area">
+<div class="logo"><img alt="慈律律師事務所標誌" src="images/logo.png"/></div>
+<div class="logo-text">
+<span class="logo-gold">慈律</span><span class="logo-white">律師事務所</span>
+</div>
+</div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" class="hamburger" type="button"><span></span><span></span><span></span></button>
+<nav class="primary-nav">
+<ul class="nav-list" id="primary-nav">
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+<li><a href="articles.html">法律觀點</a></li>
+<li><a href="appointment.html">預約諮詢</a></li>
+<li><a href="contact.html">聯絡我們</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<div class="menu-backdrop"></div>
+<button aria-controls="primary-nav" aria-expanded="false" aria-label="開啟選單" id="floatingMenuBtn" type="button"><span></span><span></span><span></span></button>
+
+
+<section class="service-page active-page" id="service-debt">
+  <div class="service-hero" role="region" aria-label="債務糾紛律師｜慈律律師事務所借款返還服務主視覺">
+    <div class="container">
+      <div class="service-hero-panel">
+        <div class="breadcrumb"><a href="index.html">首頁</a> / <a href="services.html">服務項目</a> / 債務糾紛律師</div>
+        <div class="service-kicker">Debt Dispute Service</div>
+        <h1>債務糾紛律師<span class="title-sub">借款返還、欠款催討、本票與強制執行服務</span></h1>
+        <p>債務案件常牽涉借貸關係、金流紀錄、對話承認、票據、本票裁定、支付命令與強制執行。慈律律師事務所協助當事人整理債權債務證據，評估先催告、調解、聲請支付命令或提起訴訟的處理方式。</p>
+        <div class="hero-tags" aria-label="債務糾紛法律服務重點">
+          <span>借貸證據整理</span><span>催收程序評估</span><span>執行與保全規劃</span>
+        </div>
+        <div class="service-hero-actions">
+          <a class="btn" href="appointment.html">預約律師諮詢</a>
+          <a class="btn btn-outline" href="tel:0222668879">電話諮詢 02-22668879</a>
+        </div>
+      </div>
+      <div class="service-hero-visual" aria-hidden="true">
+        <div class="visual-card">
+          <div class="visual-label">債務案件處理重點</div>
+          <ul>
+            <li>先確認借貸關係、金額與時效問題</li>
+            <li>整理匯款紀錄、借據、本票與對話承認</li>
+            <li>依個案選擇律師函、支付命令、訴訟或強制執行</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container service-layout"><main>
+    <article class="service-main-card"><h2>一、我們協助處理哪些債務案件</h2><p class="service-lead">本頁針對「債務糾紛律師」與「借款返還」需求，整理常見債務案件類型、諮詢前資料準備、律師協助流程與 FAQ。無論您是債權人要催討欠款，或債務人收到支付命令、存證信函、起訴狀，都建議先釐清借貸事實、金流與時效問題。</p><div class="service-grid"><div class="service-mini-card"><h3>借款返還與欠款催討</h3><p>協助處理私人借貸、親友借款、公司往來款、工程款、貨款、服務費與其他金錢給付請求。</p></div><div class="service-mini-card"><h3>本票、支票與票據爭議</h3><p>針對本票裁定、支票退票、票據原因關係、抗辯事由與後續強制執行進行評估。</p></div><div class="service-mini-card"><h3>支付命令與民事訴訟</h3><p>協助債權人評估聲請支付命令、起訴返還借款或損害賠償；也協助債務人判斷是否提出異議。</p></div><div class="service-mini-card"><h3>強制執行與債務協商</h3><p>針對債權憑證、薪資扣押、存款扣押、不動產執行、和解分期與清償協議進行規劃。</p></div></div></article>
+    <section class="service-section-card"><h2>二、債務案件常見爭點</h2><ul class="service-list"><li>借貸關係是否能用借據、匯款紀錄、對話紀錄、承認欠款訊息或見證人證明。</li><li>債權是否已超過消滅時效，或有中斷時效、承認債務、部分清償等情形。</li><li>是否適合先寄發存證信函或律師函，或直接聲請支付命令、調解、起訴。</li><li>若對方名下財產不明，是否需要評估假扣押、強制執行或財產查調方向。</li></ul></section>
+    <section class="service-section-card"><h2>三、諮詢前可以先準備哪些資料</h2><ul class="service-list"><li>借據、本票、支票、契約、報價單、請款單、對帳單或清償協議。</li><li>匯款紀錄、收據、轉帳明細、現金交付紀錄、LINE 對話、簡訊或 Email。</li><li>對方姓名、身分資料、地址、電話、公司統編、財產線索或工作資訊。</li><li>已收到的存證信函、支付命令、起訴狀、法院通知、執行命令或和解書。</li></ul></section>
+    <section class="service-section-card"><h2>四、律師會如何協助你</h2><div class="flow-list"><div class="flow-item"><div><h3>確認債權基礎</h3><p>先判斷金錢請求來自借貸、買賣、承攬、委任、票據或不當得利等法律關係。</p></div></div><div class="flow-item"><div><h3>整理金流與承認資料</h3><p>協助把匯款、借據、票據、對話紀錄與還款紀錄整理成法院可理解的證據脈絡。</p></div></div><div class="flow-item"><div><h3>選擇催收與訴訟程序</h3><p>依金額、證據強弱與對方態度，評估律師函、調解、支付命令、起訴或假扣押。</p></div></div><div class="flow-item"><div><h3>銜接強制執行</h3><p>取得執行名義後，協助評估存款、薪資、不動產、動產或其他財產執行方向。</p></div></div></div></section>
+    <section class="service-section-card"><h2>五、常見問題 FAQ</h2><div class="faq-list"><div class="faq-item"><h3>借錢給別人沒有借據，可以要回來嗎？</h3><p>仍有機會，但需要用匯款紀錄、對話紀錄、對方承認欠款訊息、還款紀錄或證人等資料證明借貸關係與金額。</p></div><div class="faq-item"><h3>支付命令收到後可以不理嗎？</h3><p>不建議。若債務人對金額或債權有爭議，通常要在法定期間內提出異議，否則可能產生執行風險。</p></div><div class="faq-item"><h3>本票裁定是不是一定會輸？</h3><p>本票裁定程序主要審查票據形式，若債務人有原因關係不存在、已清償、被迫簽票等抗辯，仍需另行評估救濟或訴訟策略。</p></div><div class="faq-item"><h3>債務糾紛諮詢前要準備什麼資料？</h3><p>建議準備借據、契約、本票、匯款紀錄、對話紀錄、對方資料、催討紀錄，以及法院或執行處寄來的文件。</p></div><div class="faq-item"><h3>對方沒財產，打贏官司有用嗎？</h3><p>勝訴判決或支付命令確定後可作為強制執行基礎；若對方目前無財產，仍可評估取得債權憑證並持續查調財產。</p></div></div></section>
+    <section class="service-section-card service-cta" aria-label="預約債務糾紛律師諮詢"><div><h2>六、預約債務糾紛律師諮詢</h2><p>若您正在處理借款返還、欠款催討、本票支票、支付命令或強制執行問題，建議先整理借貸證據與金流資料，讓律師協助判斷最快且最適合的處理程序。</p></div><a class="btn" href="appointment.html">前往預約諮詢</a></section>
+    <section class="service-section-card"><h2>七、相關法律文章</h2><div class="related-links"><a href="civil.html">民事訴訟與金錢給付請求 →</a><a href="real-estate.html">租金、押金與不動產債務爭議 →</a><a href="articles.html">債務與借款返還法律文章 →</a><a href="appointment.html">預約債務糾紛律師諮詢 →</a></div></section>
+  </main><aside class="service-side-card" aria-label="債務糾紛律師快速資訊"><h2 class="side-title">快速諮詢重點</h2><p style="color:rgba(26,26,26,.74);line-height:1.9;">債務案件第一次諮詢，請先整理「借款原因、交付款項方式、對方承認紀錄、已還款金額、是否收到法院文件」。這些資料會影響程序選擇與時效判斷。</p><ul class="side-list"><li>服務地區：土城、板橋、新北、台北</li><li>事務所地址：新北市土城區青雲路145號2樓</li><li>電話：02-22668879</li><li>建議：支付命令、執行命令有期限時要優先處理</li></ul><a class="btn" href="appointment.html" style="width:100%;text-align:center;">立即預約</a><a class="btn btn-outline" href="services.html" style="width:100%;text-align:center;margin-top:12px;color:#2E1F2D;border-color:rgba(212,175,55,.7);">返回服務項目</a></aside></div>
+</section>
+<a class="line-float" href="https://line.me/R/ti/p/@689mbehi" target="_blank" rel="noopener noreferrer">
+<img alt="慈律律師事務所 LINE 線上諮詢" src="https://upload.wikimedia.org/wikipedia/commons/4/41/LINE_logo.svg" loading="lazy"/>
+</a>
+
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-content">
+<div class="footer-column">
+<h3>慈律律師事務所</h3>
+<p>專業法律服務，守護您的權益</p>
+<p>Professional Legal Services, Protecting Your Rights</p>
+</div>
+<div class="footer-column">
+<h3>快速連結</h3>
+<ul>
+<li><a href="index.html">首頁</a></li>
+<li><a href="about.html">關於我們</a></li>
+<li><a href="services.html">服務項目</a></li>
+<li><a href="team.html">專業團隊</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>聯絡資訊</h3>
+<p>新北市土城區青雲路145號2樓</p>
+<p>電話：<a href="tel:0222668879" style="color: inherit; text-decoration: none;">02-22668879</a></p>
+<p>傳真：02-22625252</p>
+</div>
+<div class="footer-column">
+<h3>法律聲明</h3>
+<ul>
+<li><a href="privacy.html">隱私權政策</a></li>
+<li><a href="privacy.html#disclaimer">免責聲明</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>© 2026 慈律律師事務所 版權所有</p>
+</div>
+</div></footer>
+<script>
+
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            /* 1. 導航選單 */
+            const bodyEl = document.body;
+            const hamburgerBtn = document.querySelector('.hamburger');
+            const menuBackdrop = document.querySelector('.menu-backdrop');
+const floatingMenuBtn = document.getElementById('floatingMenuBtn');
+let syncFloatingVisibility = () => {};
+
+
+            // Defensive: remove any "快速導覽" title if it exists (keep menu clean)
+            const stripQuickNavTitle = () => {
+                const candidates = document.querySelectorAll('.quick-nav-title, .menu-title, .menu-heading');
+                candidates.forEach(el => el.remove());
+                // fallback by text match
+                document.querySelectorAll('nav.primary-nav *').forEach(el => {
+                    if (el && el.childNodes && el.childNodes.length === 1 && el.textContent) {
+                        const t = el.textContent.trim();
+                        if (t === '快速導覽') el.remove();
+                    }
+                });
+            };
+
+
+            const closeMenu = () => {
+                if (!hamburgerBtn || !menuBackdrop) return;
+                bodyEl.classList.remove('menu-open');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+                if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded','false');
+                menuBackdrop.hidden = true;
+                            syncFloatingVisibility();
+            };
+
+            const menuLinks = document.querySelectorAll('nav.primary-nav ul.nav-list a');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+
+            const openMenu = () => {
+                if (!hamburgerBtn || !menuBackdrop) return;
+                stripQuickNavTitle();
+                bodyEl.classList.add('menu-open');
+                hamburgerBtn.setAttribute('aria-expanded', 'true');
+                if (floatingMenuBtn) floatingMenuBtn.setAttribute('aria-expanded','true');
+                menuBackdrop.hidden = false;
+                            syncFloatingVisibility();
+            };
+
+            const toggleMenu = () => {
+                if (!hamburgerBtn || !menuBackdrop) return;
+                if (bodyEl.classList.contains('menu-open')) closeMenu();
+                else openMenu();
+            };
+
+            if (hamburgerBtn && menuBackdrop) {
+                menuBackdrop.hidden = true;
+
+                hamburgerBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    toggleMenu();
+                });
+
+                if (floatingMenuBtn) {
+                    floatingMenuBtn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        toggleMenu();
+                    });
+                }
+
+                menuBackdrop.addEventListener('click', closeMenu);
+
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Escape') closeMenu();
+                });
+
+                window.addEventListener('resize', () => {
+                    if (window.innerWidth > 768) closeMenu();
+                });
+            }
+
+            
+            
+
+            /* 0. Header hide on scroll (transparent & disappears) */
+            const headerEl = document.querySelector('header');
+            if (headerEl) {
+                const toggleHeader = () => {
+                    if (bodyEl && bodyEl.classList.contains('menu-open')) return;
+                    if (window.scrollY > 80) headerEl.classList.add('is-hidden');
+                    else headerEl.classList.remove('is-hidden');
+                };
+                toggleHeader();
+                window.addEventListener('scroll', toggleHeader, { passive: true });
+            }
+
+            /* Floating circle button show/hide on scroll (mobile only) */
+            syncFloatingVisibility = () => {
+                if (!floatingMenuBtn) return;
+                const isMobile = window.innerWidth <= 768;
+                const shouldShow = isMobile && window.scrollY > 80 && !bodyEl.classList.contains('menu-open');
+                floatingMenuBtn.classList.toggle('is-visible', shouldShow);
+            };
+            syncFloatingVisibility();
+            window.addEventListener('scroll', syncFloatingVisibility, { passive: true });
+            window.addEventListener('resize', syncFloatingVisibility);
+
+            /* 2. Hero 輪播圖 */
+            const slides = document.querySelectorAll('.hero-slide');
+            let currentSlide = 0;
+            if (slides.length > 0) {
+                setInterval(() => {
+                    slides[currentSlide].classList.remove('active');
+                    currentSlide = (currentSlide + 1) % slides.length;
+                    slides[currentSlide].classList.add('active');
+                }, 4000);
+            }
+
+
+        });
+
+/* 5. Toast 通知輔助函式 */
+        function showToast(type, title, desc) {
+            const container = document.getElementById('toast-container');
+            if (!container) return;
+            const toast = document.createElement('div');
+            toast.className = `toast ${type}`;
+            toast.innerHTML = `
+                <div class="icon">${type === 'error' ? '❌' : '✅'}</div>
+                <div class="content">
+                    <div class="title"><strong>${title}</strong></div>
+                    <div class="desc">${desc}</div>
+                </div>
+                <button style="background:none; border:none; cursor:pointer;" onclick="this.parentElement.remove()">×</button>
+            `;
+            container.appendChild(toast);
+            setTimeout(() => toast.remove(), 5000);
+        }
+
+</script>
+</body>
+</html>
