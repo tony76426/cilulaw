@@ -1,0 +1,65 @@
+慈律律師事務所｜Google Tag Manager 全站安裝與轉換設定指南
+更新日期：2026-10-30
+GTM 容器 ID：GTM-PXLWG8DP
+
+一、安裝完成範圍
+1. 已在所有 32 個有效 HTML 頁面的 <head> 內，加入 Google 官方標準 GTM 載入程式。
+2. 已在各頁 <body> 開頭加入 GTM noscript iframe，提供無 JavaScript 瀏覽器相容處理。
+3. 各頁新增延後載入的 gtm-events.js，偵測全站的聯絡互動與預約漏斗。
+4. 唯一的 Google Search Console 網站驗證檔保持原樣，以免影響驗證。
+5. appointment.html 保留原本後端：https://lawyer-booking-api.onrender.com/submit-appointment
+   僅於後端回傳 HTTP 成功且 success=true 或 status="ok" 時推送 generate_lead。
+6. 原始網站的圖片、樣式、所有 HTML 及其他檔案皆保留，這份 ZIP 是全站更新版，而不是差異檔。
+
+二、dataLayer 事件清單（這些事件由網站產生，不代表已自動送進 GA4）
+- click_phone                 點擊任何 tel: 連結
+- click_line                  點擊任何 LINE 官方聯絡連結
+- click_email                 點擊 mailto: 連結（如果網站有配置）
+- click_map_directions        點擊外部 Google Maps 導航連結（如有）
+- click_appointment_cta       點擊站內前往 appointment.html 的連結
+- click_contact_cta           點擊站內前往 contact.html 的連結
+- view_appointment            打開預約頁面（可評估預約頁到達率）
+- view_contact                打開聯絡頁面
+- appointment_form_start      首次開始操作預約表單（不追蹤欄位內容）
+- appointment_submit_attempt  通過驗證碼、真正向後端送出請求
+- appointment_submit_error    後端拒收、回傳失敗或網路異常
+- generate_lead               後端確實確認預約資料送出成功（建議主要轉換事件）
+
+事件的 site_section 區分 home、appointment、contact、civil、criminal、family、
+debt、inheritance、real_estate、legal_article 等公開頁面分類。
+只有表單送出事件另附 consultation_category（civil / criminal / family / traffic /
+inheritance / other / unspecified），未傳姓名、電話、電子郵件、諮詢文字或預約日期。
+
+三、非常重要：還需在 GTM 管理介面完成的事項
+網頁原始碼已完成「GTM 容器安裝」與「dataLayer 事件發送」。
+若要在 Google Analytics 4 真正看到數據，仍需登入 https://tagmanager.google.com/
+並確認 GTM-PXLWG8DP 是網站使用的容器：
+A. 建立或確認 Google tag / GA4 標籤，輸入實際 GA4 測量 ID（G-XXXXXXXXXX）。
+B. 設定所有頁面觸發，啟用自動 page_view（避免額外安裝同一 GA4 標籤造成重複）。
+C. 在 GTM 建立「自訂事件」觸發條件，名稱與上述 event 完全一致。
+D. 為要送到 GA4 的事件建立 GA4 Event 標籤，事件名稱照上述事件命名。
+   事件參數可用 dataLayer 變數（第 2 版）讀取 site_section、consultation_category、lead_source。
+E. 在 GA4 將 generate_lead 標記為「關鍵事件」（主要轉換）；其他點擊事件先作互動分析，
+   視行銷需求才決定是否列為次要轉換，避免同一名訪客被重複計算多次轉換。
+F. 如需 Google Ads 表單轉換／再行銷，還須設定 Google Ads 轉換 ID、標籤及適用的
+   同意模式（Consent Mode）與隱私權告知；僅有 GTM 容器 ID 不足以完成 Ads 轉換。
+G. 在 GTM 按「預覽」以 Tag Assistant 實際測試每種事件，再正式「提交／發布」容器。
+
+四、網站測試清單
+1. 更新版網站部署後，打開首頁與文章頁，在 Tag Assistant 確認 GTM-PXLWG8DP 已載入。
+2. 在桌機與手機版點擊「打電話」及 LINE，確認 click_phone / click_line 每次只產生 1 筆。
+3. 在預約頁確認 view_appointment、appointment_form_start 有出現。
+4. 使用安全的測試資料經完整的預約驗證碼與實際 API 成功回應：
+   應依序看到 appointment_submit_attempt、generate_lead。
+5. API 回應失敗時，只會出現 appointment_submit_error，不得出現 generate_lead。
+6. 在 GA4「即時／DebugView」確認標籤確實有收到所設定的事件。
+7. 確認 GA4 / Google Ads 僅透過 GTM 安裝一次，避免重複 page_view / conversion。
+
+五、與原始碼相關的注意事項
+- 使用者提供的原始程式混合了 GTM 載入網址與 gtag.js 初始化方法；此更新版改用
+  Google 官方兩段式 GTM 容器代碼。兩者不應並行重複安裝。
+- 現有預約表單是外部 API 提交，是否真正成功只能由後端回覆確認。
+- 不會自動取得 GA4 測量 ID 或 Google Ads 轉換 ID，因為原 ZIP 中沒有這些帳號設定。
+- 未改動原網站的法律聲明。上線前應依實際 Cookie／GA4／Ads 用途檢查隱私政策
+  告知及臺灣個人資料保護法等相關要求；有必要時再加入同意管理機制。
+- 此 ZIP 不含 Git 版本庫的遠端設定；部署時請保留 GitHub 原本的 Repository 設定。

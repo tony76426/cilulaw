@@ -2,6 +2,15 @@
 
 <html lang="zh-TW">
 <head>
+<!-- Google Tag Manager：GTM-PXLWG8DP -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PXLWG8DP');</script>
+<!-- End Google Tag Manager -->
+<!-- 全站自訂互動追蹤，不傳送表單內個人或案件資料 -->
+<script src="gtm-events.js" defer></script>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>預約法律諮詢｜慈律律師事務所</title>
@@ -1254,7 +1263,11 @@ body.standalone-page .page-content.active-page{
 .article-list-card a{ color:inherit; text-decoration:none; }
 .article-list-card a:hover{ color:var(--gold); }
 </style></head>
-<body class="standalone-page" data-api-base="https://lawyer-booking-api.onrender.com"><div id="seo-hidden-text" class="seo-visually-hidden">慈律律師事務所預約法律諮詢，新北土城律師，提供民事、刑事、家事、勞資、不動產、遺產繼承、交通事故、家暴保護令、強制執行、非訟事件等法律服務，歡迎線上預約諮詢。</div>
+<body class="standalone-page" data-api-base="https://lawyer-booking-api.onrender.com">
+<!-- Google Tag Manager (noscript)：GTM-PXLWG8DP -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PXLWG8DP"
+height="0" width="0" style="display:none;visibility:hidden" title=""></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --><div id="seo-hidden-text" class="seo-visually-hidden">慈律律師事務所預約法律諮詢，新北土城律師，提供民事、刑事、家事、勞資、不動產、遺產繼承、交通事故、家暴保護令、強制執行、非訟事件等法律服務，歡迎線上預約諮詢。</div>
 <div aria-live="polite" id="toast-container"></div>
 <!-- Appointment status modals (overlay, non-intrusive) -->
 <div aria-labelledby="loadingTitle" aria-modal="true" class="modal-overlay" id="modalLoading" role="dialog">
@@ -1611,6 +1624,10 @@ let syncFloatingVisibility = () => {};
             let __pendingAppointmentPayload = null;
 
             async function submitAppointment(payload) {
+                // 僅追蹤諮詢類別；絕不將姓名、電話、Email、案情或預約日期送入 dataLayer。
+                const trackingCategory = document.getElementById('category')?.value || 'unspecified';
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ event: 'appointment_submit_attempt', site_section: 'appointment', consultation_category: trackingCategory });
                 // 顯示 Loading 彈窗（體感至少 900ms）
                 showModal('modalLoading');
                 const start = Date.now();
@@ -1633,17 +1650,21 @@ let syncFloatingVisibility = () => {};
                     closeModal('modalLoading');
 
                     if (response.ok && result && (result.success === true || result.status === "ok")) {
+                        // 真正的表單轉換：後端確認受理後才記錄，不將點擊「提交」誤作成功。
+                        window.dataLayer.push({ event: 'generate_lead', site_section: 'appointment', lead_source: 'appointment_form', consultation_category: trackingCategory });
                         showModal('modalSuccess');
                         const formEl = document.getElementById('appointment-form');
                         if (formEl) formEl.reset();
                         generateCaptcha();
                     } else {
+                        window.dataLayer.push({ event: 'appointment_submit_error', site_section: 'appointment', consultation_category: trackingCategory });
                         const msg = (result && (result.error || result.message)) ? (result.error || result.message) : "未知錯誤";
                         const errEl = document.getElementById("errorMessage");
                         if (errEl) errEl.textContent = "發生錯誤：" + msg;
                         showModal('modalError');
                     }
                 } catch (err) {
+                    window.dataLayer.push({ event: 'appointment_submit_error', site_section: 'appointment', consultation_category: trackingCategory });
                     const elapsed = Date.now() - start;
                     if (elapsed < 900) {
                         await new Promise(r => setTimeout(r, 900 - elapsed));
