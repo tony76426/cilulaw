@@ -1622,8 +1622,11 @@ let syncFloatingVisibility = () => {};
             generateCaptcha();
 
             let __pendingAppointmentPayload = null;
+            let __appointmentSubmitting = false;
 
             async function submitAppointment(payload) {
+                if (__appointmentSubmitting) return;
+                __appointmentSubmitting = true;
                 // 僅追蹤諮詢類別；絕不將姓名、電話、Email、案情或預約日期送入 dataLayer。
                 const trackingCategory = document.getElementById('category')?.value || 'unspecified';
                 window.dataLayer = window.dataLayer || [];
@@ -1673,6 +1676,8 @@ let syncFloatingVisibility = () => {};
                     const errEl = document.getElementById("errorMessage");
                     if (errEl) errEl.textContent = "網路錯誤，請稍後再試！";
                     showModal('modalError');
+                } finally {
+                    __appointmentSubmitting = false;
                 }
             }
 
