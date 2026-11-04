@@ -1,0 +1,612 @@
+/*
+ * CILU LAW — restrained visual refinements (2026-11-04, gradient-shadow revision)
+ * Keep existing branding, layout, page contents and functionality intact.
+ * Shared by all visible site pages, loaded after existing page styles.
+ */
+
+/* Full-bleed navigation: a subtle burgundy/plum dimensional gradient,
+   inspired by the supplied reference, without rounded or floating edges. */
+header {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-radius: 0;
+  border: 0;
+  background-color: #261724;
+  background-image:
+    radial-gradient(ellipse 76% 170% at 13% -82%,
+      rgba(151, 93, 132, 0.57) 0%,
+      rgba(103, 53, 91, 0.30) 47%,
+      rgba(63, 29, 54, 0) 74%),
+    linear-gradient(106deg, #42253B 0%, #301B2D 37%, #231521 100%);
+  box-shadow: 0 2px 6px rgba(28, 18, 29, 0.12);
+}
+/* A thin metallic-gold gradient rule exactly along the header's lower edge. */
+header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    #886020 0%, #D7AC4D 16%, #F3D88D 40%,
+    #C69637 68%, #E6C16F 86%, #92661E 100%);
+  box-shadow: 0 1px 3px rgba(204, 156, 52, 0.42);
+  pointer-events: none;
+  z-index: 2;
+}
+header::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 28px;
+  background: linear-gradient(to bottom,
+    rgba(28, 18, 29, 0.24) 0%,
+    rgba(28, 18, 29, 0.09) 48%,
+    rgba(28, 18, 29, 0) 100%);
+  pointer-events: none;
+  z-index: -1;
+}
+header.is-hidden {
+  transform: translateY(-100%);
+}
+header.is-hidden::after { opacity: 0; }
+
+/* Use the installed Windows BiauKai face when available; fall back gracefully elsewhere. */
+header .logo-text,
+header .logo-gold,
+header .logo-white {
+  font-family: '標楷體', 'DFKai-SB', 'BiauKai', 'KaiTi', 'STKaiti', 'Noto Serif TC', serif;
+  font-synthesis: weight;
+}
+header .logo-text {
+  align-items: baseline;
+  letter-spacing: 0.055em;
+}
+/* Give the gold 「慈律」 identity more authority while retaining its Kai-style brush character. */
+header .logo-gold {
+  font-size: clamp(43px, 3.7vw, 49px);
+  font-weight: 900;
+  font-synthesis: weight;
+  -webkit-text-stroke: 0.85px currentColor;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.18);
+  letter-spacing: 0.04em;
+  line-height: 1.08;
+}
+header .logo-white {
+  font-size: 24.2px; /* previously 22px: +10% */
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+/* Full-bleed footer: squared full-width top edge, soft fading shadow above.
+   No floating-card spacing, clipping, or rounded corners. */
+footer {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  border-radius: 0;
+  overflow: visible;
+  border: 0;
+  box-shadow: 0 -2px 6px rgba(40, 28, 42, 0.10);
+}
+footer::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(to top,
+    rgba(40, 28, 42, 0.22) 0%,
+    rgba(40, 28, 42, 0.08) 48%,
+    rgba(40, 28, 42, 0) 100%);
+  pointer-events: none;
+}
+footer .footer-column h3 {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-size: clamp(1.06rem, 1.2vw, 1.2rem);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+footer .footer-column p,
+footer .footer-column li,
+footer .footer-column li a,
+footer .footer-bottom p {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.95;
+}
+footer .footer-column:first-child > p:first-of-type {
+  font-weight: 600;
+  letter-spacing: 0.055em;
+  color: #F1E8D6;
+}
+footer .footer-column ul li a {
+  transition: color .22s ease;
+}
+footer .footer-column ul li a:hover,
+footer .footer-column ul li a:focus-visible {
+  color: #E4C36C;
+}
+
+/* Homepage hero brand title: larger, stronger and high-contrast, without changing layout. */
+#home .hero-content h1 {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-size: clamp(3.65rem, 5.2vw, 4.45rem);
+  font-weight: 900;
+  font-synthesis: weight;
+  -webkit-text-stroke: 0.6px currentColor;
+  letter-spacing: 0.055em;
+  line-height: 1.23;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.48);
+}
+
+/* Homepage: editorial typography for main description and contact details. */
+#home .home-about-text > h2 {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-weight: 700;
+  letter-spacing: 0.065em;
+}
+#home .home-about-text .description-segments p {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-size: clamp(1.07rem, 1.13vw, 1.17rem);
+  line-height: 2.03;
+  letter-spacing: 0.035em;
+  font-weight: 400;
+}
+#home .home-about-text .contact-info p,
+#home .home-about-text .contact-info a {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-size: clamp(1.03rem, 1.08vw, 1.13rem);
+  letter-spacing: 0.03em;
+  line-height: 1.95;
+}
+#home .home-about-text .contact-info strong {
+  color: #4C3449;
+  font-weight: 700;
+}
+#home .hero-content > p:not(.hero-subtitle) {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-size: clamp(1.35rem, 2vw, 1.65rem);
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  color: #FAF3E7;
+}
+#home .hero-content .hero-subtitle {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-size: clamp(1rem, 1.35vw, 1.15rem);
+  letter-spacing: 0.04em;
+  color: #FBF8F3;
+}
+
+/* Homepage FAQ: four real cards lift and warm-gold highlight on pointer hover. */
+#home #faq .faq-item {
+  position: relative;
+  isolation: isolate;
+  transform: translateY(0);
+  transition: transform .30s cubic-bezier(.2,.75,.25,1),
+              box-shadow .30s ease,
+              border-color .30s ease,
+              background .30s ease;
+}
+#home #faq .faq-item h4 {
+  transition: color .28s ease;
+}
+@media (hover: hover) and (pointer: fine) {
+  #home #faq .faq-item:hover {
+    transform: translateY(-6px);
+    border-color: rgba(213, 166, 43, 0.82) !important;
+    background: linear-gradient(160deg, #FFFDF6 0%, #FFF7E2 100%) !important;
+    box-shadow: 0 16px 34px rgba(75, 49, 30, 0.13),
+                0 0 22px rgba(222, 178, 66, 0.20) !important;
+  }
+  #home #faq .faq-item:hover h4 { color: #8E651E !important; }
+}
+#home #faq .faq-item:focus-visible {
+  outline: 2px solid #C79A2E;
+  outline-offset: 3px;
+  transform: translateY(-3px);
+  border-color: rgba(213, 166, 43, 0.82) !important;
+  background: #FFF9E8 !important;
+  box-shadow: 0 12px 28px rgba(75, 49, 30, 0.12) !important;
+}
+
+/* About: a stronger editorial hierarchy; avoid replacing the existing layout. */
+#about .about-text > h3 {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+#about .about-text > p {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-size: clamp(1.03rem, 1.1vw, 1.14rem);
+  line-height: 2;
+  letter-spacing: 0.025em;
+}
+#about .about-text > p:first-of-type {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif;
+  font-size: clamp(1.32rem, 1.85vw, 1.65rem);
+  font-weight: 700;
+  line-height: 1.8;
+  letter-spacing: 0.08em;
+  color: #5C3A4F;
+  border-left: 3px solid #D4AF37;
+  padding-left: 16px;
+  margin: 14px 0 20px;
+}
+
+/* Maintain responsive proportions and keep the existing mobile menu behavior. */
+@media (max-width: 768px) {
+  header {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+  header .logo-text { letter-spacing: 0.025em; }
+  header .logo-gold {
+    font-size: clamp(30px, 7.8vw, 36px);
+    -webkit-text-stroke: 0.65px currentColor;
+    letter-spacing: 0.02em;
+  }
+  header .logo-white {
+    font-size: 17.6px; /* previously 16px: +10% */
+    letter-spacing: 0.012em;
+  }
+  footer {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+  }
+  #home .hero-content h1 {
+    font-size: clamp(2.15rem, 8.4vw, 3rem);
+    -webkit-text-stroke: 0.35px currentColor;
+    letter-spacing: 0.035em;
+  }
+  footer .footer-column p,
+  footer .footer-column li,
+  footer .footer-column li a,
+  footer .footer-bottom p { font-size: .98rem; }
+  #home .home-about-text .description-segments p { font-size: 1.06rem; line-height: 1.95; }
+  #home .home-about-text .contact-info p,
+  #home .home-about-text .contact-info a { font-size: 1.02rem; }
+  #about .about-text > p { font-size: 1.02rem; }
+  #about .about-text > p:first-of-type { font-size: 1.30rem; }
+}
+
+/* Keep the 10% increase at the original small-phone breakpoint too. */
+@media (max-width: 480px) {
+  header .logo-white { font-size: 16.5px; } /* previously 15px: +10% */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #home #faq .faq-item,
+  #home #faq .faq-item h4 { transition: none !important; }
+  #home #faq .faq-item:hover,
+  #home #faq .faq-item:focus-visible { transform: none !important; }
+}
+
+
+/* ==========================================================================
+   2026-11-05 | Requested sitewide header, banner and footer refinements
+   Reference: index.html / about.html. Applies also to all Legal Insights pages.
+   These rules come AFTER the individual pages' CSS and use targeted selectors
+   to resolve older inline !important declarations without replacing content.
+   ========================================================================== */
+
+/* One identical header treatment across home / about / articles / article posts. */
+body > header {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+  padding: 0 !important;
+  border-radius: 0 !important;
+  border: 0 !important;
+  background-color: #261724 !important;
+  background-image:
+    radial-gradient(ellipse 76% 170% at 13% -82%,
+      rgba(151, 93, 132, .57) 0%,
+      rgba(103, 53, 91, .30) 47%,
+      rgba(63, 29, 54, 0) 74%),
+    linear-gradient(106deg, #42253B 0%, #301B2D 37%, #231521 100%) !important;
+  box-shadow: 0 2px 6px rgba(28, 18, 29, .12) !important;
+  z-index: 1000 !important;
+}
+/* Keep pre-existing scroll-to-hide and opened mobile menu behavior intact. */
+body > header.is-hidden {
+  transform: translateY(-100%) !important;
+  pointer-events: none !important;
+}
+body.menu-open > header { z-index: 1701 !important; }
+body > header .header-container {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 0 !important;
+}
+body > header .logo-area {
+  display: flex !important;
+  align-items: center !important;
+  transform: none !important;
+}
+body > header .logo {
+  width: 78px !important;
+  height: 78px !important;
+  flex: 0 0 auto;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  overflow: hidden !important;
+}
+/* Original graphic enlarges by five percent, while retaining header geometry. */
+body > header .logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  display: block !important;
+  transform: scale(1.344) !important; /* 1.28 × 1.05 */
+  transform-origin: center !important;
+  filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .27));
+}
+body > header .logo-text {
+  display: flex !important;
+  align-items: baseline !important;
+  margin-left: 14px !important;
+  white-space: nowrap;
+  font-family: '標楷體', 'DFKai-SB', 'BiauKai', 'KaiTi', 'STKaiti', 'Noto Serif TC', serif !important;
+  letter-spacing: .055em !important;
+}
+/* "慈律" is now normal weight (no bold, no synthetic faux bold/stroke). */
+body > header .logo-gold {
+  color: #D4AF37 !important;
+  font-weight: 400 !important;
+  font-synthesis: none !important;
+  -webkit-text-stroke: 0 !important;
+  font-size: clamp(43px, 3.7vw, 49px) !important;
+  letter-spacing: .04em !important;
+  line-height: 1.08 !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, .42), 0 0 9px rgba(208, 166, 65, .15) !important;
+}
+/* "律師事務所" increases another 5% from the source 24.2px version. */
+body > header .logo-white {
+  color: #FFFFFF !important;
+  font-size: 25.41px !important; /* 24.2 × 1.05 */
+  font-weight: 600 !important;
+  letter-spacing: .04em !important;
+  margin-left: 6px !important;
+  line-height: 1.1 !important;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, .48), 0 0 5px rgba(255, 255, 255, .10) !important;
+}
+/* Older article CSS enforces a different typeface and weights with !important.
+   Match the top navigation links used by the homepage and about page. */
+body > header nav.primary-nav ul.nav-list {
+  display: flex;
+  list-style: none !important;
+  gap: 10px !important;
+  flex-wrap: wrap !important;
+  justify-content: flex-end !important;
+  align-items: center !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+body > header nav.primary-nav ul.nav-list li {
+  margin: 0 !important;
+}
+body > header nav.primary-nav ul.nav-list li a {
+  color: #FFFFFF !important;
+  font-family: 'Noto Serif TC', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', serif !important;
+  font-weight: 500 !important;
+  font-size: 18px !important;
+  letter-spacing: 1px !important;
+  line-height: normal;
+  padding: 4px 2px !important;
+  text-decoration: none !important;
+  position: relative;
+}
+body > header nav.primary-nav ul.nav-list li a:hover,
+body > header nav.primary-nav ul.nav-list li a:focus-visible {
+  color: #D4AF37 !important;
+}
+
+/* Home banner: the location / areas-of-law subtitle is 5% larger. */
+#home .hero-content .hero-subtitle {
+  font-size: clamp(1.05rem, 1.4175vw, 1.2075rem) !important;
+  text-wrap: balance; /* Avoid a single trailing Chinese character on narrow phones. */
+  text-shadow: 0 2px 7px rgba(0, 0, 0, .68), 0 1px 2px rgba(0, 0, 0, .45) !important;
+}
+/* Home banner: increase the depth of the existing service-slogan shadow. */
+#home .hero-content > p:not(.hero-subtitle) {
+  text-shadow: 0 3px 9px rgba(0, 0, 0, .7), 0 1px 3px rgba(0, 0, 0, .5) !important;
+}
+
+/* Footer: only the firm's name becomes 15% larger and uses a Song/serif face. */
+footer .footer-column:first-child > h3 {
+  font-family: 'Noto Serif TC', 'Songti TC', 'Songti SC', 'SimSun', 'PMingLiU', serif !important;
+  font-size: clamp(1.219rem, 1.38vw, 1.38rem) !important; /* 1.15 × current size */
+  font-weight: 700;
+  letter-spacing: .08em;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  body > header .header-container {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 6px;
+    padding: 8px 0 !important;
+  }
+  body > header .logo-area { width: 100%; justify-content: flex-start; }
+  body > header .logo { width: 64px !important; height: 64px !important; }
+  body > header .logo-text { margin-left: 10px !important; letter-spacing: .025em !important; }
+  body > header .logo-gold {
+    font-size: clamp(30px, 7.8vw, 36px) !important;
+    font-weight: 400 !important;
+    -webkit-text-stroke: 0 !important;
+    letter-spacing: .02em !important;
+  }
+  body > header .logo-white {
+    font-size: 18.48px !important; /* 17.6 × 1.05 */
+    letter-spacing: .012em !important;
+  }
+  /* Keep the existing off-canvas navigation. Do not show desktop links on mobile. */
+  body:not(.menu-open) > header nav.primary-nav ul.nav-list {
+    display: none !important;
+  }
+  body > header nav.primary-nav ul.nav-list {
+    flex-direction: column;
+    flex-wrap: nowrap !important;
+    justify-content: flex-start !important;
+    align-items: stretch !important;
+  }
+  body > header nav.primary-nav ul.nav-list li a {
+    font-size: 18px !important;
+  }
+}
+@media (max-width: 480px) {
+  body > header .logo-white { font-size: 17.325px !important; } /* 16.5 × 1.05 */
+}
+
+
+/* ==========================================================================
+   2026-11-05 | Second refinement: about-quote typeface and deeper hero text
+   Reference: #about .about-text > p:first-of-type (「慈心為本，律法為用。」)
+   Do not touch the consultation booking button's font or other layout.
+   ========================================================================== */
+
+/* Match precisely the About-page mission statement's serif font stack,
+   instead of the earlier Kai-style identity lettering. Retain brand colors,
+   proportions, and the user's preference for a non-bold 「慈律」. */
+body > header .logo-text,
+body > header .logo-gold,
+body > header .logo-white {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif !important;
+}
+body > header .logo-gold {
+  font-weight: 400 !important;
+  font-synthesis: none !important;
+  -webkit-text-stroke: 0 !important;
+}
+
+/* The footer firm name uses that same reference typeface; retain the 15%
+   enlargement requested previously, without changing other footer text. */
+footer .footer-column:first-child > h3 {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif !important;
+}
+
+/* Hero category subtitle: exactly 10% bigger than the prior version.
+   Previous: clamp(1.05rem, 1.4175vw, 1.2075rem). */
+#home .hero-content .hero-subtitle {
+  font-size: clamp(1.155rem, 1.55925vw, 1.32825rem) !important;
+  text-shadow:
+    0 2px 2px rgba(0, 0, 0, .78),
+    0 4px 8px rgba(0, 0, 0, .76),
+    0 7px 18px rgba(0, 0, 0, .52) !important;
+}
+
+/* Hero firm's name: richer dimensional shadows without changing the font
+   size, text content, button typography, or banner background. */
+#home .hero-content h1 {
+  text-shadow:
+    0 2px 2px rgba(0, 0, 0, .78),
+    0 5px 12px rgba(0, 0, 0, .75),
+    0 10px 28px rgba(0, 0, 0, .48) !important;
+}
+
+/* Hero service slogan: matching deeper text shadows. */
+#home .hero-content > p:not(.hero-subtitle) {
+  text-shadow:
+    0 2px 2px rgba(0, 0, 0, .80),
+    0 4px 9px rgba(0, 0, 0, .75),
+    0 8px 21px rgba(0, 0, 0, .50) !important;
+}
+
+
+/* ==========================================================================
+   2026-11-05 | V3 refinement: use home-banner title type for header identity,
+   reduce header brand scale, keep 「慈律」 gold, and enlarge hero subtitle +5%.
+   All other previous refinements remain intact.
+   ========================================================================== */
+
+/* Top navigation brand: directly follow the banner title typography language,
+   but reduced to a restrained navigation scale. */
+body > header .logo-text,
+body > header .logo-gold,
+body > header .logo-white {
+  font-family: 'Noto Serif TC', 'Songti TC', 'PMingLiU', serif !important;
+}
+body > header .logo-text {
+  align-items: baseline !important;
+  gap: 0 !important;
+}
+body > header .logo-gold {
+  color: #D4AF37 !important;
+  font-weight: 800 !important;
+  font-synthesis: weight !important;
+  font-size: clamp(26.5px, 2.32vw, 31px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: .055em !important;
+  text-shadow:
+    0 1px 1px rgba(0,0,0,.55),
+    0 2px 5px rgba(0,0,0,.32) !important;
+}
+body > header .logo-white {
+  color: #FFFFFF !important;
+  font-weight: 800 !important;
+  font-size: clamp(22.5px, 1.86vw, 27px) !important;
+  line-height: 1.08 !important;
+  letter-spacing: .048em !important;
+  margin-left: 5px !important;
+  text-shadow:
+    0 1px 1px rgba(0,0,0,.58),
+    0 2px 5px rgba(0,0,0,.34) !important;
+}
+
+/* Homepage hero subtitle: another +5% over V2 and stronger dimensional shadow. */
+#home .hero-content .hero-subtitle {
+  font-size: clamp(1.213rem, 1.637vw, 1.395rem) !important;
+  text-shadow:
+    0 2px 2px rgba(0, 0, 0, .84),
+    0 5px 11px rgba(0, 0, 0, .82),
+    0 10px 24px rgba(0, 0, 0, .58) !important;
+}
+
+@media (max-width: 768px) {
+  body > header .logo-gold {
+    font-size: clamp(22px, 6.2vw, 26px) !important;
+    letter-spacing: .04em !important;
+  }
+  body > header .logo-white {
+    font-size: clamp(17px, 4.7vw, 20px) !important;
+    letter-spacing: .025em !important;
+  }
+}
+@media (max-width: 480px) {
+  body > header .logo-gold { font-size: clamp(21px, 6.6vw, 24px) !important; }
+  body > header .logo-white { font-size: clamp(16px, 4.9vw, 18px) !important; }
+}
+
+
+/* ==========================================================================
+   2026-11-05 | V4 repair: stronger hero subtitle depth only.
+   Team portraits are preserved with their correct UTF-8 filenames in the ZIP.
+   No change to V3 design settings outside this subtitle shadow.
+   ========================================================================== */
+#home .hero-content .hero-subtitle {
+  text-shadow:
+    0 2px 2px rgba(0, 0, 0, .94),
+    0 6px 13px rgba(0, 0, 0, .91),
+    0 13px 29px rgba(0, 0, 0, .73) !important;
+}
