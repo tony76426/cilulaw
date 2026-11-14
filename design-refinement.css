@@ -680,3 +680,18 @@ body > header .logo img {
   #team .team-group-title { padding-left: 22px; padding-top: 15px; }
   #about .about-text > p:first-of-type { padding-left: 22px; padding-top: 10px; }
 }
+
+
+/* CILULAW: prevent decorative corner/text overlaps (2026-11-15) */
+/* Text-filled panels may have titles or paragraphs positioned directly at the top.
+   Remove ONLY their decorative pseudo-corners rather than allowing any overprint.
+   Preserve existing background colors and the rest of the layout. */
+:is(.highlight-box, .quote-box, .case-study, .law-article, .reminder-box, .flow-step, .privacy-nav ul, .privacy-soft-box, #about .about-text > p:first-of-type)::before,
+:is(.highlight-box, .quote-box, .case-study, .law-article, .reminder-box, .flow-step, .privacy-nav ul, .privacy-soft-box, #about .about-text > p:first-of-type)::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+}
+/* Restore the prior text indentation where the corner had reserved extra room. */
+#about .about-text > p:first-of-type { padding-left: 0; padding-top: 0; }
+.flow-step { padding-left: 14px; }
