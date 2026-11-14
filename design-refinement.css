@@ -626,3 +626,57 @@ body > header .logo img {
   transform: none !important;
   transform-origin: center !important;
 }
+
+
+/* CILULAW 2026-11-15 double gold upper-left corner */
+/* Decorative only. Functional toast colors, mobile navigation and original backgrounds stay unchanged. */
+:root { --cilu-corner-gold: #D4A628; --cilu-corner-light: #E5C267; }
+:is(#team .team-row-label, #team .team-group-title, #about .about-text > p:first-of-type, .privacy-nav ul, .privacy-soft-box, .highlight-box, .quote-box, .case-study, .law-article, .reminder-box, .flow-step) {
+  position: relative;
+  border-left: none !important;
+  --corner-width: 58px;
+  --corner-height: 45px;
+}
+:is(#team .team-row-label, #team .team-group-title, #about .about-text > p:first-of-type, .privacy-nav ul, .privacy-soft-box, .highlight-box, .quote-box, .case-study, .law-article, .reminder-box, .flow-step)::before,
+:is(#team .team-row-label, #team .team-group-title, #about .about-text > p:first-of-type, .privacy-nav ul, .privacy-soft-box, .highlight-box, .quote-box, .case-study, .law-article, .reminder-box, .flow-step)::after {
+  content: "";
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  pointer-events: none;
+  background: transparent;
+  z-index: 1;
+  border-right: 0;
+  border-bottom: 0;
+}
+:is(#team .team-row-label, #team .team-group-title, #about .about-text > p:first-of-type, .privacy-nav ul, .privacy-soft-box, .highlight-box, .quote-box, .case-study, .law-article, .reminder-box, .flow-step)::before {
+  top: 0; left: 0;
+  width: var(--corner-width);
+  height: var(--corner-height);
+  border-top: 3px solid var(--cilu-corner-gold);
+  border-left: 3px solid var(--cilu-corner-gold);
+}
+:is(#team .team-row-label, #team .team-group-title, #about .about-text > p:first-of-type, .privacy-nav ul, .privacy-soft-box, .highlight-box, .quote-box, .case-study, .law-article, .reminder-box, .flow-step)::after {
+  top: 9px; left: 9px;
+  width: calc(var(--corner-width) - 17px);
+  height: calc(var(--corner-height) - 15px);
+  border-top: 2px solid var(--cilu-corner-light);
+  border-left: 2px solid var(--cilu-corner-light);
+}
+#team .team-row-label { padding-left: 24px; padding-top: 16px; min-width: 0; }
+#team .team-group-title { padding-left: 26px; padding-top: 17px; }
+#about .about-text > p:first-of-type { padding-left: 26px; padding-top: 12px; }
+.flow-step { padding-left: 24px; }
+:is(.privacy-nav ul, .privacy-soft-box, .highlight-box, .quote-box, .case-study, .law-article, .reminder-box, .flow-step) {
+  --corner-width: 46px;
+  --corner-height: 36px;
+}
+@media (max-width: 768px) {
+  :is(#team .team-row-label, #team .team-group-title, #about .about-text > p:first-of-type) {
+    --corner-width: 48px;
+    --corner-height: 40px;
+  }
+  #team .team-row-label { padding-left: 22px; padding-top: 13px; }
+  #team .team-group-title { padding-left: 22px; padding-top: 15px; }
+  #about .about-text > p:first-of-type { padding-left: 22px; padding-top: 10px; }
+}
