@@ -610,3 +610,19 @@ body > header .logo-white {
     0 6px 13px rgba(0, 0, 0, .91),
     0 13px 29px rgba(0, 0, 0, .73) !important;
 }
+
+
+/* 2026-11-15: true circular transparent logo, no enlargement/cropping. */
+body > header .logo {
+  border-radius: 50% !important;
+  overflow: hidden !important;
+  background: transparent !important;
+}
+body > header .logo img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;
+  border-radius: 50% !important;
+  transform: none !important;
+  transform-origin: center !important;
+}
