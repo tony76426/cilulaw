@@ -1,0 +1,596 @@
+{
+  "images/cilu-logo-round-2048.webp": {
+    "source_bytes": 139902,
+    "variants": [
+      {
+        "url": "images/optimized/cilu-logo-round-2048-256-a15455632291.webp",
+        "width": 256,
+        "height": 256,
+        "bytes": 24054
+      },
+      {
+        "url": "images/optimized/cilu-logo-round-2048-512-ac3e19d058fa.webp",
+        "width": 512,
+        "height": 512,
+        "bytes": 61140
+      }
+    ]
+  },
+  "images/team-working-1.jpg": {
+    "source_bytes": 124447,
+    "variants": [
+      {
+        "url": "images/optimized/team-working-1-480-31d2b7097c42.webp",
+        "width": 480,
+        "height": 480,
+        "bytes": 41692
+      },
+      {
+        "url": "images/optimized/team-working-1-960-d9cfc78b2f98.webp",
+        "width": 960,
+        "height": 960,
+        "bytes": 123808
+      }
+    ]
+  },
+  "icons/icon-law.png": {
+    "source_bytes": 600948,
+    "variants": [
+      {
+        "url": "images/optimized/icon-law-120-4be3b2649740.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 5314
+      },
+      {
+        "url": "images/optimized/icon-law-240-af1fca908d54.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 12654
+      }
+    ]
+  },
+  "icons/icon-trust.png": {
+    "source_bytes": 442846,
+    "variants": [
+      {
+        "url": "images/optimized/icon-trust-120-26eab9284a0d.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 4506
+      },
+      {
+        "url": "images/optimized/icon-trust-240-28b22afddf25.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 9682
+      }
+    ]
+  },
+  "icons/icon-efficiency.png": {
+    "source_bytes": 438617,
+    "variants": [
+      {
+        "url": "images/optimized/icon-efficiency-120-61072cd9a738.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 4616
+      },
+      {
+        "url": "images/optimized/icon-efficiency-240-a515f3ddf2a5.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 10260
+      }
+    ]
+  },
+  "images/劉添錫律師.jpg": {
+    "source_bytes": 197042,
+    "variants": [
+      {
+        "url": "images/optimized/劉添錫律師-160-7de95042f8cc.webp",
+        "width": 160,
+        "height": 260,
+        "bytes": 7298
+      },
+      {
+        "url": "images/optimized/劉添錫律師-320-f01851f09f07.webp",
+        "width": 320,
+        "height": 521,
+        "bytes": 19934
+      },
+      {
+        "url": "images/optimized/劉添錫律師-640-95c8693581d8.webp",
+        "width": 640,
+        "height": 1042,
+        "bytes": 60186
+      },
+      {
+        "url": "images/optimized/劉添錫律師-960-cc0d2b442635.webp",
+        "width": 960,
+        "height": 1563,
+        "bytes": 139606
+      }
+    ]
+  },
+  "images/張育銜律師.jpg": {
+    "source_bytes": 1062081,
+    "variants": [
+      {
+        "url": "images/optimized/張育銜律師-160-26fe5f2f63ad.webp",
+        "width": 160,
+        "height": 177,
+        "bytes": 5144
+      },
+      {
+        "url": "images/optimized/張育銜律師-320-955d377ca03e.webp",
+        "width": 320,
+        "height": 353,
+        "bytes": 12484
+      },
+      {
+        "url": "images/optimized/張育銜律師-640-d1b252df80fc.webp",
+        "width": 640,
+        "height": 706,
+        "bytes": 35072
+      },
+      {
+        "url": "images/optimized/張育銜律師-831-217d66b89d46.webp",
+        "width": 831,
+        "height": 917,
+        "bytes": 54942
+      }
+    ]
+  },
+  "images/廖婉茹律師.jpg": {
+    "source_bytes": 762261,
+    "variants": [
+      {
+        "url": "images/optimized/廖婉茹律師-160-f0b8d7a50a40.webp",
+        "width": 160,
+        "height": 179,
+        "bytes": 4494
+      },
+      {
+        "url": "images/optimized/廖婉茹律師-320-cbf33afcc4b8.webp",
+        "width": 320,
+        "height": 359,
+        "bytes": 10566
+      },
+      {
+        "url": "images/optimized/廖婉茹律師-640-4621c04eb420.webp",
+        "width": 640,
+        "height": 717,
+        "bytes": 25696
+      },
+      {
+        "url": "images/optimized/廖婉茹律師-727-f0edd1225d18.webp",
+        "width": 727,
+        "height": 815,
+        "bytes": 31298
+      }
+    ]
+  },
+  "images/林聖哲律師.jpg": {
+    "source_bytes": 986763,
+    "variants": [
+      {
+        "url": "images/optimized/林聖哲律師-160-0d7097479b54.webp",
+        "width": 160,
+        "height": 178,
+        "bytes": 3516
+      },
+      {
+        "url": "images/optimized/林聖哲律師-320-ce57351eb741.webp",
+        "width": 320,
+        "height": 355,
+        "bytes": 9244
+      },
+      {
+        "url": "images/optimized/林聖哲律師-640-3cad9c8e0e32.webp",
+        "width": 640,
+        "height": 710,
+        "bytes": 26032
+      },
+      {
+        "url": "images/optimized/林聖哲律師-832-4444d72b97b1.webp",
+        "width": 832,
+        "height": 923,
+        "bytes": 38168
+      }
+    ]
+  },
+  "images/李孟融.png": {
+    "source_bytes": 1094305,
+    "variants": [
+      {
+        "url": "images/optimized/李孟融-160-d5604f969881.webp",
+        "width": 160,
+        "height": 196,
+        "bytes": 3752
+      },
+      {
+        "url": "images/optimized/李孟融-320-510384af7622.webp",
+        "width": 320,
+        "height": 392,
+        "bytes": 9032
+      },
+      {
+        "url": "images/optimized/李孟融-640-455a3cc5f295.webp",
+        "width": 640,
+        "height": 784,
+        "bytes": 26106
+      },
+      {
+        "url": "images/optimized/李孟融-824-713a467e1efd.webp",
+        "width": 824,
+        "height": 1009,
+        "bytes": 41764
+      }
+    ]
+  },
+  "images/鄭惟仁-2026.png": {
+    "source_bytes": 2850815,
+    "variants": [
+      {
+        "url": "images/optimized/鄭惟仁-2026-160-8cfb5b6fd197.webp",
+        "width": 160,
+        "height": 200,
+        "bytes": 4924
+      },
+      {
+        "url": "images/optimized/鄭惟仁-2026-320-27f2c6b9d3f3.webp",
+        "width": 320,
+        "height": 400,
+        "bytes": 13512
+      },
+      {
+        "url": "images/optimized/鄭惟仁-2026-640-5d8ca3631155.webp",
+        "width": 640,
+        "height": 800,
+        "bytes": 53456
+      },
+      {
+        "url": "images/optimized/鄭惟仁-2026-960-faa141bd68e1.webp",
+        "width": 960,
+        "height": 1200,
+        "bytes": 120056
+      }
+    ]
+  },
+  "images/康鎮宇.jpg": {
+    "source_bytes": 735103,
+    "variants": [
+      {
+        "url": "images/optimized/康鎮宇-160-b10ea9159e32.webp",
+        "width": 160,
+        "height": 178,
+        "bytes": 4664
+      },
+      {
+        "url": "images/optimized/康鎮宇-320-eb52d7d23d28.webp",
+        "width": 320,
+        "height": 356,
+        "bytes": 11654
+      },
+      {
+        "url": "images/optimized/康鎮宇-640-c6983a58ce68.webp",
+        "width": 640,
+        "height": 713,
+        "bytes": 32422
+      },
+      {
+        "url": "images/optimized/康鎮宇-695-b45ceb071d96.webp",
+        "width": 695,
+        "height": 774,
+        "bytes": 38292
+      }
+    ]
+  },
+  "icons/icon-hours.png": {
+    "source_bytes": 567857,
+    "variants": [
+      {
+        "url": "images/optimized/icon-hours-120-a8927dad47ec.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 5678
+      },
+      {
+        "url": "images/optimized/icon-hours-240-a7e7853ae625.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 12754
+      }
+    ]
+  },
+  "icons/icon-reply.png": {
+    "source_bytes": 502994,
+    "variants": [
+      {
+        "url": "images/optimized/icon-reply-120-6579f0d947b2.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 3920
+      },
+      {
+        "url": "images/optimized/icon-reply-240-9c55add1c277.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 8712
+      }
+    ]
+  },
+  "icons/icon-privacy.png": {
+    "source_bytes": 472520,
+    "variants": [
+      {
+        "url": "images/optimized/icon-privacy-120-0a5df21f1667.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 3744
+      },
+      {
+        "url": "images/optimized/icon-privacy-240-b5dc3b889a0f.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 7990
+      }
+    ]
+  },
+  "icons/icon-location.png": {
+    "source_bytes": 428918,
+    "variants": [
+      {
+        "url": "images/optimized/icon-location-120-8710672ffce3.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 3352
+      },
+      {
+        "url": "images/optimized/icon-location-240-251cd26f21e7.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 7268
+      }
+    ]
+  },
+  "icons/icon-phone.png": {
+    "source_bytes": 584263,
+    "variants": [
+      {
+        "url": "images/optimized/icon-phone-120-409863b6dde7.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 4324
+      },
+      {
+        "url": "images/optimized/icon-phone-240-b986413f6c23.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 9948
+      }
+    ]
+  },
+  "icons/icon-officehours.png": {
+    "source_bytes": 567857,
+    "variants": [
+      {
+        "url": "images/optimized/icon-officehours-120-a8927dad47ec.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 5678
+      },
+      {
+        "url": "images/optimized/icon-officehours-240-a7e7853ae625.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 12754
+      }
+    ]
+  },
+  "icons/icon-line.png": {
+    "source_bytes": 809552,
+    "variants": [
+      {
+        "url": "images/optimized/icon-line-120-74cc690d51e3.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 4238
+      },
+      {
+        "url": "images/optimized/icon-line-240-64b7bb266d14.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 8728
+      }
+    ]
+  },
+  "images/office-environment-1.jpg": {
+    "source_bytes": 470537,
+    "variants": [
+      {
+        "url": "images/optimized/office-environment-1-480-f9a5a82aeb49.webp",
+        "width": 480,
+        "height": 336,
+        "bytes": 63474
+      },
+      {
+        "url": "images/optimized/office-environment-1-841-b15cd73b270a.webp",
+        "width": 841,
+        "height": 588,
+        "bytes": 164644
+      }
+    ]
+  },
+  "icons/icon-law-1.png": {
+    "source_bytes": 389841,
+    "variants": [
+      {
+        "url": "images/optimized/icon-law-1-120-f0e361db2348.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 4226
+      },
+      {
+        "url": "images/optimized/icon-law-1-240-2609f480381c.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 9304
+      }
+    ]
+  },
+  "icons/icon-search.png": {
+    "source_bytes": 528128,
+    "variants": [
+      {
+        "url": "images/optimized/icon-search-120-29eb3313e688.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 5250
+      },
+      {
+        "url": "images/optimized/icon-search-240-da66c834c0df.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 11924
+      }
+    ]
+  },
+  "icons/icon-divorce.png": {
+    "source_bytes": 303034,
+    "variants": [
+      {
+        "url": "images/optimized/icon-divorce-120-7ed272039f8d.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 5698
+      },
+      {
+        "url": "images/optimized/icon-divorce-240-42dac8a1553f.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 13288
+      }
+    ]
+  },
+  "icons/icon-execution.png": {
+    "source_bytes": 402420,
+    "variants": [
+      {
+        "url": "images/optimized/icon-execution-120-65fafa4529e3.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 4748
+      },
+      {
+        "url": "images/optimized/icon-execution-240-19e9095416aa.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 10596
+      }
+    ]
+  },
+  "icons/icon-realestate.png": {
+    "source_bytes": 359849,
+    "variants": [
+      {
+        "url": "images/optimized/icon-realestate-120-cf692a9f291c.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 3422
+      },
+      {
+        "url": "images/optimized/icon-realestate-240-1026466b6d83.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 7016
+      }
+    ]
+  },
+  "icons/icon-inherit.png": {
+    "source_bytes": 390749,
+    "variants": [
+      {
+        "url": "images/optimized/icon-inherit-120-3524d7050ecd.webp",
+        "width": 120,
+        "height": 120,
+        "bytes": 4938
+      },
+      {
+        "url": "images/optimized/icon-inherit-240-a667dc815205.webp",
+        "width": 240,
+        "height": 240,
+        "bytes": 10096
+      }
+    ]
+  },
+  "images/hero-banner-1.jpg": {
+    "source_bytes": 142620,
+    "variants": [
+      {
+        "url": "images/optimized/hero-banner-1-960-ecad5c74d6b7.webp",
+        "width": 960,
+        "height": 538,
+        "bytes": 25512
+      },
+      {
+        "url": "images/optimized/hero-banner-1-1600-b56e42cd6a99.webp",
+        "width": 1600,
+        "height": 896,
+        "bytes": 50092
+      }
+    ]
+  },
+  "images/hero-banner-2.jpg": {
+    "source_bytes": 928839,
+    "variants": [
+      {
+        "url": "images/optimized/hero-banner-2-960-433a3f1eff3e.webp",
+        "width": 960,
+        "height": 540,
+        "bytes": 59852
+      },
+      {
+        "url": "images/optimized/hero-banner-2-1600-e8f9880fd8e2.webp",
+        "width": 1600,
+        "height": 900,
+        "bytes": 127048
+      }
+    ]
+  },
+  "images/hero-banner-3.jpg": {
+    "source_bytes": 144116,
+    "variants": [
+      {
+        "url": "images/optimized/hero-banner-3-960-e6dd396c4fc1.webp",
+        "width": 960,
+        "height": 538,
+        "bytes": 28504
+      },
+      {
+        "url": "images/optimized/hero-banner-3-1600-3e551c2e39a0.webp",
+        "width": 1600,
+        "height": 896,
+        "bytes": 59182
+      }
+    ]
+  },
+  "images/hero-banner-4.jpg": {
+    "source_bytes": 318536,
+    "variants": [
+      {
+        "url": "images/optimized/hero-banner-4-960-dde0e233bcf9.webp",
+        "width": 960,
+        "height": 538,
+        "bytes": 87144
+      },
+      {
+        "url": "images/optimized/hero-banner-4-1600-9e4c329e8a95.webp",
+        "width": 1600,
+        "height": 896,
+        "bytes": 201070
+      }
+    ]
+  }
+}
