@@ -695,3 +695,68 @@ body > header .logo img {
 /* Restore the prior text indentation where the corner had reserved extra room. */
 #about .about-text > p:first-of-type { padding-left: 0; padding-top: 0; }
 .flow-step { padding-left: 14px; }
+
+
+/* 2026-11-23 | Mobile floating menu: keep one trigger while the off-canvas nav is open */
+/*
+ * When opening the scrolled-page floating trigger, older page scripts restore
+ * the header so its nested navigation drawer remains visible. Keep the drawer,
+ * but suppress the old header's branding/hamburger and keep the floating
+ * trigger available as the close button. No desktop layout changes.
+ */
+@media (max-width: 768px) {
+  body.menu-open > header.is-hidden {
+    opacity: 1 !important;
+    transform: none !important;
+    pointer-events: none !important;
+    background: transparent !important;
+    background-color: transparent !important;
+    background-image: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  /* The gold separator and header shadow must not reappear behind the drawer. */
+  body.menu-open > header.is-hidden::before,
+  body.menu-open > header.is-hidden::after {
+    display: none !important;
+  }
+
+  body.menu-open > header.is-hidden .logo-area,
+  body.menu-open > header.is-hidden .hamburger {
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+
+  /* Header stays in the DOM to anchor the existing slide-out navigation. */
+  body.menu-open > header.is-hidden nav.primary-nav,
+  body.menu-open > header.is-hidden nav.primary-nav ul.nav-list,
+  body.menu-open > header.is-hidden nav.primary-nav ul.nav-list a {
+    pointer-events: auto !important;
+  }
+
+  /* Override older page scripts that remove .is-visible on menu-open. */
+  body.menu-open > header.is-hidden ~ #floatingMenuBtn {
+    display: flex !important;
+  }
+
+  /* Reuse the same circle as an obvious close (X) control. */
+  #floatingMenuBtn span {
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  body.menu-open > header.is-hidden ~ #floatingMenuBtn span:first-child {
+    transform: translateY(7px) rotate(45deg);
+  }
+  body.menu-open > header.is-hidden ~ #floatingMenuBtn span:nth-child(2) {
+    opacity: 0;
+  }
+  body.menu-open > header.is-hidden ~ #floatingMenuBtn span:last-child {
+    transform: translateY(-7px) rotate(-45deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #floatingMenuBtn span { transition: none; }
+}
