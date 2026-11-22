@@ -99,11 +99,17 @@ hero = {i: manifest[f'images/hero-banner-{i}.jpg']['variants'] for i in range(1,
 text = re.sub(r'<link\b[^>]*rel="preload"[^>]*as="image"[^>]*>', '', text)
 preloads = '\n'.join(f'<link rel="preload" as="image" type="image/webp" href="{hero[1][j]["url"]}" media="{media}" fetchpriority="high">' for j, media in [(0, '(max-width: 768px)'), (1, '(min-width: 769px)')])
 text = text.replace('</head>', preloads + '\n</head>')
-for i in range(1, 5):
-    pattern = r'<div class="hero-slide' + (' active' if i == 1 else '') + r'"[^>]*></div>'
+# Match all slides once, then map frame 1..4 in order. This also makes rebuilds idempotent.
+slide_pattern = re.compile(r'<div class="hero-slide(?: active)?"[^>]*></div>')
+slide_matches = list(slide_pattern.finditer(text))
+assert len(slide_matches) == 4, f'expected four homepage slides, found {len(slide_matches)}'
+slide_numbers = iter(range(1, 5))
+def replace_slide(match):
+    i = next(slide_numbers)
     attrs = f'data-mobile="{hero[i][0]["url"]}" data-desktop="{hero[i][1]["url"]}"'
-    text, count = re.subn(pattern, f'<div class="hero-slide' + (' active' if i == 1 else '') + f'" {attrs}></div>', text, count=1)
-    assert count == 1
+    cls = 'hero-slide active' if i == 1 else 'hero-slide'
+    return f'<div class="{cls}" {attrs}></div>'
+text = slide_pattern.sub(replace_slide, text)
 start, end = '/* responsive-hero-start */', '/* responsive-hero-end */'
 text = re.sub(re.escape(start) + r'.*?' + re.escape(end), '', text, flags=re.S)
 css = f'''{start}
