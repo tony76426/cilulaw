@@ -823,3 +823,15 @@ width:40px!important;height:40px!important;padding:0!important;background:rgba(6
 border:1px solid rgba(225,189,131,.85)!important;box-shadow:none!important;z-index:1900!important}
 body.menu-open > header:not(.is-hidden) ~ #floatingMenuBtn{display:none!important}
 }
+
+/* 2026-11-24: vertically center mobile menu icon alongside the brand lockup. */
+@media (max-width: 768px) {
+  body > header:not(.is-hidden) .header-container > .hamburger {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+  }
+  body.menu-open > header:not(.is-hidden) .header-container > .hamburger {
+    top: calc(15px + env(safe-area-inset-top)) !important;
+    transform: none !important;
+  }
+}
